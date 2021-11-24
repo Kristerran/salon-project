@@ -1,16 +1,16 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import '../css/nav.css';
+import '../css/navbar.css';
 
 //feel free to change the icons, just be sure to update the icons call tags in
 //the script below
-import { FaHome} from 'react-icons/fa';
+import { FaHome, FaStore} from 'react-icons/fa';
 import { MdMenuBook, MdOutlineLocalGroceryStore } from 'react-icons/md';
 import { CgProfile } from 'react-icons/cg';
-import { IoStorefrontSharp, IoLoginOutline } from 'react-icons/io';
+import { BiLogIn } from 'react-icons/bi';
 
 
-function Navbar() {
+function NavPane() {
 
     return (
 
@@ -23,10 +23,10 @@ function Navbar() {
                         <Nav.Link href="/home">Home<FaHome /></Nav.Link>
                         <Nav.Link href="/service-menu"><MdMenuBook />Services</Nav.Link>
                         <Nav.Link href="/profiles"><CgProfile />Stylists</Nav.Link>
-                        <Nav.Link href="/store"><IoStorefrontSharp />Store</Nav.Link>
+                        <Nav.Link href="/store"><FaStore />Store</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login"><IoLoginOutline />Login</Nav.Link>
+                        <Nav.Link href="/login"><BiLogIn />Login</Nav.Link>
                         <Nav.Link href="/cart"><MdOutlineLocalGroceryStore />Cart</Nav.Link>
                     </Nav>
             </Navbar.Collapse>
@@ -35,4 +35,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default NavPane;
