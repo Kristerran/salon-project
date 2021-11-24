@@ -33,7 +33,7 @@ function Footer() {
                         <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by ENTER COMPANY NAME HERE</p>
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
-                        <SocialIcons />
+                        <SocialIcons className="social-icons"/>
                     </div>
                 </div>
             </div>
