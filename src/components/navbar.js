@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav} from 'react-bootstrap';
 import '../css/navbar.css';
 
 //feel free to change the icons, just be sure to update the icons call tags in
@@ -15,7 +15,7 @@ function NavPane() {
     return (
 
         <Navbar collapseOnSelect sticky="top" expand="lg">
-            <Container>
+            <>
                 <Navbar.Brand href="/">INSERT TEXT FOR LOGO HERE</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -30,7 +30,7 @@ function NavPane() {
                         <Nav.Link href="/cart"><MdOutlineLocalGroceryStore />Cart</Nav.Link>
                     </Nav>
             </Navbar.Collapse>
-            </Container>
+            </>
         </Navbar>
     );
 }
