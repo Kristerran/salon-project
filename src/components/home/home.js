@@ -39,6 +39,15 @@ function Home() {
                 </Card>
             </div>
             <div>
+                <Card className="location">
+                    <Card.Img variant="left" src={Placeholder} alt='google map snippet' />
+                    <Card.Body>
+                        <Card.Title>SOME WORDS</Card.Title>
+                        <Button href="googlemaps.com/.....">Find us on Google Maps</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+            <div>
                 <TestimonialCards />
             </div>
             <Footer />
