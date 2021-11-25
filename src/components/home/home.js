@@ -3,11 +3,11 @@ import { Card, Container, Button } from "react-bootstrap";
 
 import '../../css/home/home.css';
 
-import Navbar from "../navbar.js";
-import Testimonials from "../home/testimonials.js"
+import NavPane from "../navpane.js";
+import TestimonialCards from "../home/testimonial-card.js"
 import Footer from "../footer/footer.js";
 
-import Example from '../../assets/images/example1.png';
+// layout idea- see Example from '../../assets/images/example1.png';
 import Placeholder from '../../assets/images/placeholder.png';
 
 
@@ -15,13 +15,13 @@ import Placeholder from '../../assets/images/placeholder.png';
 function Home() {
     return (
         <Container>
-            <Navbar />
-            <div class="hero" src={ Example } renderOverlay={() => (
-                <View>
-                    <Text>ENTER TEXT HERE</Text>
-                    <Text>ENTER TEXT HERE</Text>
-                    <Text><a href="/services">See out menu of services</a></Text>
-                </View>)} />
+            <NavPane />
+            <div class="hero" src={ Placeholder } renderOverlay={() => (
+                <div>
+                    <h1>ENTER TEXT HERE</h1>
+                    <h3>ENTER TEXT HERE</h3>
+                    <p><a href="/services">See out menu of services</a></p>
+                </div>)} />
             <div>
                 <Card className="profiles">
                     <Card.Img variant="top" src={Placeholder} alt="card-image" />
@@ -39,7 +39,7 @@ function Home() {
                 </Card>
             </div>
             <div>
-                <Testimonials />
+                <TestimonialCards />
             </div>
             <Footer />
          </Container>

@@ -5,7 +5,7 @@ import './css/App.css';
 import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Navbar from './components/navbar.js';
+import NavPane from './components/navpane.js';
 import Footer from './components/footer/footer.js';
 import Profiles from './components/profiles/profiles.js';
 import Home from './components/home/home.js';
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <NavPane />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/ServiceMenu' element={<ServiceMenu />} />
