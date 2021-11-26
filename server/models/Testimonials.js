@@ -1,9 +1,5 @@
-import React from 'react';
-import Testimonials from '../../src/components/home/testimonial-card.js';
-
-const testimonials = [
+const TestimonialsModel = [
     {
-        id: '',
         name: '',
         image: '',
         quote: '',
@@ -11,8 +7,4 @@ const testimonials = [
     }
 ];
 
-function Tests() {
-    return <Testimonials testimonials={testimonials} />;
-}
-
-export default Tests;
+export default TestimonialsModel;

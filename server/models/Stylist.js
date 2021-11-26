@@ -1,6 +1,13 @@
-const stylist = schema({
-    name: '',
-    quote: '',
-    image: '',
-    rating: '',
-})
+const StylistModel = [
+    {
+        name: '',
+        image: '',
+        specialty1: '',
+        specialty1: '',
+        specialty2: '',
+        specialty3: '',
+        years: '',
+    }
+];
+
+export default StylistModel;

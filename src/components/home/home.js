@@ -1,10 +1,16 @@
 import React from "react";
-import { Card, Container, Button } from "react-bootstrap";
+import { Card, Container, Button, Col, Row } from "react-bootstrap";
 
 import '../../css/home/home.css';
 
 import NavPane from "../navpane.js";
-import TestimonialCards from "../home/testimonial-card.js"
+
+//import cards
+import TestimonialCards from "./TestimonialCard.js";
+//import model with prop data
+import TestimonialModel from '../../../server/models/Testimonials.js';
+const testimonialInfo = TestimonialModel;
+
 import Footer from "../footer/footer.js";
 
 // layout idea- see Example from '../../assets/images/example1.png';
@@ -47,9 +53,13 @@ function Home() {
                     </Card.Body>
                 </Card>
             </div>
-            <div>
-                <TestimonialCards />
-            </div>
+            <Row>
+                <Col md={3}>
+                    {testimonialInfo.map((each) => (
+                        <TestimonialCards quote={each.quote} image={each.image} name={each.name} rating={each.rating}/>
+                    ))}
+                </Col>
+            </Row>
             <Footer />
          </Container>
      );
