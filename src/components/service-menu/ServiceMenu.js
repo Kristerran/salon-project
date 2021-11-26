@@ -5,9 +5,9 @@ import items from './data.js';
 
 import '../../css/service-menu/service-menu.css';
 
-//import model
-import ServiceMenuModel from '../../../server/models/ServiceMenu.js';
-const menuInfo = ServiceMenuModel;
+//import model?
+// import ServiceMenuModel from '../../../server/models/ServiceMenu.js';
+// const menuInfo = ServiceMenuModel;
 
 import ApptForm from '../appointment-form/appt-form.js';
 import Menu from './data.js';
