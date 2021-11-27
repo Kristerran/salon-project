@@ -4,7 +4,7 @@ import { Table } from 'reactstrap';
 import UpdateItemModal from './UpdateItemModal.js';
 import DeleteItem from './DeleteItem.js';
 
-export default class Admin extends Component {
+export default class ProductTable extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,17 +22,13 @@ export default class Admin extends Component {
     }
 
     render() {
-        const stylesColor = (color) => ({
-            textDecoration: 'underline',
-        })
-
         const { stylesTab2 } = this.props
         const { apiList } = this.state
 
         return (
             <Table responsive striped border hover size='sm'>
                 <thead style={stylesTab2}>
-                    <tr>sku, name, category, size, price, img, description, inventory
+                    <tr>
                         <th>#</th>
                         <th>Id</th>
                         <th>Name</th>
