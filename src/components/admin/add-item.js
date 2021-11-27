@@ -91,3 +91,6 @@ class AddItem extends Component {
 }
 
 export default AddItem;
+
+
+//source: https://github.com/NielsDom/ecommerce-react/blob/master/client/src/components/Admin-form-add-item.js
