@@ -28,7 +28,7 @@ const styles = {
   }
 };
 
-const EachItemInList = ({
+const EachProductInList = ({
   FilteredSortedList,
   currentPage,
   itemsMaxPage
@@ -58,7 +58,7 @@ const EachItemInList = ({
   ));
 };
 
-EachItemInList.propTypes = propTypes;
+EachProductInList.propTypes = propTypes;
 
-export default EachItemInList;
+export default EachProductInList;
 
