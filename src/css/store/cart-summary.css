@@ -1,0 +1,9 @@
+fontSize: {
+    fontSize: '13px'
+  },
+  centerButtons: {
+    display:'flex',
+    justifyContent: 'center',
+    margin: '10px',
+    textDecoration: 'none'
+  }

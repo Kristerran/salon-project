@@ -19,5 +19,3 @@ const Categories = ({ categories, filterItems }) => {
 }
 
 export default Categories;
-
-//source: https://github.com/Fuglydami/react-menu-list/blob/main/src/Categories.js

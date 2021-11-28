@@ -10,41 +10,6 @@ const propTypes = {
   deleteALlFromCart: PropTypes.func.isRequired,
 };
 
-const styles = {
-  h1: {
-    textAlign: 'center',
-    padding: '30px'
-  },
-  images: {
-    width: '30px'
-  },
-  checkoutBtn: {
-    textAlign: 'right'
-  },
-  btnIncrement: {
-    color: '#072a48',
-    backgroundColor: 'white',
-    border: 'solid',
-    borderColor: '#072a48',
-    width: '30px',
-    cursor: 'pointer',
-    borderWidth: '0.1ex'
-  },
-  btnDelete: {
-    color: 'white',
-    backgroundColor: '#072a48',
-    border: 'solid',
-    borderColor: '#072a48',
-    width: '30px',
-    cursor: 'pointer',
-    borderWidth: '0.1ex'
-  },
-  containerPadding: {
-    paddingTop: '70px',
-    paddingBottom: '150px'
-  }
-}
-
 const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
 
   const { h1, images, checkoutBtn, btnIncrement, btnDelete, containerPadding } = styles
@@ -69,7 +34,7 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
               <tr>
                 <td>
                   <img style={images} src={x.images[0]} alt=""/>
-                  <p><b>{x.title}</b> | {x.selectedSize} | {x.selectedColor}</p>
+                  <p><b>{x.name}</b> | {x.size}</p>
                 </td>
                 <td>
                   <p><b>{x.price}$</b></p>
@@ -113,7 +78,7 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
           </tbody>
         </Table>
         <div style={checkoutBtn}>
-          <Link to="/checkout"><Button >Check out</Button></Link>
+          <Link to="/checkout"><Button >Checkout</Button></Link>
         </div>
       </Container>
     </div>

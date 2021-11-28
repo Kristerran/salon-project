@@ -1,3 +1,7 @@
+sources:
+store components:
+https://github.com/Fuglydami/react-menu-list/blob/main/src/Categories.js & https://github.com/NielsDom/ecommerce-react/blob/master/client/src/components/Admin-form-add-item.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
