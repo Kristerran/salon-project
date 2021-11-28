@@ -26,17 +26,14 @@ function Footer() {
                     </div>
                         <img class="col-xs-6 col-md-3" src={Placeholder} alt="logo">INSERT LOGO HERE</img>
                 </div>
-            </div>
-            <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by ENTER COMPANY NAME HERE</p>
-                    </div>
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <SocialIcons className="social-icons"/>
                     </div>
+                    <Row>
+                        <Col md='12' style={{textAlign: 'center', paddingTop:'30px'}}>Copyright your website © 2018 All Rights Reserved</Col>
+                    </Row>
                 </div>
-            </div>
         </footer>
     );
 }

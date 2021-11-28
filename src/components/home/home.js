@@ -11,6 +11,7 @@ import TestimonialCards from "./TestimonialCard.js";
 import TestimonialModel from '../../../server/models/Testimonials.js';
 const testimonialInfo = TestimonialModel;
 
+import HeroBanner from './HeroBanner.js';
 import Footer from "../footer/footer.js";
 
 // layout idea- see Example from '../../assets/images/example1.png';
@@ -22,13 +23,7 @@ function Home() {
     return (
         <Container>
             <NavPane />
-            <div class="hero" src={ Placeholder } renderOverlay={() => (
-                <div>
-                    <h1>ENTER TEXT HERE</h1>
-                    <h3>ENTER TEXT HERE</h3>
-                    <p><a href="/services">See out menu of services</a></p>
-                </div>)} />
-            <div>
+            <HeroBanner />
                 <Card className="profiles">
                     <Card.Img variant="top" src={Placeholder} alt="card-image" />
                     <Card.Body>
