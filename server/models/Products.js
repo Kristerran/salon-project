@@ -1,15 +1,12 @@
 const Products =[
     {
-        id: '',
-        name: '',
-        category: '',
-        manufacturer: '',
+        title: '',
         size: '',
-        price: '100',
-        currency: 'USD',
-        img: '',
+        price: '',
+        images: '',
+        rating: '',
+        tags: '',
         description: '',
-        inventory: '',
     }
 
 ]
