@@ -3,10 +3,15 @@ import {
 	LIST_IS_LOADING,
 	LIST_FETCH_SUCCESS,
 	FILTER_ARGS,
-    FILTER_PRICE_RANGE,
-    ITEM_ERROR,
-    ITEM_IS_LOADING,
-    ITEM_FETCH_SUCCESS
+  FILTER_CATEGORIES_MULTIPLE_KEYWORDS,
+  FILTER_CATEGORIES_ONE_KEYWORD,
+  FILTER_SIZE,
+  FILTER_PRICE_RANGE,
+  RESET_KEYWORDS,
+  ITEM_ERROR,
+  ITEM_IS_LOADING,
+  FILL_FILTER,
+  ITEM_FETCH_SUCCESS
 } from '../constants';
 
 export const listHasError = bool => ({
@@ -69,9 +74,7 @@ export const actionFillFilters = keywords => ({
   keywords
 });
 
-export const resetKeywords = () => ({
-  type: RESET_KEYWORDS
-});
+export const resetKeywords = () => ({ type: RESET_KEYWORDS });
 
 export const itemFetchDataSuccess = item => ({
   type: ITEM_FETCH_SUCCESS,
