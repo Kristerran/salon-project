@@ -1,22 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { isBrowser, isMobile } from "react-device-detect";
-import StoreBanner from './StoreBanner';
+import ItemListBanner from './ItemListBanner';
 import Breadcrumbs from './Breadcrumbs';
-import Sidebar from './Sidebar';
+import ItemListSidebar from './ItemListSidebar';
 import Paginator from './Paginator';
-import EachItemInList from './EachProductInList';
+import EachItemInList from './EachItemInList.js';
+import BtnLinkGenderPage from './BtnLinkGenderPage.js'
 import { Container, Row, Col } from 'reactstrap';
 
 const propTypes = {
   listIsLoading: PropTypes.bool.isRequired,
   FilteredSortedList: PropTypes.array.isRequired,
+  keywordsForFilter: PropTypes.array.isRequired,
+  oneKeywordForFilter: PropTypes.func.isRequired,
   currentPageHandler: PropTypes.func.isRequired,
   currentPage: PropTypes.number.isRequired,
   itemsMaxPage: PropTypes.number.isRequired,
   dispatchSize: PropTypes.func.isRequired,
+  sortSizeForFilter: PropTypes.string.isRequired,
   sortArgsForFilter: PropTypes.string.isRequired,
   dispatchToSortList: PropTypes.func.isRequired,
+  keywordsSelectAction: PropTypes.func.isRequired,
   categoriesProducts: PropTypes.object.isRequired,
   actionPriceRangeFilter: PropTypes.func.isRequired,
   reducerPriceRangeFilter: PropTypes.number.isRequired,
@@ -40,18 +45,30 @@ const styles = {
   }
 };
 
-const ViewProducts = ({
+const ItemList = ({
+  match,
   listIsLoading,
   FilteredSortedList,
+  keywordsForFilter,
+  oneKeywordForFilter,
   currentPageHandler,
   currentPage,
   itemsMaxPage,
+  dispatchSize,
+  sortSizeForFilter,
   sortArgsForFilter,
+  dispatchToSortList,
+  keywordsSelectAction,
   categoriesProducts,
   actionPriceRangeFilter,
   reducerPriceRangeFilter,
   actionFillFilters
 }) => {
+
+  const { gender } = match.params;
+  const listLength = FilteredSortedList.length
+
+  const loading_logic = listIsLoading && <LoadingGif />;
 
   const pagination = Math.ceil(listLength/itemsMaxPage)>1 ?
     (<Paginator
@@ -62,31 +79,73 @@ const ViewProducts = ({
     />) :
     currentPage > 1 && (()=> currentPageHandler('empty'))()
 
+
+
+  const itemsListByGender_logic =
+    <Col md={{ size: 9, order: 1 }}>
+      {listIsLoading === false && <i>Results: {listLength}</i>}
+      {FilteredSortedList.length === 0 && listIsLoading === false &&
+      <div style={{ display: 'flex', alignItems: 'center'}}>
+        <h2><i>Select a category: </i> </h2>
+        <BtnLinkGenderPage gender='men'/>
+        <BtnLinkGenderPage gender='women'/>
+      </div>}
+
+      <Row>
+        {loading_logic} {/* if list is loading show loader */}
+        <EachItemInList
+          FilteredSortedList={FilteredSortedList}
+          currentPage={currentPage}
+          itemsMaxPage={itemsMaxPage}
+          currentPageHandler={currentPageHandler}
+          listIsLoading={listIsLoading}
+        />
+      </Row>
+      {pagination}
+    </Col>;
+
     const sideBar =  isBrowser &&
     <Col md="3" xs='12'>
       <Row>
-        <Sidebar
+        <ItemListSidebar
+          keywordsForFilter={keywordsForFilter}
+          dispatchSize={dispatchSize}
+          sortSizeForFilter={sortSizeForFilter}
+          keywordsSelectAction={keywordsSelectAction}
           categoriesProducts={categoriesProducts}
           actionPriceRangeFilter={actionPriceRangeFilter}
           reducerPriceRangeFilter={reducerPriceRangeFilter}
+          oneKeywordForFilter={oneKeywordForFilter}
+          gender={gender}
           actionFillFilters={actionFillFilters}
         />
       </Row>
     </Col>;
 
+
   return (
     <div>
-      <StoreBanner
+      <ItemListBanner
+        gender={gender}
         reducerPriceRangeFilter={reducerPriceRangeFilter}
+        sortSizeForFilter={sortSizeForFilter}
+        keywordsForFilter={keywordsForFilter}
         sortArgsForFilter={sortArgsForFilter}
       />
       <Breadcrumbs
         selectedCategory={keywordsForFilter}
+        keywordsForFilter={keywordsForFilter}
         sortArgsForFilter = {sortArgsForFilter}
+        dispatchToSortList = {dispatchToSortList}
+        gender={gender}
         backgroundColor={'#072a48'}
         textColor={'white'}
         marginTop={-34}
+        showSortBtn={keywordsForFilter.length > 0}
         showFilterBtn={isMobile}
+        dispatchSize={dispatchSize}
+        sortSizeForFilter={sortSizeForFilter}
+        keywordsSelectAction={keywordsSelectAction}
         categoriesProducts={categoriesProducts}
         actionPriceRangeFilter={actionPriceRangeFilter}
         reducerPriceRangeFilter={reducerPriceRangeFilter}
@@ -94,6 +153,7 @@ const ViewProducts = ({
       />
       <Container style={styles.containerPaddingTop}>
         <Row>
+          {itemsListByGender_logic} {/* show list depending on gender  */}
           {sideBar}
         </Row>
       </Container>
@@ -101,6 +161,6 @@ const ViewProducts = ({
   );
 };
 
-ViewProducts.propTypes = propTypes;
+ItemList.propTypes = propTypes;
 
-export default ViewProducts;
+export default ItemList;

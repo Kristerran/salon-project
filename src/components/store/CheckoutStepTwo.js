@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Row, Col, Input, Badge, Button, ListGroupItem, Collapse, Label, Alert,FormGroup } from 'reactstrap';
+import { Row,  Col,  Input,  Badge,  Button,  ListGroupItem,  Collapse,  Label,  Alert, FormGroup } from 'reactstrap';
 
 const propTypes = {
   addUserAddress: PropTypes.func.isRequired,
@@ -8,7 +8,6 @@ const propTypes = {
   step2Unlock: PropTypes.bool.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
   zipCode: PropTypes.number.isRequired,
@@ -24,19 +23,40 @@ const propTypes = {
   onChangeState: PropTypes.func.isRequired,
   onChangeZipCode: PropTypes.func.isRequired,
   onChangePhoneNumber: PropTypes.func.isRequired,
-  onChangeAdress1: PropTypes.func.isRequired,
-  onChangeAdress2: PropTypes.func.isRequired,
-  onChangeShipppingMethod: PropTypes.func.isRequired,
+  onChangeAddress1: PropTypes.func.isRequired,
+  onChangeAddress2: PropTypes.func.isRequired,
+  onChangeShippingMethod: PropTypes.func.isRequired,
   toggle: PropTypes.func.isRequired,
   stepsUnlock: PropTypes.func.isRequired,
   formValidator: PropTypes.func.isRequired
 };
 
 const CheckoutStepTwo = ({
-  styles, step2, step2Unlock, toggle, stepsUnlock, onChangeFirstName,onChangeLastName, onChangeCity, onChangeState,
-  onChangeZipCode, onChangePhoneNumber, onChangeAdress1, onChangeAdress2,
-  onChangeShipppingMethod, firstName, lastName, city, state, zipCode,
-  phoneNumber, address1, address2, shippingMethod, formValidator, formIsValid,
+  styles,
+  step2,
+  step2Unlock,
+  toggle,
+  stepsUnlock,
+  onChangeFirstName,
+  onChangeLastName,
+  onChangeCity,
+  onChangeState,
+  onChangeZipCode,
+  onChangePhoneNumber,
+  onChangeAddress1,
+  onChangeAddress2,
+  onChangeShippingMethod,
+  firstName,
+  lastName,
+  city,
+  state,
+  zipCode,
+  phoneNumber,
+  address1,
+  address2,
+  shippingMethod,
+  formValidator,
+  formIsValid,
   addUserAddress
 }) => {
 
@@ -45,7 +65,7 @@ const CheckoutStepTwo = ({
     lastName: lastName.length > 2 && typeof lastName === 'string',
     city: city.length > 2 && typeof city === 'string',
     state: state.length > 2 && typeof state === 'string',
-    zipCode: typeof postalCode === 'number',
+    zipCode: typeof zipCode === 'number',
     phoneNumber: typeof phoneNumber === 'number',
     address1: address1.length > 2 && typeof address1 === 'string'
   }
@@ -63,18 +83,18 @@ const CheckoutStepTwo = ({
               {!validatorClient.state && <div>State</div>}
               {!validatorClient.zipCode && <div>Zip Code</div>}
               {!validatorClient.phoneNumber && <div>Phone Number</div>}
-              {!validatorClient.address1 && <div>Address1 field</div>}
+              {!validatorClient.address1 && <div>Address</div>}
             </Alert>
           </Row>
         )
       } else {
         return(
           <Alert color="success">
-            Thank you! Click 'continue'
+            Thank you! Click 'Continue'
           </Alert>
         )
       }
-    }
+    } 
   }
 
   return (
@@ -86,11 +106,11 @@ const CheckoutStepTwo = ({
     <Collapse isOpen={step2}>
       <Row>
         <Col md={6} style={styles.formFieldsSpace}>
-          <Label for="First name">First name</Label>
+          <Label for="First name">First Name</Label>
           <Input type='text' onChange={onChangeFirstName} value={firstName} />
         </Col>
         <Col md={6} style={styles.formFieldsSpace}>
-          <Label for="exampleEmail">last Name</Label>
+          <Label for="exampleEmail">Last Name</Label>
           <Input type='text' onChange={onChangeLastName} value={lastName} />
         </Col>
         <Col md={6} style={styles.formFieldsSpace}>
@@ -110,26 +130,26 @@ const CheckoutStepTwo = ({
           <Input type='number' onChange={onChangePhoneNumber} value={phoneNumber} />
         </Col>
         <Col md={12} style={styles.formFieldsSpace}>
-          <Label for="Address1">Address1</Label>
-          <Input type='text' onChange={onChangeAdress1} value={address1} />
+          <Label for="Address1">Address</Label>
+          <Input type='text' onChange={onChangeAddress1} value={address1} />
         </Col>
         <Col md={12} style={styles.formFieldsSpace}>
-          <Label>Address2</Label>
-          <Input type='text' onChange={onChangeAdress2} value={address2} />
+          <Label>Address 2</Label>
+          <Input type='text' onChange={onChangeAddress2} value={address2} />
         </Col>
         <Col xs={6} style={styles.formFieldsSpace}>
           <FormGroup style={styles.formFieldsSpace}>
             <Label for="exampleCheckbox" ><u>Shipping Method</u></Label>
             <FormGroup check>
               <Label check>
-                <Input type="radio" onChange={()=>onChangeShipppingMethod(1)} checked={shippingMethod === 1} />{' '}
-                express (2 days shipping)
+                <Input type="radio" onChange={()=>onChangeShippingMethod(1)} checked={shippingMethod === 1} />{' '}
+                Express (2 Day Shipping)
               </Label>
             </FormGroup>
             <FormGroup check disabled>
               <Label check>
                 <Input type="radio" onChange={()=>onChangeShipppingMethod(2)} checked={shippingMethod === 2} />{' '}
-                1 week shipping
+                Standard (5-7 Day Shipping)
               </Label>
             </FormGroup>
           </FormGroup>
@@ -150,7 +170,7 @@ const CheckoutStepTwo = ({
               } else {
                 formValidator(true)
               }
-              }}>continue</Button>
+              }}>Continue</Button>
         </div>
       </Row>
       {warningValidator(formIsValid)}

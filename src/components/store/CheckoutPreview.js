@@ -8,7 +8,7 @@ const propTypes = {
   empty: PropTypes.bool.isRequired
 };
 
-const CheckoutMiniSummary = ({ getCart, empty }) => {
+const CheckoutPreview = ({ getCart, empty }) => {
 
   const styles = {
     fontSize: {
@@ -38,7 +38,7 @@ const CheckoutMiniSummary = ({ getCart, empty }) => {
       }
       </ListGroupItem>
       <ListGroupItem>
-          <Link to="/checkout" style={styles.centerButtons}><Button className='p-3 mb-2 bg-dark text-white' size="lg">Check out</Button></Link>
+          <Link to="/checkout" style={styles.centerButtons}><Button className='p-3 mb-2 bg-dark text-white' size="lg">Checkout</Button></Link>
           <Link to="/cart" style={styles.centerButtons}><Button outline color="secondary" size="lg">View Cart</Button></Link>
       </ListGroupItem>
     </Fragment>
@@ -54,6 +54,6 @@ const CheckoutMiniSummary = ({ getCart, empty }) => {
 
 }
 
-CheckoutMiniSummary.propTypes = propTypes;
+CheckoutPreview.propTypes = propTypes;
 
-export default CheckoutMiniSummary;
+export default CheckoutPreview;

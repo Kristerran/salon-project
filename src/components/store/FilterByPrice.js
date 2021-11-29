@@ -13,7 +13,7 @@ const styles = {
   justifyContent: 'space-around'
 };
 
-const ProductListFilterPriceBar = ({
+const FilterByPrice = ({
   actionPriceRangeFilter,
   reducerPriceRangeFilter
 }) => (
@@ -26,15 +26,15 @@ const ProductListFilterPriceBar = ({
       />
       <div style={styles}>
         <span>
-          min
+          Min
         </span>
         <span>
-          max
+          Max
         </span>
       </div>
     </div>
   );
 
-ProductListFilterPriceBar.propTypes = propTypes;
+FilterByPrice.propTypes = propTypes;
 
-export default ProductListFilterPriceBar;
+export default FilterByPrice;

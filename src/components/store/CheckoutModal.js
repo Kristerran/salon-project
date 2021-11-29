@@ -6,22 +6,28 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row } from 're
 const propTypes = {
   infoItem: PropTypes.object.isRequired,
   toggleModal: PropTypes.func.isRequired,
-  size: PropTypes.string.isRequired,
+  selectedSize: PropTypes.string.isRequired,
   openModal: PropTypes.bool.isRequired,
-  totalItems: PropTypes.number.isRequired
+  totalItemsSelectorStats: PropTypes.number.isRequired
 };
 
-const CheckoutModal = ({ infoItem, openModal, toggleModal, size, totalItems}) => (
+const CheckoutModal = ({
+  infoItem,
+  openModal,
+  toggleModal,
+  selectedSize,
+  totalItemsSelectorStats
+}) => (
   <Modal isOpen={openModal} toggle={toggleModal} >
-    <ModalHeader toggle={toggleModal}>You have {totalItems} item{totalItems>1 && 's'} in your cart</ModalHeader>
+    <ModalHeader toggle={toggleModal}>You have {totalItemsSelectorStats} item{totalItemsSelectorStats>1 && 's'} in your cart</ModalHeader>
     <ModalBody>
-      {totalItems>1 && 'last item added:'}
+      {totalItemsSelectorStats>1 && 'last item added:'}
       <Row>
-        <Col xs="6"><img src={infoItem.img[0]} style={{width: '100%'}} alt="" /> </Col>
+        <Col xs="6"><img src={infoItem.images[0]} style={{width: '100%'}} alt="" /> </Col>
         <Col xs="6">
-          <b>{infoItem.name}</b>
+          <b>{infoItem.title}</b>
           <div>{infoItem.price} $</div>
-          <div>size: {size}</div>
+          <div>size: {selectedSize}</div>
         </Col>
       </Row>
     </ModalBody>

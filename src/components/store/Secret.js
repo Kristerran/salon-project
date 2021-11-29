@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import Admin from './Admin';
+import Admin from '../admin/Admin.js';
 
 
 class Secret extends Component {
@@ -28,7 +28,7 @@ class Secret extends Component {
   }
 
   render() {
-    const showAdminPanel = this.state.apiAuth ? <Admin /> : <p>Authorization is required, please login here: <Link to="/admin">login</Link></p>
+    const showAdminPanel = this.state.apiAuth ? <Admin /> : <p>Authorization is required, please login here: <Link to="/admin">Login</Link></p>
 
     return (
       <div>

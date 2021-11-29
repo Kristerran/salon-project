@@ -25,7 +25,8 @@ function Footer() {
                         </ul>
                     </div>
                         <img class="col-xs-6 col-md-3" src={Placeholder} alt="logo">INSERT LOGO HERE</img>
-                </div>
+                    </div>
+
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <SocialIcons className="social-icons"/>
@@ -34,6 +35,7 @@ function Footer() {
                         <Col md='12' style={{textAlign: 'center', paddingTop:'30px'}}>Copyright your website © 2018 All Rights Reserved</Col>
                     </Row>
                 </div>
+            </div>
         </footer>
     );
 }

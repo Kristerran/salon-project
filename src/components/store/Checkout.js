@@ -3,7 +3,7 @@ import React from 'react';
 import CheckoutStepOne from './CheckoutStepOne';
 import CheckoutStepTwo from './CheckoutStepTwo';
 import CheckoutStepThree from './CheckoutStepThree';
-import CheckoutSummary from './CartSummary.js';
+import CheckoutPreview from './CheckoutPreview.js';
 import { Row, Col, Container, Progress, ListGroup } from 'reactstrap';
 
 const propTypes = {
@@ -28,7 +28,6 @@ const propTypes = {
   formIsValid: PropTypes.bool.isRequired,
   onChangeFirstName: PropTypes.func.isRequired,
   onChangeLastName: PropTypes.func.isRequired,
-  onChangeCountry: PropTypes.func.isRequired,
   onChangeCity: PropTypes.func.isRequired,
   onChangeState: PropTypes.func.isRequired,
   onChangeZipCode: PropTypes.func.isRequired,
@@ -62,7 +61,7 @@ const styles = {
   }
 }
 
-const CheckoutContainer = ({
+const Checkout = ({
   getCart,
   addUserAddress,
   getUserAddress,
@@ -84,7 +83,6 @@ const CheckoutContainer = ({
   formIsValid,
   onChangeFirstName,
   onChangeLastName,
-  onChangeCountry,
   onChangeCity,
   onChangeState,
   onChangeZipCode,
@@ -129,7 +127,6 @@ const CheckoutContainer = ({
               toggle={toggle}
               onChangeFirstName={onChangeFirstName}
               onChangeLastName={onChangeLastName}
-              onChangeCountry={onChangeCountry}
               onChangeCity={onChangeCity}
               onChangeState={onChangeState}
               onChangeZipCode={onChangeZipCode}
@@ -164,7 +161,7 @@ const CheckoutContainer = ({
           </ListGroup>
         </Col>
         <Col md='4'>
-          <CheckoutSummary
+          <CheckoutPreview
             getCart={getCart}
             selectorTotalAmountCart={selectorTotalAmountCart}
             totalDelivery={totalDelivery}
@@ -175,6 +172,6 @@ const CheckoutContainer = ({
   </div>
 );
 
-CheckoutContainer.propTypes = propTypes;
+Checkout.propTypes = propTypes;
 
-export default CheckoutContainer;
+export default Checkout;

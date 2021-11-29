@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { Row, Col, Input, Badge, Button, ListGroupItem, Collapse, Label,FormFeedback } from 'reactstrap';
+import { Row, Col, Input, Badge, Button, ListGroupItem, Collapse, Label, CustomInput, FormFeedback } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   email: PropTypes.string.isRequired,
@@ -13,17 +14,16 @@ const propTypes = {
   emailIsValid: PropTypes.bool.isRequired,
 };
 
-const CheckoutStepOne = ({ styles, email, step1, toggle, stepsUnlock, emailIsValid, handleEmailValidation, onChangeEmail}) => {
-
+const CheckoutStepOne = ({ styles, email, step1, toggle, stepsUnlock,
+emailIsValid, handleEmailValidation, onChangeEmail }) => {
   const emailValidation = (/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test(String(email).toLowerCase())
-
   return (
     <ListGroupItem disabled={!step1} style={styles.collapsePannel}>
       <h3 style={styles.collapsePanelTitle} onClick={()=>toggle('step1')} >
         <Badge color="secondary" pill size='sm'>1</Badge>  Customer
       </h3>
       <Collapse isOpen={step1}>
-      <p>Express Checkout: Enter your email address and follow the steps in the email response to create an account.</p>
+      <p>For EXpress Checkout, enter your email and follow the steps to cerate an account!</p>
       <Label for="exampleEmail">Email</Label>
       <Row>
         <Col md="6">
@@ -49,6 +49,11 @@ const CheckoutStepOne = ({ styles, email, step1, toggle, stepsUnlock, emailIsVal
               handleEmailValidation(false)
             }
             }}>Continue</Button>
+        </Col>
+        <Col xs="12">
+        <div style={{margin: '20px'}}>
+          <CustomInput type="checkbox" id="exampleCustomCheckbox" label="Subscribe to our newsletter" />
+        </div>
         </Col>
       </Row>
       </Collapse>

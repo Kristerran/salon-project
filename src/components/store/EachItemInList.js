@@ -28,19 +28,15 @@ const styles = {
   }
 };
 
-const EachProductInList = ({
-  FilteredSortedList,
-  currentPage,
-  itemsMaxPage
-}) => {
+const EachItemInList = ({ FilteredSortedList, currentPage, itemsMaxPage }) => {
   return (FilteredSortedList.slice((currentPage-1)*itemsMaxPage,itemsMaxPage*currentPage).map(x =>
-    <Col md="4" key={x._id}> 
+    <Col md="4" key={x._id}>
       <Card style={styles.spaceColumn}>
         <Link to={`/item/${x._id}/${x.title.split(' ').join('-')}`} className="text-white">
           <CardImg top width="100%" src={x.images[0]} alt="Card image cap" />
         </Link>
           <div>
-            <div style={{position: 'absolute', top: 0, textAlign: 'center', width: '100%'}}>{x.color.map(x=><div key={x} style={{width:'20px', height:'20px', backgroundColor:x, boxShadow: '0px 0px 14px -4px rgba(0,0,0,0.75)'}}/>)}</div>
+            <div style={{position: 'absolute', top: 0, textAlign: 'center', width: '100%'}}></div>
             <p style={{margin:'auto'}}>{x.title}</p>
             <StarRatings
               rating={x.rating}
@@ -58,7 +54,6 @@ const EachProductInList = ({
   ));
 };
 
-EachProductInList.propTypes = propTypes;
+EachItemInList.propTypes = propTypes;
 
-export default EachProductInList;
-
+export default EachItemInList;

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { Badge, ListGroupItem, Collapse, Col, Row } from 'reactstrap';
+import { Badge, Button, ListGroupItem, Collapse, Col, Row } from 'reactstrap';
 
 const propTypes = {
   toggle: PropTypes.func.isRequired,
@@ -10,7 +10,7 @@ const propTypes = {
   onSubmitOrder: PropTypes.func.isRequired
 };
 
-const CheckoutStepThree = ({ styles, step3, step3Unlock, toggle, getUserAddress
+const CheckoutStepThree = ({ styles, step3, step3Unlock, toggle, getUserAddress,  onSubmitOrder,  selectorTotalAmountCart, totalDelivery
 }) => {
 
   const { address1, address2, city, firstName, lastName, phoneNumber,
