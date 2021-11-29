@@ -3,7 +3,7 @@ import { fetchItemApi } from '../actions/DataFetchAction.js';
 import { addToCart } from '../actions/CartAction.js';
 import { connect } from 'react-redux';
 import { selectorTotalItemsCart } from '../selectors/SelectorListStats.js';
-import Item from '../components/store/Products.js';
+import Item from '../components/store/Item.js';
 
 class ItemContainer extends Component {
 
@@ -11,9 +11,7 @@ class ItemContainer extends Component {
     super(props);
     this.state = {
       selectedSize: '',
-      selectedColor: '',
       sizeSelectionMissingRemark: '',
-      colorSelectionMissingRemark: ''
     }
   }
 
@@ -21,13 +19,10 @@ class ItemContainer extends Component {
 
   handleSizeSelection = selectedSize => this.setState({ selectedSize });
 
-  handleColorSelection = selectedColor => this.setState({ selectedColor });
-
   validateSizeSelection = remark => remark === 'valid' ? this.setState({ sizeSelectionMissingRemark: '' }) : this.setState({ sizeSelectionMissingRemark: remark });
 
-  validateColorSelection = remark => remark === 'valid' ? this.setState({ colorSelectionMissingRemark: '' }) : this.setState({ colorSelectionMissingRemark: remark }); 
 
-  render = () => <Item {...this.props} {...this.state} handleSizeSelection={this.handleSizeSelection} handleColorSelection={this.handleColorSelection} validateSizeSelection={this.validateSizeSelection} validateColorSelection={this.validateColorSelection} />;
+  render = () => <Item {...this.props} {...this.state} handleSizeSelection={this.handleSizeSelection} validateSizeSelection={this.validateSizeSelection} />;
 
 };
 

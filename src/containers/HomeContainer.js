@@ -4,7 +4,8 @@ import { Card, Container, Button, Col, Row } from "react-bootstrap";
 import '../../css/home/home.css';
 
 import NavPane from "../components/navpane.js";
-import HeroBanner from '../components/home/HeroBanner.js'
+import HeroBanner from '../components/home/HeroBanner.js';
+import HomeCarousel from '../components/store/HomeCarousel.js';
 
 //import cards
 import TestimonialCards from "../components/home/TestimonialCard.js";
@@ -27,6 +28,7 @@ const Home = () => (
                 <meta name="description" content="company name"></meta>
             </Helmet>
             <HeroBanner />
+            <div><HomeCarousel /></div>
             <div>
                 <Card className="profiles">
                     <Card.Img variant="top" src={Placeholder} alt="card-image" />
