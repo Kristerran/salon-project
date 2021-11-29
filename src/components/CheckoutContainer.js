@@ -72,7 +72,7 @@ class CheckoutContainer extends Component {
     const ref = Math.random().toString(36).substring(5)+ Date.now();
     axios.post('/api/add/orders', {
       ref,
-      customerinfo: {email, firstName, lastName, city, state, zipCode, phoneNumber, address1, address2},
+      customerInfo: {email, firstName, lastName, city, state, zipCode, phoneNumber, address1, address2},
       order: getCart.map(x => ({idItem: x._id, nameItem:x.title, price:x.price, quantity:x.quantity})),
       totalDelivery,
       totalAmount: selectorTotalAmountCart

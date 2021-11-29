@@ -3,27 +3,31 @@ import { Card, Container, Button, Col, Row } from "react-bootstrap";
 
 import '../../css/home/home.css';
 
-import NavPane from "../navpane.js";
+import NavPane from "../components/navpane.js";
+import HeroBanner from '../components/home/HeroBanner.js'
 
 //import cards
-import TestimonialCards from "./TestimonialCard.js";
+import TestimonialCards from "../components/home/TestimonialCard.js";
 //import model with prop data
-import TestimonialModel from '../../../server/models/Testimonials.js';
+import TestimonialModel from '../../server/models/Testimonials.js';
 const testimonialInfo = TestimonialModel;
 
-import HeroBanner from './HeroBanner.js';
-import Footer from "../footer/footer.js";
+import Footer from "../components/footer/footer.js";
 
 // layout idea- see Example from '../../assets/images/example1.png';
 import Placeholder from '../../assets/images/placeholder.png';
 
 
 
-function Home() {
-    return (
+const Home = () => (
         <Container>
             <NavPane />
+            <Helmet>
+                <title> ENTER TITLE HERE</title>
+                <meta name="description" content="company name"></meta>
+            </Helmet>
             <HeroBanner />
+            <div>
                 <Card className="profiles">
                     <Card.Img variant="top" src={Placeholder} alt="card-image" />
                     <Card.Body>
@@ -56,8 +60,7 @@ function Home() {
                 </Col>
             </Row>
             <Footer />
-         </Container>
-     );
-}
+         </Container >
+);
 
 export default Home;
