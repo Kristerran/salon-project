@@ -5,6 +5,8 @@ import {
   listHasError,
   listIsLoading,
   sortArgsForFilter,
+  keywordsForFilter,
+  sortSizeForFilter,
   itemFetchDataSuccess,
   itemHasError,
   itemIsLoading,
@@ -12,7 +14,7 @@ import {
 } from './reducers/listFetchReducer';
 import { categoriesProducts } from './reducers/categoriesProductsReducer'
 import { getUserAddress } from './reducers/usersReducer'
-import { cartReducer } from './reducers/cartReducer' 
+import { cartReducer } from './reducers/cartReducer'
 
 const rootReducer = combineReducers({
   listFetchDataSuccess,
@@ -21,6 +23,9 @@ const rootReducer = combineReducers({
   listIsLoading,
   itemHasError,
   itemIsLoading,
+  sortArgsForFilter,
+  keywordsForFilter,
+  sortSizeForFilter,
   categoriesProducts,
   cartReducer,
   reducerPriceRangeFilter,
