@@ -2,46 +2,49 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Empty from './components/Empty';
 import Loadable from 'react-loadable';
-import NavbarContainer from './containers/Navbar-container';
-import Footer from './components/Footer';
-import './style/transition.css';
+import NavbarContainer from './containers/NavbarContainer';
+import Footer from './components/footer/footer.js';
 
 
 const Loading = () => <div style={{height: '1000px'}}></div>;
 
 const ItemContainer = Loadable({
-  loader: () => import('./containers/Item-container'),
+  loader: () => import('./containers/ItemContainer'),
   loading: Loading
 });
 
 const CheckoutContainer = Loadable({
-  loader: () => import('./containers/Checkout-container'),
+  loader: () => import('./containers/CheckoutContainer'),
   loading: Loading
 });
 
 const CartContainer = Loadable({
-  loader: () => import('./containers/Cart-container'),
+  loader: () => import('./containers/CartContainer'),
   loading: Loading
 });
 
 const HomepageContainer = Loadable({
-  loader: () => import('./containers/Homepage-container'),
+  loader: () => import('./containers/HomeContainer'),
   loading: Loading
 });
 
 const ItemsListContainer = Loadable({
-  loader: () => import('./containers/Items-list-container'),
+  loader: () => import('./containers/ItemsListContainer'),
   loading: Loading
 });
 
+const ItemsListGenderHomepage = Loadable({
+  loader: () => import('./components/ItemsListGenderHome'),
+  loading: Loading
+});
 
 const AdminContainer = Loadable({
-  loader: () => import('./containers/Admin-container'),
+  loader: () => import('./containers/AdminContainer'),
   loading: Loading
 });
 
 const Secret = Loadable({
-  loader: () => import('./components/admin/owner/store/Secret.js'),
+  loader: () => import('./components/Secret'),
   loading: Loading
 });
 
@@ -50,10 +53,12 @@ const Router = () => (
     <NavbarContainer />
       <Switch>
         <Route exact path='/' component={HomepageContainer} />
-        <Route exact path='/productlist' component={ItemsListContainer} />
+        <Route exact path='/productslist' component={ItemsListContainer} />
         <Route exact path='/item/:id/:item' component={ItemContainer} />
         <Route exact path='/checkout' component={CheckoutContainer} />
         <Route exact path='/cart' component={CartContainer} />
+        <Route exact path='/productslist/:gender' component={ItemsListContainer} />
+        <Route exact path='/category/:gender' component={ItemsListGenderHomepage} />
         <Route exact path='/admin' component={AdminContainer} />
         <Route exact path='/dashboard' component={Secret} />
         <Route component={Empty}/>

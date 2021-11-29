@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { isMobile } from "react-device-detect";
-import ButtonSorter from './Button-sorter';
-import ButtonFilterMobile from './Button-filter-mobile';
+import ButtonSorter from './BtnSort.js';
+import ButtonFilterMobile from './BtnFilter-Mobile.js';
 
 
 const propTypes = {
@@ -78,7 +78,7 @@ const Breadcrumbs = ({
       <Col sm={{ size: 'auto', offset: 6 }} style={styles.sortBtnMobileScreen}>
         {showFilterBtn &&
           <ButtonFilterMobile
-            buttonLabel='Filter the list'
+            buttonLabel='Filter Items'
             dispatchSize={dispatchSize}
             sortSizeForFilter={sortSizeForFilter}
             keywordsSelectAction={keywordsSelectAction}
@@ -95,7 +95,7 @@ const Breadcrumbs = ({
         />
       </Col>
 
-  const selectedItem = selectedCategory.length === 1 ? ' '+selectedCategory : selectedCategory.length > 1 ? ' Multiple criterias' : ' Category selection'
+  const selectedItem = selectedCategory.length === 1 ? ' '+selectedCategory : selectedCategory.length > 1 ? ' Multiple Criteria' : ' Category Selection'
   return (
     <div style={isMobile ? styles.containerMobileScreen : styles.containerPcScreen}>
       <Container>

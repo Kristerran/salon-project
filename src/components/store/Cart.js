@@ -7,7 +7,7 @@ const propTypes = {
   getCart: PropTypes.array.isRequired,
   addToCart: PropTypes.func.isRequired,
   deleteFromCart: PropTypes.func.isRequired,
-  deleteALlFromCart: PropTypes.func.isRequired,
+  deleteAllFromCart: PropTypes.func.isRequired,
 };
 
 const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
@@ -18,7 +18,7 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
   return (
     <div style={containerPadding}>
       <Container>
-        <h1 style={h1}>Cart</h1>
+        <h1 style={centerh1}>Cart</h1>
         <Table>
           <thead>
             <tr>
@@ -30,11 +30,11 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
           </thead>
           <tbody>
           {
-            getCart.map(x =>
+            getCart.sort((a, b) => a._id === b._id ? a.selectedSize === b.selectedSize ? a.selectedColor < b.selectedColor : a.selectedSize < b.selectedSize : a._id < b._id).map(x => 
               <tr>
                 <td>
                   <img style={images} src={x.images[0]} alt=""/>
-                  <p><b>{x.name}</b> | {x.size}</p>
+                  <p><b>{x.title}</b> | {x.selectedSize} | {x.selectedColor}</p>
                 </td>
                 <td>
                   <p><b>{x.price}$</b></p>
@@ -63,7 +63,7 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
                 <b>Shipping</b>
               </td>
               <td>
-                <b>5.95 $</b>
+                <b>3 $</b>
               </td>
             </tr>
             <tr>
@@ -72,7 +72,7 @@ const Cart = ({ getCart, addToCart, deleteFromCart, deleteALlFromCart }) => {
                 <b>Total</b>
               </td>
               <td>
-                <b>{reducePrice + 5.95} $</b>
+                <b>{reducePrice + 3} $</b>
               </td>
             </tr>
           </tbody>

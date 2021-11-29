@@ -7,7 +7,7 @@ const propTypes = {
   sortArgsForFilter: PropTypes.string.isRequired,
 };
 
-class SortBtn extends Component {
+class BtnSort extends Component {
 
   constructor(props) {
     super(props);
@@ -39,13 +39,13 @@ class SortBtn extends Component {
           Sort: {dropDownWithArrow(sortArgsForFilter)}
         </DropdownToggle>
         <DropdownMenu>
-          {eachDropDown(['nameAsc', 'nameDesc', 'priceAsc', 'priceDesc'])}
+          {eachDropDown(['titleAsc', 'titleDesc', 'priceAsc', 'priceDesc'])}
         </DropdownMenu>
       </ButtonDropdown>
     );
   };
 };
 
-SortBtn.propTypes = propTypes;
+BtnSort.propTypes = propTypes;
 
-export default SortBtn;
+export default BtnSort;

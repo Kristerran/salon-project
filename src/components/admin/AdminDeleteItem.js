@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import FiXCircle from 'react-icons/fi';
+import { FiXCircle } from 'react-icons/fi';
 import axios from 'axios';
 
 class DeleteItem extends Component {
@@ -30,16 +30,16 @@ class DeleteItem extends Component {
     toggle = () => this.setState({ modalEdit: !this.state.modalEdit });
 
     render() {
-        const { name, id } = this.props
+        const { title, id } = this.props
         return (
             <div>
                 <Button size='sm' onClick={this.toggle}><FiXCircle /></Button>
                 <Modal isOpen={this.state.modalEdit} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
-                    <ModalBody>Are you sure you want to delete {name}?
+                    <ModalBody>Are you sure you want to delete {title}?
                     </ModalBody>
                     <ModalFooter>
-                        <Button color='danger' onClick={() => this.handleDelete(id, name)}>Yes, Delete it</Button>{' '}
+                        <Button color='danger' onClick={() => this.handleDelete(id, title)}>Yes, Delete it</Button>{' '}
                         <Button color="secondary" onClick={this.toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>
