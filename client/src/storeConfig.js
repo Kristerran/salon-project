@@ -11,10 +11,10 @@ import {
   itemHasError,
   itemIsLoading,
   reducerPriceRangeFilter
-} from './reducers/listFetchReducer';
+} from './utils/reducers/listFetchReducer';
 import { categoriesProducts } from './reducers/categoriesProductsReducer'
 import { getUserAddress } from './reducers/usersReducer'
-import { cartReducer } from './reducers/cartReducer'
+import { cartReducer } from './utils/reducers/cartReducer'
 
 const rootReducer = combineReducers({
   listFetchDataSuccess,
