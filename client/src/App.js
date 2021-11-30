@@ -39,15 +39,14 @@ function App() {
           <Provider store={store} />
             <NavPane />
             <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/signup' component={Signup} />
-                <Route path='/ServiceMenu' element={<ServiceMenu />} />
-                <Route path='/Profiles' element={<Profiles />} />
-                <Route path='/Store' element={<Store />} />
+              <Route exact path='/' component={Home} />
+              <Route exact path='/Login' component={Login} />
+              <Route path='/ServiceMenu' component={ServiceMenu} />
+              <Route path='/Profiles' component={Profiles} />
+              <Route path='/Store' component={Store} />
             </Switch>
-          <Footer />
-        </div>
+            <Footer />
+          </div>
         </Router>
       </ApolloProvider>
   );

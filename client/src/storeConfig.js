@@ -1,4 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
+
+// import monitorReducersEnhancer from './enhancers/monitorReducers'
+// import loggerMiddleware from './middleware/logger'
+// import rootReducer from './reducers'
+
 import thunk from 'redux-thunk';
 import {
   listFetchDataSuccess,
