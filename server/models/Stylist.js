@@ -9,13 +9,21 @@ const stylistSchema = new Schema({
     },
     speciality: {
         type: String,
-        required: true, 
+        required: true,
     },
     bio: {
         type: String,
-        required: true, 
+        required: true,
     },
-    
+    year: {
+        type: Number,
+        required: true,
+    },
+    imgPath: {
+        type: "String",
+        required: true,
+    }
+
 })
 const Stylist = mongoose.model('Stylist', stylistSchema);
 module.exports = Stylist;
