@@ -41,11 +41,28 @@ type Auth {
 }
 
 type Query {
-
+user: User
+order(_id: ID!): Order
+service(_id: ID!): Service
+services: [Service]
 }
 
 type Mutation {
-
+addUser(
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String
+): Auth
+addOrder(services: [ID]!): Order
+updateUser(
+    firstName: String
+    lastName: String
+    email: String
+    password: String
+): User
+updateService(_id: ID! price: Float!): Service
+login(email: String!, password: String!): Auth
 }
 `;
 
