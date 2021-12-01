@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { Jumbotron, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
 import { isMobile } from "react-device-detect";
 import ItemTags from './ItemTags.js';
 
@@ -50,7 +50,7 @@ const ItemsListBanner = ({
     bannerCoverWomenPc
 
   return (
-    <Jumbotron style={backgroundJumbotron}>
+    <div style={backgroundJumbotron}>
       <Container style={textBanner}>
         <h1 className="display-3" style={titleH1Pc}>{gender === 'men' ? 'Men' : 'Women' }</h1>
         <ItemTags
@@ -60,7 +60,7 @@ const ItemsListBanner = ({
           keywordsForFilter={keywordsForFilter}
         />
       </Container>
-    </Jumbotron>
+    </div>
   )
 };
 

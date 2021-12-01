@@ -12,7 +12,9 @@ import {
 	FILTER_ARGS,
 	FILL_FILTER,
 	ITEM_FETCH_SUCCESS
-} from '../constants.js';
+} from '../actions/constants.js';
+
+import { combineReducers } from 'redux';
 
 export const listHasError = (state = false, action) => {
   switch (action.type) {
@@ -125,3 +127,5 @@ export const itemFetchDataSuccess = (state = [], action) => {
 			return state;
   }
 };
+
+export default combineReducers({listHasError, itemHasError, listIsLoading, itemIsLoading, sortArgsForFilter, sortSizeForFilter, reducerPriceRangeFilter, keywordsForFilter, listFetchDataSuccess, itemFetchDataSuccess  })

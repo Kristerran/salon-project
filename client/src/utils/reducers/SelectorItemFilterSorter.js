@@ -24,23 +24,24 @@ const getFilteredList = (listFetchDataSuccess, keywordsForFilter, sortArgsForFil
       case 'titleAsc':
         if (a.title > b.title) return 1;
         if (a.title < b.title) return -1;
-
+        break;
       case 'titleDesc':
         if (a.title < b.title) return 1;
         if (a.title > b.title) return -1;
-
+        break;
       case 'priceAsc':
         if (a.price > b.price) return 1;
         if (a.price < b.price) return -1;
-
+        break;
       case 'priceDesc':
         if (a.price < b.price) return 1;
         if (a.price > b.price) return -1;
-
+        break;
       default:
-        if (a.title > b.title) return 1;
-        if (a.title < b.title) return -1;
+        return 1;
+
     }
+    return
   })
 }
 

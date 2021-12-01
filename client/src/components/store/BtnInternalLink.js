@@ -9,7 +9,7 @@ const propTypes = {
   content: PropTypes.string.isRequired
 };
 
-const ButtonInternalLink = ({link, sizeBtn, content}) =>
+const BtnInternalLink = ({link, sizeBtn, content}) =>
   <Link to={link}>
     <Button size={sizeBtn}>
       {content}

@@ -61,3 +61,5 @@ const Submenu = ({ sendOneKeyword, gender, itemsListByGender, handleSubMenuExit
 );
 
 Submenu.propTypes = propTypes;
+
+export default Submenu;

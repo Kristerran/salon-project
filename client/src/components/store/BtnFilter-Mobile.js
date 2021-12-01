@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React  from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import ItemsListFilterKeywords from './Item-list-filter-keywords'
-import ItemsListFilterSize from './Items-list-filter-size'
-import ItemListFilterPriceBar from './Item-list-filter-priceBar'
+import FilterByKeywords from './FilterByKeywords.js'
+import FilterBySize from './FilterBySize.js'
+import FilterByPrice from './FilterByPrice.js'
 
 const propTypes = {
   dispatchSize: PropTypes.func.isRequired,
@@ -16,7 +16,7 @@ const propTypes = {
   listLength: PropTypes.number.isRequired
 };
 
-class MobileFilterBtn extends React.Component {
+class BtnFilterMobile extends React.Component {
 
   constructor(props) {
     super(props);
@@ -52,18 +52,18 @@ class MobileFilterBtn extends React.Component {
           <ModalHeader toggle={this.toggle}>Results: <b>{listLength}</b></ModalHeader>
           <ModalBody>
             <h4>Categories</h4>
-              <ItemsListFilterKeywords
+              <FilterByKeywords
                 keywordsForFilter={keywordsForFilter}
                 keywordsSelectAction={keywordsSelectAction}
                 categoriesProducts={categoriesProducts}
               />
             <h4>Size</h4>
-              <ItemsListFilterSize
+              <FilterBySize
                 dispatchSize={dispatchSize}
                 sortSizeForFilter={sortSizeForFilter}
               />
             <h4>Price {`< ${reducerPriceRangeFilter}$`}</h4>
-              <ItemListFilterPriceBar
+              <FilterByPrice
                 actionPriceRangeFilter={actionPriceRangeFilter}
                 reducerPriceRangeFilter={reducerPriceRangeFilter}
               />
@@ -74,6 +74,6 @@ class MobileFilterBtn extends React.Component {
   }
 }
 
-MobileFilterButton.propTypes = propTypes;
+BtnFilterMobile.propTypes = propTypes;
 
-export default MobileFilterButton;
+export default BtnFilterMobile;

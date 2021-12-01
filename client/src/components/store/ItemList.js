@@ -68,7 +68,7 @@ const ItemList = ({
   const { gender } = match.params;
   const listLength = FilteredSortedList.length
 
-  const loading_logic = listIsLoading && <LoadingGif />;
+  const loading_logic = listIsLoading;
 
   const pagination = Math.ceil(listLength/itemsMaxPage)>1 ?
     (<Paginator

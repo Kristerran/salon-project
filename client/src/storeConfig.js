@@ -1,4 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
+
+// import monitorReducersEnhancer from './enhancers/monitorReducers'
+// import loggerMiddleware from './middleware/logger'
+// import rootReducer from './reducers'
+
 import thunk from 'redux-thunk';
 import {
   listFetchDataSuccess,
@@ -11,10 +16,10 @@ import {
   itemHasError,
   itemIsLoading,
   reducerPriceRangeFilter
-} from './reducers/listFetchReducer';
+} from './utils/reducers/listFetchReducer';
 import { categoriesProducts } from './reducers/categoriesProductsReducer'
 import { getUserAddress } from './reducers/usersReducer'
-import { cartReducer } from './reducers/cartReducer'
+import { cartReducer } from './utils/reducers/cartReducer'
 
 const rootReducer = combineReducers({
   listFetchDataSuccess,
