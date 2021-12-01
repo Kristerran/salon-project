@@ -11,6 +11,6 @@ const availableSizes = ['All', '8oz', '16oz', '24oz'];
 
 const FilterBySize = ({dispatchSize, sortSizeForFilter}) => availableSizes.map(x=><Button outline={sortSizeForFilter !== x} color="secondary" onClick={()=> dispatchSize(x)} key={x}>{x}</Button>);
 
-ItemsListFilterSize.propTypes = propTypes;
+FilterBySize.propTypes = propTypes;
 
 export default FilterBySize;

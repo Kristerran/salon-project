@@ -11,7 +11,7 @@ const ProductLabels = ({ reducerPriceRangeFilter, sortArgsForFilter }) => {
 
   const priceLabel = <Badge style={{padding: '10px', margin:'10px'}} color='success'>{`#Price<${reducerPriceRangeFilter} $`} </Badge>
     const sortLabel = <Badge style={{padding: '10px', margin:'10px'}} color='danger'>{`#Sort: ${sortArgsForFilter}`} </Badge>
-  const categoriesLabel = <Badge style={{padding: '10px', margin:'10px'}} color='light' key={x}>{`#${x}`} </Badge>
+  const categoriesLabel = <Badge style={{padding: '10px', margin:'10px'}} color='light' ></Badge>
   return (
     <div style={{fontSize:'20px'}}>
       { sortLabel }

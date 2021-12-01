@@ -1,7 +1,7 @@
 import React from "react";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Button } from "reactstrap";
 
-import '../../css/home/profiles.css';
+// import '../../css/home/profiles.css';
 
 function StylistCard(props) {
     return (

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Slider from 'react-rangeslider';
-import '../style/rangeslider.min.css';
+import '../../css/rangeslider.min.css';
 
 const propTypes = {
   actionPriceRangeFilter: PropTypes.func.isRequired,

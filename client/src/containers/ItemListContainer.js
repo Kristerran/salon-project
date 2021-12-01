@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
-} from '../actions/DataFetchActions.js';
+} from '../utils/actions/DataFetchAction.js';
 
-import { selectorListFilterSorter } from '../selectors/selector_list_products_filter_sorter';
-import ItemsList from '../components/store/ItemList.js';
+import { selectorListFilterSorter } from '../utils/reducers/SelectorItemFilterSorter.js';
+import ItemList from '../components/store/ItemList.js';
 
 class ItemListContainer extends Component {
 
@@ -27,12 +27,16 @@ class ItemListContainer extends Component {
     Number.isInteger(x) && this.setState({currentPage: x + 1});
   };
 
-  render = () => <ItemList
+  render = () => (
+    <>
+      storePage
+      <ItemList
       {...this.props}
       {...this.state}
       currentPageHandler={this.currentPageHandler}
-    />
-}
+      />
+      </>
+  )}
 
 const mapStateToProps = state => {
   const { keywordsForFilter, sortSizeForFilter, categoriesProducts, listIsLoading, reducerPriceRangeFilter,sortArgsForFilter } = state;

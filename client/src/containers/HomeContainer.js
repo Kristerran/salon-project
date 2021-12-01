@@ -1,68 +1,66 @@
 import React from "react";
-import { Card, Container, Button, Col, Row } from "react-bootstrap";
+import { Card, Container, Button, Row, CardImg, CardBody, CardTitle } from "reactstrap";
 
-import '../../css/home/home.css';
-
-import NavPane from "../components/navpane.js";
+import '../css/home/home.css';
 import HeroBanner from '../components/home/HeroBanner.js';
 import HomeCarousel from '../components/store/HomeCarousel.js';
 
 //import cards
-import TestimonialCards from "../components/home/TestimonialCard.js";
+// import TestimonialCards from "../components/home/TestimonialCardjs";
 //import model with prop data
-import TestimonialModel from '../../server/models/Testimonials.js';
-const testimonialInfo = TestimonialModel;
 
-import Footer from "../components/footer/footer.js";
+
+import Footer from "../components/footer.js";
 
 // layout idea- see Example from '../../assets/images/example1.png';
-import Placeholder from '../../assets/images/placeholder.png';
+import Placeholder from '../assets/images/placeholder.png';
 
 
 
-const Home = () => (
+function Home() {
+    return (
         <Container>
-            <NavPane />
-            <Helmet>
+            <div>
                 <title> ENTER TITLE HERE</title>
                 <meta name="description" content="company name"></meta>
-            </Helmet>
+            </div>
             <HeroBanner />
             <div><HomeCarousel /></div>
             <div>
                 <Card className="profiles">
-                    <Card.Img variant="top" src={Placeholder} alt="card-image" />
-                    <Card.Body>
-                        <Card.Title>ENTER BLURB HERE</Card.Title>
+                    <CardImg variant="top" src={Placeholder} alt="card-image" />
+                    <CardBody>
+                        <CardTitle>ENTER BLURB HERE</CardTitle>
                         <Button href="/profiles">Meet our Team of Stylists</Button>
-                    </Card.Body>
+                    </CardBody>
                 </Card>
                 <Card className="products">
-                    <Card.Img variant="top" src={Placeholder} alt="card-image" />
-                    <Card.Body>
-                        <Card.Title>ENTER BLURB HERE</Card.Title>
+                    <CardImg variant="top" src={Placeholder} alt="card-image" />
+                    <CardBody>
+                        <CardTitle>ENTER BLURB HERE</CardTitle>
                         <Button href="/profiles">View our selection of products</Button>
-                    </Card.Body>
+                    </CardBody>
                 </Card>
             </div>
             <div>
                 <Card className="location">
-                    <Card.Img variant="left" src={Placeholder} alt='google map snippet' />
-                    <Card.Body>
-                        <Card.Title>SOME WORDS</Card.Title>
+                    <CardImg variant="left" src={Placeholder} alt='google map snippet' />
+                    <CardBody>
+                        <CardTitle>SOME WORDS</CardTitle>
                         <Button href="googlemaps.com/.....">Find us on Google Maps</Button>
-                    </Card.Body>
+                    </CardBody>
                 </Card>
             </div>
             <Row>
-                <Col md={3}>
+                {/* <Col md={3}>
                     {testimonialInfo.map((each) => (
                         <TestimonialCards quote={each.quote} image={each.image} name={each.name} rating={each.rating}/>
                     ))}
-                </Col>
+                </Col> */}
             </Row>
             <Footer />
-         </Container >
-);
+        </Container >
+    );
+}
 
 export default Home;

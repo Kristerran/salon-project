@@ -1,6 +1,6 @@
 import React from 'react'
 import { isMobile } from "react-device-detect";
-import { Jumbotron, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 const styles = {
   bannerCoverPc: {
@@ -31,14 +31,14 @@ const styles = {
 const { bannerCoverPc, bannerCoverMobile, textBanner, titleH1Mobile, titleH1Pc } = styles
 
 const HeroBanner = () => (
-  <Jumbotron fluid style={isMobile? bannerCoverMobile : bannerCoverPc}>
+  <div fluid style={isMobile? bannerCoverMobile : bannerCoverPc}>
     <Container fluid style={{height: '300px'}}>
       <div style={textBanner}>
         <h1 className="display-3" style={isMobile ? titleH1Mobile : titleH1Pc}>SALON NAME</h1>
         <p>BLURB</p>
       </div>
     </Container>
-  </Jumbotron>
+  </div>
 );
 
 export default HeroBanner;

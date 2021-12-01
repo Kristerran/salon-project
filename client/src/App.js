@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import { Provider } from 'react-redux';
@@ -9,14 +10,14 @@ import './css/App.css';
 import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavPane from './components/navpane.js';
-import Footer from './components/footer/footer.js';
+import NavPane from './containers/navpane.js';
+import Footer from './components/footer.js';
 import Login from './containers/LoginContainer.js';
-import Signup from './containers/SignupContainer.js';
-import Home from './components/home/home.js';
-import ServiceMenu from './components/service-menu/service-menu.js';
-import Profiles from './components/profiles/profiles.js';
-import Store from './components/containers/ItemListContainer.js';
+// import Signup from './containers/SignupContainer.js';
+import Home from './containers/HomeContainer.js';
+import ServiceMenu from './components/service-menu/ServiceMenu.js';
+import Profiles from './components/stylist-profiles/stylists.js';
+import Store from './containers/ItemListContainer.js';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -38,17 +39,17 @@ function App() {
         <div className="App">
           <Provider store={store} />
             <NavPane />
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/Login' component={Login} />
-              <Route path='/ServiceMenu' component={ServiceMenu} />
-              <Route path='/Profiles' component={Profiles} />
-              <Route path='/Store' component={Store} />
-            </Switch>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/serviceMenu' element={<ServiceMenu />} />
+              <Route path='/profiles' element={<Profiles />} />
+              <Route path='/store' element={<Store />} />
+            </Routes>
             <Footer />
           </div>
-        </Router>
-      </ApolloProvider>
+      </Router>
+    </ApolloProvider>
   );
 }
 

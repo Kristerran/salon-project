@@ -12,7 +12,7 @@ import {
   ITEM_IS_LOADING,
   FILL_FILTER,
   ITEM_FETCH_SUCCESS
-} from '../constants';
+} from './constants';
 
 export const listHasError = bool => ({
   type: LIST_ERROR,

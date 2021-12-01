@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav, NavbarBrand, NavbarToggler, NavLink, Collapse} from 'reactstrap';
 import '../css/navbar.css';
 
 //feel free to change the icons, just be sure to update the icons call tags in
@@ -14,22 +14,22 @@ function NavPane() {
 
     return (
 
-        <Navbar collapseOnSelect sticky="top" expand="lg">
+        <Navbar sticky="top" expand="lg">
             <>
-                <Navbar.Brand href="/">INSERT TEXT FOR LOGO HERE</Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
+                <NavbarBrand href="/">INSERT TEXT FOR LOGO HERE</NavbarBrand>
+                <NavbarToggler aria-controls="responsive-navbar-nav" />
+                <Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/home">Home<FaHome /></Nav.Link>
-                        <Nav.Link href="/service-menu"><MdMenuBook />Services</Nav.Link>
-                        <Nav.Link href="/profiles"><CgProfile />Stylists</Nav.Link>
-                        <Nav.Link href="/store"><FaStore />Store</Nav.Link>
+                        <NavLink href="/home">Home<FaHome /></NavLink>
+                        <NavLink href="/service-menu"><MdMenuBook />Services</NavLink>
+                        <NavLink href="/profiles"><CgProfile />Stylists</NavLink>
+                        <NavLink href="/store"><FaStore />Store</NavLink>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login"><BiLogIn />Login</Nav.Link>
-                        <Nav.Link href="/cart"><MdOutlineLocalGroceryStore />Cart</Nav.Link>
+                        <NavLink href="/login"><BiLogIn />Login</NavLink>
+                        <NavLink href="/cart"><MdOutlineLocalGroceryStore />Cart</NavLink>
                     </Nav>
-            </Navbar.Collapse>
+            </Collapse>
             </>
         </Navbar>
     );

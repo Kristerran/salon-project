@@ -23,7 +23,7 @@ const styles = {
   }
 }
 
-const ButtonLinkGenderPage = ({gender, content=gender}) => {
+const BtnLinkGenderPage = ({gender, content=gender}) => {
 
   const {buttonStylePc, buttonStyleMobile } = styles
 
