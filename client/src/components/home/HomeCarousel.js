@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
 import { Carousel, CarouselItem, CarouselControl, Col, Row } from 'reactstrap';
-import ButtonInternalLink from './BtnInternalLink.js';
-import Placeholder from '../../assets/images/placeholder.png';
+import ButtonInternalLink from '../store/BtnInternalLink.js';
 
-const styles = {
-  sliderContent: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    color:'white'
-  }
-}
 
 const items = [
   {
-    src: {Placeholder},
-    altText: 'Slide 1',
-    caption: 'Slide 1',
     title: 'Womens haircare',
     subtitle: 'ya',
     btn: {
@@ -27,9 +14,6 @@ const items = [
     }
   },
   {
-    src: {Placeholder},
-    altText: 'Slide 2',
-    caption: 'Slide 2',
     title: "Mens Haircare",
     subtitle: 'Ya',
     btn: {
@@ -39,9 +23,6 @@ const items = [
     }
   },
   {
-    src: {Placeholder},
-    altText: 'Slide 3',
-    caption: 'Slide 3',
     title: 'Services',
     subtitle: 'Amazing!',
     btn: {
@@ -94,13 +75,10 @@ class HomeCarousel extends Component {
           key={x.src}
         >
           <Row  style={{backgroundColor: '#072a48'}}>
-            <Col md="6">
-              <img src={x.src} alt={x.altText} style={{width: '100%', maxHeight: '500px'}}/>
-            </Col>
-            <Col md="6" style={styles.sliderContent}>
+            <Col md="12">
               <h2>{x.title}</h2>
               <p>{x.subtitle}</p>
-              <ButtonInternalLink 
+              <ButtonInternalLink
                 content={x.btn.content}
                 link={x.btn.link}
                 lightOrDark='light'

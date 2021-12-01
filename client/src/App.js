@@ -15,9 +15,9 @@ import Footer from './components/footer.js';
 import Login from './containers/LoginContainer.js';
 // import Signup from './containers/SignupContainer.js';
 import Home from './containers/HomeContainer.js';
-import ServiceMenu from './components/service-menu/ServiceMenu.js';
-import Profiles from './components/stylist-profiles/stylists.js';
-import Store from './containers/ItemListContainer.js';
+import Services from './containers/Services.js';
+import Profiles from './containers/stylists.js';
+import Store from './containers/StoreContainer.js';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -42,7 +42,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/login' element={<Login />} />
-              <Route path='/serviceMenu' element={<ServiceMenu />} />
+              <Route path='/service-menu' element={<Services />} />
               <Route path='/profiles' element={<Profiles />} />
               <Route path='/store' element={<Store />} />
             </Routes>

@@ -12,12 +12,11 @@ function StylistCard(props) {
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>Specializes In:
                         <span>
-                            <li>{props.specialty1}</li>
-                            <li>{props.specialty2}</li>
-                            <li>{props.specialty3}</li>
+                            <li>{props.specialty}</li>
                         </span>
                     </Card.Text>
-                    <Card.Text>Years of Experience<span>{props.years}</span></Card.Text>
+                    <Card.Text>Bio<span>{props.bio}</span></Card.Text>
+                    <Card.Text>Years of Experience<span>{props.year}</span></Card.Text>
                     <Button>Book an Appointment</Button>
                 </Card.Body>
             </Card>

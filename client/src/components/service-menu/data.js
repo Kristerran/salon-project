@@ -1,12 +1,68 @@
-const Menu = [
+const items = [
     {
-        id: '',
-        title: '',
-        category: '',
-        price: '',
+        id: '1',
+        title: ' womens haircut',
+        category: 'Cut',
+        price: '1000',
         img: '',
-        description: ''
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '2',
+        title: 'partial highlight',
+        category: 'Color',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '3',
+        title: 'keratin',
+        category: 'Treatment',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '4',
+        title: 'all over color',
+        category: 'Color',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '1',
+        title: ' womens haircut',
+        category: 'Cut',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '2',
+        title: 'partial highlight',
+        category: 'Color',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '3',
+        title: 'keratin',
+        category: 'Treatment',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
+    },
+    {
+        id: '4',
+        title: 'all over color',
+        category: 'Color',
+        price: '1000',
+        img: '',
+        desc: 'sdfsdfdsfsdf'
     }
 ]
 
-export default Menu;
+export default items;

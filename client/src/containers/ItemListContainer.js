@@ -29,7 +29,6 @@ class ItemListContainer extends Component {
 
   render = () => (
     <>
-      storePage
       <ItemList
       {...this.props}
       {...this.state}

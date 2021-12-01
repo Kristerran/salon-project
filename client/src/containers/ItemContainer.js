@@ -29,7 +29,7 @@ class ItemContainer extends Component {
 const mapStateToProps = state => ({
   infoItem: state.itemFetchDataSuccess,
   loading: state.itemIsLoading,
-  errorFetching: state.itemHasErrorm,
+  errorFetching: state.itemHasError,
   totalItemsSelectorStats: selectorTotalItemsCart(state)
 });
 

@@ -9,12 +9,10 @@ function SocialIcons() {
 
     return (
         <>
-            <ul>
-                <li><a href="https://facebook.com"><AiFillFacebook /></a></li>
-                <li><a href="https://twitter.com"><AiFillTwitterSquare /></a></li>
-                <li><a href="https://instagram.com"><AiFillInstagram /></a></li>
-                <li><a href="https://yelp.com"><FaYelp /></a></li>
-            </ul>
+                <a href="https://facebook.com"><AiFillFacebook /></a>
+                <a href="https://twitter.com"><AiFillTwitterSquare /></a>
+                <a href="https://instagram.com"><AiFillInstagram /></a>
+                <a href="https://yelp.com"><FaYelp /></a>
         </>
     );
 }
