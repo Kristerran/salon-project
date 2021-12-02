@@ -1,7 +1,5 @@
 
 import React from 'react';
-import '../../css/menu.css';
-
 
 const Menu = ({ items }) => {
   return (

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import Menu from '../components/service-menu/Menu.js';
-import Categories from '../components/service-menu/Categories.js';
-import items from '../components/service-menu/data.js';
-import '../css/menu.css';
+
+import Menu from './Menu.js';
+import Categories from '.Categories.js';
+
+import items from '.data.js';
+
+import '../../css/services/services.css';
+
 
 const allCategories = ['all', ...new Set(items.map(item => item.category))]
 
@@ -23,7 +27,6 @@ function Services() {
             <section className="menu section">
                 <div className="title">
                     <h2>Our Services</h2>
-                    <div className="underline" />
                 </div>
                 <Categories categories={categories} filterItems={filterItems} />
                 <Menu items={menuItems} />
