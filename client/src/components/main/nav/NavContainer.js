@@ -3,7 +3,6 @@ import '../../../css/main/nav.css';
 
 // import Logo from "../../Logo.js";
 import MainMenu from './MainMenu.js';
-import MobileNav from './MobileMenu.js';
 import SocialIcons from '../social-icons.js';
 
 
@@ -28,7 +27,6 @@ function NavContainer() {
                         <div className='row'>
                             {/* <Logo /> */}
                             <MainMenu />
-                            <MobileNav />
                         </div>
                     </div>
                 </div>

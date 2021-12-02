@@ -1,112 +1,136 @@
 import React from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from 'reactstrap';
 
-function MainMenu() {
-    return (
-        <nav className="main-menu">
-            <ul>
-                <li>
-                    <a href="/home">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/book">
-                        <span>Book</span>
-                    </a>
-                </li>
+export default class MainMenu extends React.Component {
+    constructor(props) {
+      super(props);
 
-                <li class='dropdown services'>
-                    <a href="/service-menu" aria-haspopup="true">
-                        <span>Services</span>
-                    </a>
-                    <ul className="submenu">
-                        <li className="submenu-item">
-                            <a href="#hair" aria-haspopup="true">
-                                <span>Hair Solutions</span>
-                            </a>
-                            <ul className="submenu">
-                                <li className="submenu-item">
-                                    <a href="#haircut"><span>Haircuts</span></a>
-                                </li>
-                                <li className="submenu-item">
-                                    <a href="#color"><span>Hair Color</span></a>
-                                </li>
-                                <li className="submenu-item">
-                                    <a href="#styling"><span>Hair Styling</span></a>
-                                </li>
-                                <li className="submenu-item">
-                                    <a href="#extensions"><span>Hair Extensions</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="submenu-item">
-                            <a href="#treatments"> <span>Treatments</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/about">
-                        <span>About</span>
-                    </a>
-                    <ul className="submenu">
-                        <li>
-                            <a href="#bio"><span>About SALON NAME</span></a>
-                        </li>
-                        <li>
-                            <a href="#profiles"><span>Our Stylists</span></a>
-                        </li>
-                        <li>
-                            <a href="#hours"><span> Our Hours</span></a>
-                        </li>
-                        <li className="submenu-item">
-                            <a href="#contact" aria-haspopup="true">
-                                <span>Contact Us</span>
-                            </a>
-                            <ul className="submenu">
-                                <li className="submenu-item">
-                                    <a href="#map"><span>Location</span></a>
-                                </li>
-                                <li className="submenu-item">
-                                    <a href="#contact-info"><span>Contact</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/testimonials">
-                        <span>Reviews</span>
-                    </a>
-                    <ul className="submenu">
-                        <li>
-                            <a href="#testimonials"><span>Our clients</span></a>
-                        </li>
-                        <li>
-                            <a href="#new-review"><span>Leave us a review</span></a>
-                            <ul className="submenu">
-                                <li>
-                                    <a href="mailto:email@email.com"><span>Email Us</span></a>
-                                </li>
-                                <li>
-                                    <a href="www.google.com/salonName"><span>Google review</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/store">
-                        <span>Products</span>
-                    </a>
-                    <ul className="submenu">
-                        <li>
-                            <a href='/store'><span>Shop Our Salon Products</span></a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    )
-}
+      this.toggle = this.toggle.bind(this);
+      this.state = {
+        isOpen: false
+      };
+    }
+    toggle() {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    }
 
-export default MainMenu;
+    render() {
+      return (
+        <>
+          <Navbar color="light" light expand="md">
+            <NavbarBrand href="/">ENTER LOGO HERE</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="/">Home</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/BookContainer.js">Appointments</NavLink>
+                </NavItem>
+
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>Services</DropdownToggle>
+                  <DropdownMenu right>
+                    <UncontrolledDropdown nav inDropdownItem direction="right">
+                        <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem>
+                                <NavLink href="/menu/#cut">Cuts</NavLink>
+                            </DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem>
+                                <NavLink href="/menu/#color">Color</NavLink>
+                            </DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem>
+                                <NavLink href="/menu/#styling">Styling</NavLink>
+                            </DropdownItem>
+                            <DropdownItem divider />
+                            <DropdownItem>
+                                <NavLink href="/menu/#extensions">Extensions</NavLink>
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
+                    <DropdownItem divider />
+                        <DropdownItem>
+                            <NavLink href="/menu/#treatments">Hair Treatments</NavLink>
+                        </DropdownItem>
+                 </DropdownMenu>
+                </UncontrolledDropdown>
+
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>About</DropdownToggle>
+                  <DropdownMenu down>
+                        <DropdownItem>
+                            <NavLink href="/about">Who We Are</NavLink>
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                            <NavLink href="/about/stylistCard">Our Stylists</NavLink>
+                            </DropdownItem>
+                        <DropdownItem divider />
+                        <UncontrolledDropdown nav inDropdownItem direction="right">
+                        <DropdownToggle nav caret>Contact Us</DropdownToggle>
+                            <DropdownMenu right>
+                                <DropdownItem>
+                                    <NavLink href="/menu/map">Location</NavLink>
+                                    </DropdownItem>
+                                          <DropdownItem>
+                                          <NavLink href="/menu/hours">
+                                          Hours</NavLink></DropdownItem>
+                                <DropdownItem>Contact Info </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                   </DropdownMenu>
+                </UncontrolledDropdown>
+
+                <UncontrolledDropdown nav in Navbar>
+                <DropdownToggle nav caret>Testimonials</DropdownToggle>
+                  <DropdownMenu down>
+                        <DropdownItem>Our Clients</DropdownItem>
+                        <DropdownItem divider />
+                        <UncontrolledDropdown nav in Navbar direction="right">
+                        <DropdownToggle nav caret>Leave A Review</DropdownToggle>
+                            <DropdownMenu down>
+                                <DropdownItem>
+                                    <NavLink href="www.google.com">Review Us on Google </NavLink>
+                                    </DropdownItem>
+                                <DropdownItem divider />
+                                    <DropdownItem>
+                                        <NavLink href="mailto:email@email.com">Email Us</NavLink>
+                                    </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                    </DropdownMenu>
+                </UncontrolledDropdown>
+
+                <UncontrolledDropdown nav in Navbar>
+                <DropdownToggle nav caret>Products</DropdownToggle>
+                    <DropdownMenu down>
+                        <DropdownItem>
+                            <NavLink href="/storeContainer">All Products</NavLink>
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                            <NavLink href="/storeContainer/">Shampoo & Conditioner</NavLink>
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                            <NavLink href="/storeContainer/#style">Styling Products</NavLink>
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                            <NavLink href="/storeContainer/#accessories">Accessories</NavLink>
+                        </DropdownItem>
+                    </DropdownMenu>
+                </UncontrolledDropdown>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </>
+      );
+    }
+  }
