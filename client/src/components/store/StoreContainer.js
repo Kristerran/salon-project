@@ -1,7 +1,7 @@
 import React from "react";
 import { Container} from "reactstrap";
-import NavBarContainer from '../components/store/StoreNav.js';
-import ItemListGender from '../components/store/ItemListGender.js';
+import NavBarContainer from './StoreNav.js';
+import ItemListGender from './ItemListGender.js';
 import '../css/store/store.css';
 import { Provider } from 'react-redux';
 

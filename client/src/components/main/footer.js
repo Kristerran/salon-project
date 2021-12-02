@@ -4,7 +4,7 @@ import { Row, Col } from 'reactstrap';
 
 import '../css/footer/footer.css'
 
-import SocialIcons from "../containers/social-icons.js";
+import SocialIcons from "./social-icons.js";
 // import Placeholder from "../assets/images/placeholder.png"
 
 

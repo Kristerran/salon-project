@@ -10,14 +10,13 @@ import './css/App.css';
 import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavPane from './containers/navpane.js';
-import Footer from './components/footer.js';
-import Login from './containers/LoginContainer.js';
-// import Signup from './containers/SignupContainer.js';
-import Home from './containers/HomeContainer.js';
-import Services from './containers/Services.js';
-import Profiles from './containers/stylists.js';
-import Store from './containers/StoreContainer.js';
+import NavContainer from './components/main/nav/NavContainer.js';
+import Footer from './components/main/footer.js';
+import Home from './components/home/HomeContainer.js';
+import Services from './components/services/ServicesContainer.js';
+import About from './components/about/AboutContainer.js';
+import Reviews from './components/reviews/ReviewsContainer.js';
+import Store from './components/store/StoreContainer.js';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -38,12 +37,12 @@ function App() {
       <Router>
         <div className="App">
           <Provider store={store} />
-            <NavPane />
+            <NavContainer />
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/service-menu' element={<Services />} />
-              <Route path='/profiles' element={<Profiles />} />
+              <Route path='/services' element={<Services />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/reviews' element={<Reviews />} />
               <Route path='/store' element={<Store />} />
             </Routes>
             <Footer />

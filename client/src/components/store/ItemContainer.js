@@ -3,7 +3,7 @@ import { fetchItemApi } from '../actions/DataFetchAction.js';
 import { addToCart } from '../actions/CartAction.js';
 import { connect } from 'react-redux';
 import { selectorTotalItemsCart } from '../selectors/SelectorListStats.js';
-import Item from '../components/store/Item.js';
+import Item from './Item.js';
 
 class ItemContainer extends Component {
 
