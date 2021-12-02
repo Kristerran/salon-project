@@ -1,0 +1,25 @@
+/* Hero Banner */
+
+.bannerCoverPc {
+    background-image: 'url("/images/banner-cover-pc.jpg")',
+    background-size: 'cover'
+  };
+  .bannerCoverMobile {
+    background-image: 'url("/images/banner-cover-mobile.jpg")',
+    background-size: 'cover'
+  };
+  .textBanner {
+    text-shadow: "3px 3px 3px grey",
+    text-align: 'center',
+    color:'white'
+  };
+  .centerButtons {
+    text-align: 'center',
+    padding: '30px'
+  };
+  .titleH1Pc {
+    fontsize: '80px'
+  };
+  .titleH1Mobile {
+    font-size: '60px'
+  };
