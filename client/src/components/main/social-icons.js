@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/social-icons.css';
+import '../../css/main/social-icons.css';
 
 import { AiFillFacebook, AiFillTwitterSquare, AiFillInstagram } from "react-icons/ai";
 import { FaYelp } from "react-icons/fa";

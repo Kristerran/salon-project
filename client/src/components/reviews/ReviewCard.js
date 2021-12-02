@@ -1,24 +1,21 @@
 import React from "react";
-import { Container } from "reactstrap";
 
-import '../../css/home/testimonials.css';
+import './data.js';
 
-
-
-function TestimonialCard(props) {
+function ReviewCard(review) {
     return (
-        <Container>
-            <figure className="testimonial-card">
-                <blockquote>{item.quote}</blockquote>
+        <>
+            <figure className="review-card">
+                <blockquote>{review.quote}</blockquote>
                 <div class="author">
-                    <img src={item.image} alt="image of person" />
-                    <h5>{item.name} <span>{item.rating}</span></h5>
+                    <img src={review.imgPath} alt="image of person" />
+                    <h5>{review.name} <span>{review.date}</span><span>{review.rating}</span></h5>
                 </div>
             </figure>
-        </Container>
+        </>
     );
 }
 
-export default TestimonialCard;
+export default ReviewCard;
 
-source: https://codepen.io/ashcon/pen/MEoeaE
+// source: https://codepen.io/ashcon/pen/MEoeaE

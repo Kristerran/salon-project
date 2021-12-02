@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Col, Row } from 'reactstrap';
+import { Col, Row, Button } from 'reactstrap';
 
-import BookApptForm from '../book/BookApptForm.js';
+// import BookingForm from '../book/BookingForm.js';
 
 function BookCard() {
     return (
         <Row>
-            <Col md={12} style="textAlign: center">
+            <Col md={12} style={{textAlign: "center"}}>
                 <h2>Book An Appointment</h2>
                 <h6>BLURB</h6>
             </Col>
@@ -17,7 +17,7 @@ function BookCard() {
                 <Button><a href="../book/BookContainer">See Our Availability</a></Button>
             </Col>
             <Col md={6}>
-                <BookApptForm />
+                {/* <BookingForm /> */}
             </Col>
         </Row>
     )

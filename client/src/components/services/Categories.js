@@ -3,7 +3,7 @@ import React from 'react';
 const Categories = ({ categories, filterItems }) => {
     return (
         <>
-            <button><a href='../book/BookApptForm.js'></a>Book An Appointment</button>
+            <button><a href='../book/BookApptForm.js'>Book An Appointment</a></button>
             <div className="btn-container">
                 {categories.map((category, index) => {
                     return (

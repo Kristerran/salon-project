@@ -11,10 +11,10 @@ import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import NavContainer from './components/main/nav/NavContainer.js';
-import Home from './components/home/home.js';
+import Home from './components/home/HomeContainer.js';
 import Services from './components/services/ServicesContainer.js';
 import About from './components/about/AboutContainer.js';
-import Reviews from './components/reviews/ReviewsContainer.js';
+import Reviews from './components/reviews/ReviewContainer.js';
 import Store from './components/store/StoreContainer.js';
 import Footer from './components/main/footer.js';
 

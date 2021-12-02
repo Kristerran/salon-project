@@ -1,9 +1,10 @@
 import React from 'react';
-import '../css/navbar.css';
+import '../../../css/main/nav.css';
 
-import Logo from "../../Logo.js";
+// import Logo from "../../Logo.js";
 import MainMenu from './MainMenu.js';
 import MobileNav from './MobileMenu.js';
+import SocialIcons from '../social-icons.js';
 
 
 
@@ -25,7 +26,7 @@ function NavContainer() {
                     <div className="header-sticky" style={{ display: 'none' }}></div>
                     <div className="nav-header">
                         <div className='row'>
-                            <Logo />
+                            {/* <Logo /> */}
                             <MainMenu />
                             <MobileNav />
                         </div>

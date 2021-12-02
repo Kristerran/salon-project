@@ -2,14 +2,9 @@ import React from "react";
 import { Container} from "reactstrap";
 import NavBarContainer from './StoreNav.js';
 import ItemListGender from './ItemListGender.js';
-import '../css/store/store.css';
 import { Provider } from 'react-redux';
 
-// layout idea- see Example from '../../assets/images/example1.png';
-// import Placeholder from '../assets/images/placeholder.png';
-// import { BiStore } from "react-icons/bi";
-
-
+import '../../css/store/store.css';
 
 function StoreContainer() {
     return (

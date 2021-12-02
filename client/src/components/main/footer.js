@@ -2,7 +2,7 @@ import React from "react";
 
 import { Row, Col } from 'reactstrap';
 
-import '../css/footer/footer.css'
+import '../../css/main/footer.css';
 
 import SocialIcons from "./social-icons.js";
 // import Placeholder from "../assets/images/placeholder.png"
@@ -20,20 +20,33 @@ function Footer() {
                     </div>
                     <div className="col-sm-12 col-md-4">
                         <h6>Contact Us</h6>
-                        <ul style={{listStyle:'none'}}>
-                            <li>Phone: </li>
-                            <li>Address:</li>
-                            <li>Hours:</li>
-                            <li>Hours2:</li>
-                        </ul>
+                        <Row>
+                            <Col>Phone</Col>
+                            <Col>555-555-555</Col>
+                        </Row>
+                        <Row>
+                            <Col>Address</Col>
+                            <Col>2 water st</Col>
+                        </Row>
+                        <Row>
+                            <Col><h6>Hours</h6></Col>
+                        </Row>
+                        <Row>
+                            <Col>Sunday - Monday</Col>
+                            <Col>Closed</Col>
+                        </Row>
+                        <Row>
+                            <Col>Tuesday - Saturday</Col>
+                            <Col>10:00 AM - 7:00 PM</Col>
+                        </Row>
                     </div>
                     <div className=" col-sm-12 col-md-3">
                         <h6>LINKS</h6>
                         <ul className="footer-links">
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/service-menu">Services</a></li>
-                            <li><a href="/portfolios">Stylists</a></li>
-                            <li><a href="/store">Shop Products</a></li>
+                            <li><a href="../home/HomeContainer.js">Home</a></li>
+                            <li><a href="../services/ServicesContainer.js">Services</a></li>
+                            <li><a href="../about/AboutContainer.js">About</a></li>
+                            <li><a href="../store/StoreContainer.js">Products</a></li>
                         </ul>
                     </div>
                     {/* <img className="col-xs-6 col-md-3" src={Placeholder} alt="logo">INSERT LOGO HERE</img> */}

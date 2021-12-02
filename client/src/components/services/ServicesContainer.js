@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Menu from './Menu.js';
-import Categories from '.Categories.js';
+import Categories from './Categories.js';
 
-import items from '.data.js';
+import items from './data.js';
 
 import '../../css/services/services.css';
 

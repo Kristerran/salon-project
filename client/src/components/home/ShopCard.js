@@ -5,7 +5,7 @@ import Placeholder from '../../assets/images/placeholder.png';
 function ShopCard() {
     return (
         <Row>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
                     <CardImg src={Placeholder} alt="Card image" />
                     <CardImgOverlay>
@@ -14,7 +14,7 @@ function ShopCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
                     <CardImg src={Placeholder} alt="Card image" />
                     <CardImgOverlay>
@@ -23,7 +23,7 @@ function ShopCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
                     <CardImg src={Placeholder} alt="Card image" />
                     <CardImgOverlay>
@@ -32,7 +32,7 @@ function ShopCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
                     <CardImg src={Placeholder} alt="Card image" />
                     <CardImgOverlay>
