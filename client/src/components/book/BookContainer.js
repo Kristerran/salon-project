@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Col, Row } from 'reactstrap';
 
+import '../../css/booking/booking.css';
+
 import BookApptForm from './BookApptForm.js';
 import Calendar from './Calendar.js';
 import Hours from "../about/Hours.js";
@@ -28,4 +30,4 @@ function BookContainer() {
     )
 }
 
-export default BookCard;
+export default BookContainer;
