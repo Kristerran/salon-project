@@ -1,10 +1,12 @@
 import React from "react";
 
 import '../../css/home/home.css';
-import Placeholder from '../assets/images/placeholder.png';
 
 import HeroBanner from './HeroBanner.js';
-import About from './AboutCard.js';
+import AboutCard from './AboutCard.js';
+import ServiceCard from './ServiceCard.js';
+import BookCard from './BookCard.js';
+import ShopCard from './ShopCard.js';
 
 
 
