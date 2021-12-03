@@ -1,6 +1,9 @@
 sources:
 store components:
-https://github.com/Fuglydami/react-menu-list/blob/main/src/Categories.js & https://github.com/NielsDom/ecommerce-react/blob/master/client/src/components/Admin-form-add-item.js
+https://github.com/Fuglydami/react-menu-list/blob/main/src/Categories.js &
+https://github.com/NielsDom/ecommerce-react/blob/master/client/src/components/Admin-form-add-item.js
+https://dolcevitasalon-sr.com/#aboutus
+https://github.com/alaminsahed/onlineShop
 
 # Getting Started with Create React App
 
