@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import Menu from './Menu.js';
 import Categories from './Categories.js';
-
 import items from './data.js';
 
 import '../../css/services/services.css';
@@ -29,7 +28,7 @@ function Services() {
                     <h2>Our Services</h2>
                 </div>
                 <Categories categories={categories} filterItems={filterItems} />
-                <Menu items={menuItems} />
+                <Menu items={menuItems}/>
             </section>
         </main>
     );

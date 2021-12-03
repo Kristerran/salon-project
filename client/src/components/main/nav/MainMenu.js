@@ -28,7 +28,7 @@ export default class MainMenu extends React.Component {
                   <NavLink><Link to="/">Home<span> | </span></Link></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink><Link to="/BookContainer">Appointments<span> | </span></Link></NavLink>
+                  <NavLink><Link to="/book">Appointments<span> | </span></Link></NavLink>
                 </NavItem>
 
                 <UncontrolledDropdown nav inNavbar>
@@ -38,25 +38,25 @@ export default class MainMenu extends React.Component {
                         <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem>
-                                <Link to="/menu">Cuts</Link>
+                                <Link to="/services">Cuts</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <Link to="/menu">Color</Link>
+                                <Link to="/services">Color</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <Link to="/menu">Styling</Link>
+                                <Link to="/services">Styling</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <Link to="/menu">Extensions</Link>
+                                <Link to="/services">Extensions</Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <DropdownItem divider />
                         <DropdownItem>
-                            <Link to="/menu">Hair Treatments</Link>
+                            <Link to="/services">Hair Treatments</Link>
                         </DropdownItem>
                  </DropdownMenu>
                 </UncontrolledDropdown>
@@ -69,19 +69,21 @@ export default class MainMenu extends React.Component {
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <Link to="/stylistCards">Our Stylists</Link>
+                            <Link to="/stylists">Our Stylists</Link>
                             </DropdownItem>
                         <DropdownItem divider />
                         <UncontrolledDropdown nav inDropdownItem direction="right">
                         <DropdownToggle nav caret>Contact Us</DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    <Link to="/map">Location</Link>
-                                    </DropdownItem>
-                                          <DropdownItem>
-                                          <Link to="/hours">
-                                          Hours</Link></DropdownItem>
-                                <DropdownItem>Contact Info </DropdownItem>
+                                  <Link to="/location">Location</Link>
+                                </DropdownItem>
+                                <DropdownItem>
+                                  <Link to="/hours">Hours</Link>
+                                </DropdownItem>
+                                <DropdownItem>
+                                  <Link to='/contact'>Contact Info </Link>
+                                </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                    </DropdownMenu>
@@ -90,7 +92,9 @@ export default class MainMenu extends React.Component {
                 <UncontrolledDropdown nav in Navbar>
                 <DropdownToggle nav caret>Testimonials<span> | </span></DropdownToggle>
                   <DropdownMenu down>
-                        <DropdownItem>Our Clients</DropdownItem>
+                    <DropdownItem>
+                      <Link to='/reviews'>Our Clients</Link>
+                    </DropdownItem>
                         <DropdownItem divider />
                         <UncontrolledDropdown nav in Navbar direction="right">
                         <DropdownToggle nav caret>Leave A Review</DropdownToggle>
