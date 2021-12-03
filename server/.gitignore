@@ -1,1 +1,13 @@
+<<<<<<< HEAD
 node_modules
+=======
+/node_modules
+
+/build
+
+.Ds_Store
+.env
+.env.local
+.env.test.local
+.env.production.local
+>>>>>>> f08751f743af0e2d374cece258ff7799e28bb937
