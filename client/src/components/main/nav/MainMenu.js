@@ -69,7 +69,7 @@ export default class MainMenu extends React.Component {
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <Link to="/stylistCard">Our Stylists</Link>
+                            <Link to="/stylistCards">Our Stylists</Link>
                             </DropdownItem>
                         <DropdownItem divider />
                         <UncontrolledDropdown nav inDropdownItem direction="right">
