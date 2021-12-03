@@ -1,38 +1,41 @@
 {
-  "name": "salon-project",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
+    "@apollo/client": "^3.5.5",
+    "@apollo/react-hooks": "^4.0.0",
+    "apollo": "^2.33.9",
+    "apollo-boost": "^0.4.9",
+    "apollo-link-context": "^1.0.20",
+    "axios": "^0.24.0",
+    "email-prop-type": "^3.0.1",
+    "graphql": "^14.7.0",
+    "graphql-tag": "^2.12.6",
+    "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.0",
+    "react-device-detect": "^2.1.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-loadable": "^5.5.0",
+    "react-paypal-express-checkout": "^1.0.5",
+    "react-rangeslider": "^2.2.0",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "^4.0.3",
+    "react-star-ratings": "^2.3.0",
+    "reactstrap": "^9.0.1",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
+    "reselect": "^4.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "proxy": "http://localhost:5000/"
 }
