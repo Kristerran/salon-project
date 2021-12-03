@@ -4,10 +4,13 @@ import Placeholder from '../../assets/images/placeholder.png';
 
 function ServiceCard() {
     return (
+        <>
+            <h2>Our Services</h2>
+            <h4>BLURB</h4>
         <Row>
-            <Col md={4}>
+            <Col md={5} >
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image" style={{height:'400px'}}/>
                     <CardImgOverlay>
                         <CardTitle>Haircuts</CardTitle>
                         <CardText> Women's Signature Cuts</CardText>
@@ -15,9 +18,9 @@ function ServiceCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image" style={{height:'400px'}} />
                     <CardImgOverlay>
                         <CardTitle> Hair Color</CardTitle>
                         <CardText>All Over Color</CardText>
@@ -28,7 +31,7 @@ function ServiceCard() {
             </Col>
             <Col md={4}>
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image"  style={{height:'400px'}}/>
                     <CardImgOverlay>
                         <CardTitle>Hair Treatments</CardTitle>
                         <CardText>Condition & Repair</CardText>
@@ -38,7 +41,7 @@ function ServiceCard() {
             </Col>
             <Col md={4}>
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image" style={{height:'400px'}}/>
                     <CardImgOverlay>
                         <CardTitle>Extensions</CardTitle>
                         <CardText>Hand-Tied</CardText>
@@ -46,9 +49,9 @@ function ServiceCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={3}>
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image" style={{height:'400px'}}/>
                     <CardImgOverlay>
                         <CardTitle>Hair Styling</CardTitle>
                         <CardText>Signature Blowout</CardText>
@@ -56,9 +59,9 @@ function ServiceCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-            <Col md={4}>
+            <Col md={5}>
                 <Card>
-                    <CardImg src={Placeholder} alt="Card image" />
+                    <CardImg src={Placeholder} alt="Card image" style={{height:'400px'}}/>
                     <CardImgOverlay>
                         <CardTitle>Luxury Products</CardTitle>
                         <CardText>Hair Products</CardText>
@@ -66,7 +69,8 @@ function ServiceCard() {
                     </CardImgOverlay>
                 </Card>
             </Col>
-        </Row>
+            </Row>
+        </>
     )
 }
 

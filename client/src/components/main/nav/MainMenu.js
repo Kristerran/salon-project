@@ -25,14 +25,14 @@ export default class MainMenu extends React.Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">Home</NavLink>
+                  <NavLink href="/">Home<span> | </span></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/BookContainer.js">Appointments</NavLink>
+                  <NavLink href="/BookContainer">Appointments<span> | </span></NavLink>
                 </NavItem>
 
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>Services</DropdownToggle>
+                  <DropdownToggle nav caret>Services<span> | </span></DropdownToggle>
                   <DropdownMenu right>
                     <UncontrolledDropdown nav inDropdownItem direction="right">
                         <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
@@ -62,24 +62,24 @@ export default class MainMenu extends React.Component {
                 </UncontrolledDropdown>
 
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>About</DropdownToggle>
+                  <DropdownToggle nav caret>About<span> | </span></DropdownToggle>
                   <DropdownMenu down>
                         <DropdownItem>
                             <NavLink href="/about">Who We Are</NavLink>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/about/stylistCard">Our Stylists</NavLink>
+                            <NavLink href="/stylistCard">Our Stylists</NavLink>
                             </DropdownItem>
                         <DropdownItem divider />
                         <UncontrolledDropdown nav inDropdownItem direction="right">
                         <DropdownToggle nav caret>Contact Us</DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    <NavLink href="/menu/map">Location</NavLink>
+                                    <NavLink href="/map">Location</NavLink>
                                     </DropdownItem>
                                           <DropdownItem>
-                                          <NavLink href="/menu/hours">
+                                          <NavLink href="/hours">
                                           Hours</NavLink></DropdownItem>
                                 <DropdownItem>Contact Info </DropdownItem>
                             </DropdownMenu>
@@ -88,7 +88,7 @@ export default class MainMenu extends React.Component {
                 </UncontrolledDropdown>
 
                 <UncontrolledDropdown nav in Navbar>
-                <DropdownToggle nav caret>Testimonials</DropdownToggle>
+                <DropdownToggle nav caret>Testimonials<span> | </span></DropdownToggle>
                   <DropdownMenu down>
                         <DropdownItem>Our Clients</DropdownItem>
                         <DropdownItem divider />
@@ -108,14 +108,14 @@ export default class MainMenu extends React.Component {
                 </UncontrolledDropdown>
 
                 <UncontrolledDropdown nav in Navbar>
-                <DropdownToggle nav caret>Products</DropdownToggle>
+                <DropdownToggle nav caret>Products<span> | </span></DropdownToggle>
                     <DropdownMenu down>
                         <DropdownItem>
                             <NavLink href="/storeContainer">All Products</NavLink>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/storeContainer/">Shampoo & Conditioner</NavLink>
+                            <NavLink href="/storeContainer">Shampoo & Conditioner</NavLink>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>

@@ -18,9 +18,10 @@ function NavContainer() {
                                 <span> Phone Number </span>
                                 <span> | </span>
                                 <span><a href="mailto:email@email.com">email@email.com</a></span>
+                                <span> | </span>
+                                <SocialIcons />
                             </div>
                         </div>
-                        <div className="align-content-left"><SocialIcons /></div>
                     </div>
                     <div className="header-sticky" style={{ display: 'none' }}></div>
                     <div className="nav-header">

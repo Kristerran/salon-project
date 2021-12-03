@@ -22,22 +22,22 @@ function Footer() {
                         <h6>Contact Us</h6>
                         <Row>
                             <Col>Phone</Col>
-                            <Col>555-555-555</Col>
+                            <Col>555<span> | </span>555<span> | </span>555</Col>
                         </Row>
                         <Row>
                             <Col>Address</Col>
-                            <Col>2 water st</Col>
+                            <Col>2 water st <span> | </span>City <span> | </span>State</Col>
                         </Row>
                         <Row>
                             <Col><h6>Hours</h6></Col>
                         </Row>
                         <Row>
-                            <Col>Sunday - Monday</Col>
+                            <Col>Sunday <span> | </span>Monday</Col>
                             <Col>Closed</Col>
                         </Row>
                         <Row>
-                            <Col>Tuesday - Saturday</Col>
-                            <Col>10:00 AM - 7:00 PM</Col>
+                            <Col>Tuesday <span> | </span>Saturday</Col>
+                            <Col>10:00 AM <span> | </span>7:00 PM</Col>
                         </Row>
                     </div>
                     <div className=" col-sm-12 col-md-3">
@@ -52,7 +52,7 @@ function Footer() {
                     {/* <img className="col-xs-6 col-md-3" src={Placeholder} alt="logo">INSERT LOGO HERE</img> */}
                 </div>
                 <Row>
-                    <Col md='12' style={{textAlign: 'center', paddingTop:'30px'}}>Copyright your website © 2021 All Rights Reserved</Col>
+                    <Col md='12' style={{textAlign: 'center', paddingTop:'30px'}}>Copyright your website © 2021 <span> | </span>All Rights Reserved</Col>
                 </Row>
             </div>
         </footer>
