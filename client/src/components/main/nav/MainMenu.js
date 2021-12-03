@@ -30,36 +30,9 @@ export default class MainMenu extends React.Component {
                 <NavItem>
                   <NavLink><Link to="/book">Appointments<span> | </span></Link></NavLink>
                 </NavItem>
-
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>Services<span> | </span></DropdownToggle>
-                  <DropdownMenu right>
-                    <UncontrolledDropdown nav inDropdownItem direction="right">
-                        <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem>
-                                <Link to="/services">Cuts</Link>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <Link to="/services">Color</Link>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <Link to="/services">Styling</Link>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <Link to="/services">Extensions</Link>
-                            </DropdownItem>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
-                    <DropdownItem divider />
-                        <DropdownItem>
-                            <Link to="/services">Hair Treatments</Link>
-                        </DropdownItem>
-                 </DropdownMenu>
-                </UncontrolledDropdown>
+                <NavItem>
+                  <NavLink><Link to="/services">Services Offered<span> | </span></Link></NavLink>
+                </NavItem>
 
                 <UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>About<span> | </span></DropdownToggle>
@@ -76,10 +49,10 @@ export default class MainMenu extends React.Component {
                         <DropdownToggle nav caret>Contact Us</DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                  <Link to="/location">Location</Link>
+                                  <NavLink><Link to="/location">Location</Link></NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
-                                  <Link to="/hours">Hours</Link>
+                                  <NavLink><Link to="/hours">Hours</Link></NavLink>
                                 </DropdownItem>
                                 <DropdownItem>
                                   <Link to='/contact'>Contact Info </Link>

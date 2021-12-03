@@ -1,21 +1,19 @@
 import React from "react";
 
-import './data.js';
+import reviews from './reviews.js';
 
-function ReviewCard(review) {
+function Review() {
     return (
-        <>
-            <figure className="review-card">
-                <blockquote>{review.quote}</blockquote>
-                <div class="author">
-                    <img src={review.imgPath} alt="image of person" />
-                    <h5>{review.name} <span>{review.date}</span><span>{review.rating}</span></h5>
-                </div>
-            </figure>
-        </>
+        <figure className="review-card">
+            <blockquote>{reviews.quote}</blockquote>
+            <div class="author">
+                <img src={reviews.imgPath} alt="image of person" />
+                <h5>{reviews.name} <span>{reviews.date}</span><span>{reviews.rating}</span></h5>
+            </div>
+        </figure>
     );
 }
 
-export default ReviewCard;
+export default Review;
 
 // source: https://codepen.io/ashcon/pen/MEoeaE

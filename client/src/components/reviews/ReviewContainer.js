@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ReviewCard from './ReviewCard.js';
+import Review from './ReviewCard.js';
 
 import '../../css/reviews/reviews.css';
 
@@ -11,7 +11,7 @@ function ReviewContainer() {
             <div className="title">
                 <h2>See what our clients have to say:</h2>
             </div>
-            <ReviewCard />
+            <Review />
         </>
     );
 }

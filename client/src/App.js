@@ -23,6 +23,7 @@ import Location from './components/about/Map.js';
 import Contact from './components/about/Contact.js';
 import Hours from './components/about/Hours.js';
 import Reviews from './components/reviews/ReviewContainer.js';
+import reviews from './components/reviews/reviews.js';
 import Store from './components/store/StoreContainer.js';
 import Footer from './components/main/footer.js';
 
