@@ -2,13 +2,13 @@ import React from 'react';
 
 import { Row, Col } from 'reactstrap';
 
-import Map from '../about/Map.js';
+// import Map from './Map.js';
 
 function Hours() {
     return (
         <>
             <Row>
-                <Col md={8}><Map /></Col>
+                {/* <Col md={8}><Map /></Col> */}
                 <Col md={4}>
                     <Row>
                         <Col>Our Hours</Col>
