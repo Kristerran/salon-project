@@ -1,6 +1,6 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from 'reactstrap';
-
+import { Collapse, Navbar,NavLink, NavbarToggler, NavbarBrand, Nav, NavItem,UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from 'reactstrap';
+import { Link } from 'react-router-dom';
 export default class MainMenu extends React.Component {
     constructor(props) {
       super(props);
@@ -20,15 +20,15 @@ export default class MainMenu extends React.Component {
       return (
         <>
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">ENTER LOGO HERE</NavbarBrand>
+            <NavbarBrand to="/">ENTER LOGO HERE</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">Home<span> | </span></NavLink>
+                  <NavLink><Link to="/">Home<span> | </span></Link></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/BookContainer">Appointments<span> | </span></NavLink>
+                  <NavLink><Link to="/BookContainer">Appointments<span> | </span></Link></NavLink>
                 </NavItem>
 
                 <UncontrolledDropdown nav inNavbar>
@@ -38,25 +38,25 @@ export default class MainMenu extends React.Component {
                         <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem>
-                                <NavLink href="/menu/#cut">Cuts</NavLink>
+                                <Link to="/menu">Cuts</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <NavLink href="/menu/#color">Color</NavLink>
+                                <Link to="/menu">Color</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <NavLink href="/menu/#styling">Styling</NavLink>
+                                <Link to="/menu">Styling</Link>
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem>
-                                <NavLink href="/menu/#extensions">Extensions</NavLink>
+                                <Link to="/menu">Extensions</Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
                     <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/menu/#treatments">Hair Treatments</NavLink>
+                            <Link to="/menu">Hair Treatments</Link>
                         </DropdownItem>
                  </DropdownMenu>
                 </UncontrolledDropdown>
@@ -65,22 +65,22 @@ export default class MainMenu extends React.Component {
                   <DropdownToggle nav caret>About<span> | </span></DropdownToggle>
                   <DropdownMenu down>
                         <DropdownItem>
-                            <NavLink href="/about">Who We Are</NavLink>
+                            <Link to="/about">Who We Are</Link>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/stylistCard">Our Stylists</NavLink>
+                            <Link to="/stylistCard">Our Stylists</Link>
                             </DropdownItem>
                         <DropdownItem divider />
                         <UncontrolledDropdown nav inDropdownItem direction="right">
                         <DropdownToggle nav caret>Contact Us</DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    <NavLink href="/map">Location</NavLink>
+                                    <Link to="/map">Location</Link>
                                     </DropdownItem>
                                           <DropdownItem>
-                                          <NavLink href="/hours">
-                                          Hours</NavLink></DropdownItem>
+                                          <Link to="/hours">
+                                          Hours</Link></DropdownItem>
                                 <DropdownItem>Contact Info </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
@@ -96,11 +96,11 @@ export default class MainMenu extends React.Component {
                         <DropdownToggle nav caret>Leave A Review</DropdownToggle>
                             <DropdownMenu down>
                                 <DropdownItem>
-                                    <NavLink href="www.google.com">Review Us on Google </NavLink>
+                                    <Link to="www.google.com">Review Us on Google </Link>
                                     </DropdownItem>
                                 <DropdownItem divider />
                                     <DropdownItem>
-                                        <NavLink href="mailto:email@email.com">Email Us</NavLink>
+                                        <Link to="mailto:email@email.com">Email Us</Link>
                                     </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
@@ -111,19 +111,19 @@ export default class MainMenu extends React.Component {
                 <DropdownToggle nav caret>Products<span> | </span></DropdownToggle>
                     <DropdownMenu down>
                         <DropdownItem>
-                            <NavLink href="/storeContainer">All Products</NavLink>
+                            <Link to="/store">All Products</Link>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/storeContainer">Shampoo & Conditioner</NavLink>
+                            <Link to="/store">Shampoo & Conditioner</Link>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/storeContainer/#style">Styling Products</NavLink>
+                            <Link to="/store">Styling Products</Link>
                         </DropdownItem>
                         <DropdownItem divider />
                         <DropdownItem>
-                            <NavLink href="/storeContainer/#accessories">Accessories</NavLink>
+                            <Link to="/store">Accessories</Link>
                         </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledDropdown>

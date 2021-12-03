@@ -3,7 +3,6 @@ import { Card, Container, Button } from "reactstrap";
 
 import './data.js';
 
-
 function StylistCard(stylist) {
     return (
         <Container>
