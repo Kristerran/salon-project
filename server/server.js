@@ -11,33 +11,21 @@ const PORT = process.env.PORT || 3001;
 //   resolvers,
 //   context: authMiddleware,
 // });
-<<<<<<< HEAD
-// server.applyMiddleware({ app });
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-=======
 
 // server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
->>>>>>> f08751f743af0e2d374cece258ff7799e28bb937
 // if we're in production, serve client/build as static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-<<<<<<< HEAD
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-=======
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
->>>>>>> f08751f743af0e2d374cece258ff7799e28bb937
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
