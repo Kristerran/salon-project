@@ -4,11 +4,11 @@ import { Col, Row } from 'reactstrap';
 
 import '../../css/booking/booking.css';
 
-import BookApptForm from './BookApptForm.js';
+import BookingForm from './BookingForm.js';
 import Calendar from './Calendar.js';
 import Hours from "../about/Hours.js";
 
-function BookContainer() {
+function Book() {
     return (
         <>
             <Row>
@@ -17,7 +17,7 @@ function BookContainer() {
                     <h6>BLURB</h6>
                 </Col>
                 <Col md={6}>
-                    <BookApptForm />
+                    <BookingForm />
                 </Col>
                 <Col md={6}>
                     <Hours />
@@ -30,4 +30,4 @@ function BookContainer() {
     )
 }
 
-export default BookContainer;
+export default Book;

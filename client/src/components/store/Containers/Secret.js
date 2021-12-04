@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import Admin from './Admin.js';
+import Admin from '../admin/Admin.js';
 
 
 class Secret extends Component {

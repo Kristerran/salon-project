@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import EmployeeTable from './ProductTable.js';
-import AddEmployee from './store/AddItem.js';
-import EmployeeHistoryLog from './HistoryLog.js';
-import EmployeeSalesTable from './OrderTable.js'
-import ViewAllEmployeeCalendars from '/EmployeeCalendars.js';
+import ProductTable from './AdminItemTable';
+import AddItem from './AdminAddItem';
+import HistoryLog from './AdminItemHistoryLog';
+import OrderTable from './AdminOrdersTable'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Admin extends Component {
@@ -12,12 +11,12 @@ export default class Admin extends Component {
         super(props);
         this.state = {
             apiList: [],
-            activeTab: '1'
+            activeTab: '2'
         }
     }
     async componentDidMount() {
         try {
-            const response = await axios.get('/api/employees')
+            const response = await axios.get('/api/orders')
             const apiList = await response.data;
             this.setState({ apiList })
         } catch (error) {
@@ -49,11 +48,6 @@ export default class Admin extends Component {
                 cursor: 'pointer',
                 backgroundColor: '#ffce56',
                 color:'white'
-            },
-            tab5: {
-                cursor: 'pointer',
-                backgroundColor: 'black',
-                color:'white'
               },
         }
         return (
@@ -61,45 +55,37 @@ export default class Admin extends Component {
               <Nav tabs>
                 <NavItem>
                   <NavLink style={styles.tab1} onClick={() => { this.toggle('1'); }}>
-                    <b>Employee Directory</b>
-                  </NavLink> 
+                    <b>Orders</b>
+                  </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink style={styles.tab2} onClick={() => { this.toggle('2'); }}>
-                    <b>Add New Employee</b>
+                    <b>Update/delete items</b>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink style={styles.tab3} onClick={() => { this.toggle('3'); }}>
-                    <b>Employee History Log</b>
+                    <b>Add new item</b>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink style={styles.tab4} onClick={() => { this.toggle('4'); }}>
-                    <b>Employee Sales Log</b>
-                  </NavLink>
-                 </NavItem>
-                <NavItem>
-                  <NavLink style={styles.tab5} onClick={() => { this.toggle('5'); }}>
-                    <b>View All Employee Calendars</b>
+                    <b>History log</b>
                   </NavLink>
                 </NavItem>
               </Nav>
               <TabContent activeTab={this.state.activeTab}>
                 <TabPane tabId="1">
-                  <EmployeeTable stylesTab1={styles.tab1}/>
+                  <OrderTable stylesTab1={styles.tab1}/>
                 </TabPane>
-                <TabPane tabId="2" style={styles.tab2}>
-                  <AddEmployee />
+                <TabPane tabId="2">
+                  <ProductTable stylesTab2={styles.tab2}/>
                 </TabPane>
-                <TabPane tabId="3">
-                  <EmployeeHistoryLog stylesTab4={styles.tab3} />
-                    </TabPane>
+                <TabPane tabId="3" style={styles.tab3}>
+                  <AddItem />
+                </TabPane>
                 <TabPane tabId="4">
-                  <EmployeeSalesTable stylesTab4={styles.tab4} />
-                    </TabPane>
-                <TabPane tabId="5">
-                  <ViewAllEmployeeCalendars stylesTab4={styles.tab5} />
+                  <HistoryLog stylesTab4={styles.tab4} />
                 </TabPane>
               </TabContent>
             </div>

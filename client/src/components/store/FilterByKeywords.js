@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react'
-import '../../css/checkbox.min.css';
+import '../../css/store/checkbox.min.css';
 
 const propTypes = {
   gender: PropTypes.string.isRequired,
