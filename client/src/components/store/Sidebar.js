@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProductListFilterPriceBar from './Item-list-filter-priceBar';
+import ProductListFilterPriceBar from './FilterByPrice';
 
 const propTypes = {
   categoriesProducts: PropTypes.object.isRequired,

@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-
+import thunk from 'redux-thunk';
 // import monitorReducersEnhancer from './enhancers/monitorReducers'
 // import loggerMiddleware from './middleware/logger'
 // import rootReducer from './reducers'
@@ -31,7 +31,7 @@ const rootReducer = combineReducers({
   sortArgsForFilter,
   keywordsForFilter,
   sortSizeForFilter,
-  categoriesProducts,
+  categoriesItems,
   cartReducer,
   reducerPriceRangeFilter,
   getUserAddress

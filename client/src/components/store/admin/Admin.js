@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AdminItemTable from './AdminItemTable.js'
+import AdminItemTable from './AdminItemTable'
 import AdminAddItem from './AdminAddItem.js'
 import AdminItemHistoryLog from './AdminItemHistoryLog.js'
 import AdminOrdersTable from './AdminOrdersTable.js'

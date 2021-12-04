@@ -2,7 +2,7 @@ import {
 	ADD_TO_CART,
 	DELETE_FROM_CART,
 	DELETE_ALL_FROM_CART
-} from '../constants.js';
+} from './constants.js';
 
 export const addToCart = item => ({
 	type: ADD_TO_CART,

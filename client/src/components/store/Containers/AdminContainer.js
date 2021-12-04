@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Redirect } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, Container, Col } from 'reactstrap';
 
 class AdminContainer extends Component {
@@ -54,7 +54,7 @@ class AdminContainer extends Component {
 
   redirectLoginSuccessListener = () => {
     if (this.state.apiResponse === 'success') {
-      return <Redirect to={{
+      return <Link to={{
         pathname: "/dashboard",
         state: { referrer: 'test' }
       }}

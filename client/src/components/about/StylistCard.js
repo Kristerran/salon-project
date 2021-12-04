@@ -5,7 +5,7 @@ import stylist from './data.js';
 
 function StylistCard() {
     return (
-        <Container>
+        <Container className="stylists">
             <Card className="stylist-cards">
                 <img variant="top" src={stylist.imgPath} className="img-fluid" alt="card-img" />
                 <CardBody>
