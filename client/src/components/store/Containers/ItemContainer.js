@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { fetchItemApi } from '../actions/DataFetchAction.js';
 import { addToCart } from '../actions/CartAction.js';
 import { connect } from 'react-redux';
-import { selectorTotalItemsCart } from '../selectors/SelectorListStats.js';
+import { selectorTotalItemsCart } from '../../../utils/reducers/SelectorListStats';
 import Item from '../Item.js';
 
 class ItemContainer extends Component {
