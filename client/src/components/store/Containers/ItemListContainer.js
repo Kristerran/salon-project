@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
-} from '../utils/actions/DataFetchAction.js';
+} from '../actions/DataFetchAction';
 
-import { selectorListFilterSorter } from '../utils/reducers/SelectorItemFilterSorter.js';
-import ItemList from '../components/store/ItemList.js';
+import { selectorListFilterSorter } from '../../../utils/reducers/SelectorItemFilterSorter';
+import ItemList from '../ItemList';
 
 class ItemListContainer extends Component {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { oneKeywordForFilter } from '../../../utils/actions/DataFetchAction.js';
+// import { oneKeywordForFilter } from '../../../utils/actions/DataFetchAction.js';
 import { Row, Col, Card, CardImg, Container } from 'reactstrap';
 
 const styles = {

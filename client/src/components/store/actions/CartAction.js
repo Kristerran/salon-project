@@ -14,7 +14,7 @@ export const deleteFromCart = item => ({
 	item
 });
 
-export const deleteALlFromCart = item => ({
+export const deleteAllFromCart = item => ({
 	type: DELETE_ALL_FROM_CART,
 	item
 });
