@@ -3,11 +3,10 @@ import React, { Component } from "react";
 import { isBrowser } from "react-device-detect";
 import Breadcrumbs from "./Breadcrumbs";
 import { Col, Row, Container } from "reactstrap";
-import StarRatings from "react-star-ratings";
-import ButtonSizeSelect from "./Button-size-select";
-import ButtonAddToCart from "./Button-add-to-cart";
-import CheckoutModal from "./Checkout-modal";
-import CarouselItemPage from "./Carousel-item";
+import StarRatings from "./StarRatings";
+import ButtonSizeSelect from "./BtnSizeSelect";
+import ButtonAddToCart from "./BtnAddToCart";
+import CheckoutModal from "./CheckoutModal";
 
 const propTypes = {
   infoItem: PropTypes.array.isRequired,

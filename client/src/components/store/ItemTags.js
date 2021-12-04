@@ -7,7 +7,7 @@ const propTypes = {
   sortArgsForFilter: PropTypes.string.isRequired,
 };
 
-const ProductLabels = ({ reducerPriceRangeFilter, sortArgsForFilter }) => {
+const ItemTags = ({ reducerPriceRangeFilter, sortArgsForFilter }) => {
 
   const priceLabel = <Badge style={{padding: '10px', margin:'10px'}} color='success'>{`#Price<${reducerPriceRangeFilter} $`} </Badge>
     const sortLabel = <Badge style={{padding: '10px', margin:'10px'}} color='danger'>{`#Sort: ${sortArgsForFilter}`} </Badge>
@@ -21,6 +21,6 @@ const ProductLabels = ({ reducerPriceRangeFilter, sortArgsForFilter }) => {
   )
 };
 
-ProductLabels.propTypes = propTypes;
+ItemTags.propTypes = propTypes;
 
 export default ProductLabels;

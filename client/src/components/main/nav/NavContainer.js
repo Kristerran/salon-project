@@ -23,13 +23,8 @@ function NavContainer() {
                             </div>
                         </div>
                     </div>
-                    <div className="header-sticky" style={{ display: 'none' }}></div>
-                    <div className="nav-header">
-                        <div className='row'>
-                            {/* <Logo /> */}
-                            <MainMenu />
-                        </div>
-                    </div>
+                    {/* <Logo /> */}
+                    <MainMenu />
                 </div>
             </div>
         </header>

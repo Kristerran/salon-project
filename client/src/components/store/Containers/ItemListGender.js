@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { oneKeywordForFilter } from '../../utils/actions/DataFetchAction.js';
+import { oneKeywordForFilter } from '../../../utils/actions/DataFetchAction.js';
 import { Row, Col, Card, CardImg, Container } from 'reactstrap';
-
-import Placeholder from '../../assets/images/placeholder.png';
 
 const styles = {
   cardTitle: {
@@ -22,22 +20,22 @@ const styles = {
 
 const categoryWomen = [
     {
-      imgSrc:{Placeholder},
+      imgSrc:'',
       cardTitle:'Shampoo',
       linkCategory:'Shampoo & Conditioner'
     },
     {
-        imgSrc:{Placeholder},
+        imgSrc:'',
         cardTitle:'Shampoo',
         linkCategory:'Shampoo & Conditioner'
     },
     {
-        imgSrc:{Placeholder},
+        imgSrc:'',
         cardTitle:'Shampoo',
         linkCategory:'Shampoo & Conditioner'
     },
     {
-        imgSrc:{Placeholder},
+        imgSrc:'',
         cardTitle:'Shampoo',
         linkCategory:'Shampoo & Conditioner'
     }
@@ -45,22 +43,22 @@ const categoryWomen = [
 
 const categoryMen = [
   {
-    imgSrc:{Placeholder},
+    imgSrc:'',
       cardTitle:'Shampoo',
       linkCategory:'Shampoo & Conditioner'
   },
   {
-    imgSrc:{Placeholder},
+    imgSrc:'',
       cardTitle:'Shampoo',
       linkCategory:'Shampoo & Conditioner'
   },
   {
-    imgSrc:{Placeholder},
+    imgSrc:'',
       cardTitle:'Shampoo',
       linkCategory:'Shampoo & Conditioner'
   },
   {
-    imgSrc:{Placeholder},
+    imgSrc:'',
       cardTitle:'Shampoo',
       linkCategory:'Shampoo & Conditioner'
   }

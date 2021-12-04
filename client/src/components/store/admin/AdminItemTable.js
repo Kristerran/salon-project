@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Table } from 'reactstrap';
-import AdminUpdateItemModal from './AdminUpdateItemModal.js';
-import AdminDeleteItem from './AdminDeleteItem.js';
+import AdminUpdateItemModal from './AdminUpdateItemModal';
+import AdminDeleteItem from './AdminDeleteItem';
 
 export default class Admin extends Component {
     constructor(props){

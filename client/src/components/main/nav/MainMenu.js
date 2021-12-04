@@ -1,6 +1,6 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink,UncontrolledDropdown, DropdownToggle, DropdownItem, DropdownMenu } from 'reactstrap';
-
+import { Collapse, Navbar,NavLink, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 export default class MainMenu extends React.Component {
     constructor(props) {
       super(props);
@@ -20,113 +20,28 @@ export default class MainMenu extends React.Component {
       return (
         <>
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">ENTER LOGO HERE</NavbarBrand>
+            <NavbarBrand to="/">ENTER LOGO HERE</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">Home<span> | </span></NavLink>
+                  <NavLink><Link to="/">Home<span> | </span></Link></NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/BookContainer">Appointments<span> | </span></NavLink>
+                  <NavLink><Link to="/book">Appointments<span> | </span></Link></NavLink>
                 </NavItem>
-
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>Services<span> | </span></DropdownToggle>
-                  <DropdownMenu right>
-                    <UncontrolledDropdown nav inDropdownItem direction="right">
-                        <DropdownToggle nav caret>Hair Solutions</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem>
-                                <NavLink href="/menu/#cut">Cuts</NavLink>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <NavLink href="/menu/#color">Color</NavLink>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <NavLink href="/menu/#styling">Styling</NavLink>
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                <NavLink href="/menu/#extensions">Extensions</NavLink>
-                            </DropdownItem>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
-                    <DropdownItem divider />
-                        <DropdownItem>
-                            <NavLink href="/menu/#treatments">Hair Treatments</NavLink>
-                        </DropdownItem>
-                 </DropdownMenu>
-                </UncontrolledDropdown>
-
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>About<span> | </span></DropdownToggle>
-                  <DropdownMenu down>
-                        <DropdownItem>
-                            <NavLink href="/about">Who We Are</NavLink>
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                            <NavLink href="/stylistCard">Our Stylists</NavLink>
-                            </DropdownItem>
-                        <DropdownItem divider />
-                        <UncontrolledDropdown nav inDropdownItem direction="right">
-                        <DropdownToggle nav caret>Contact Us</DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    <NavLink href="/map">Location</NavLink>
-                                    </DropdownItem>
-                                          <DropdownItem>
-                                          <NavLink href="/hours">
-                                          Hours</NavLink></DropdownItem>
-                                <DropdownItem>Contact Info </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
-                   </DropdownMenu>
-                </UncontrolledDropdown>
-
-                <UncontrolledDropdown nav in Navbar>
-                <DropdownToggle nav caret>Testimonials<span> | </span></DropdownToggle>
-                  <DropdownMenu down>
-                        <DropdownItem>Our Clients</DropdownItem>
-                        <DropdownItem divider />
-                        <UncontrolledDropdown nav in Navbar direction="right">
-                        <DropdownToggle nav caret>Leave A Review</DropdownToggle>
-                            <DropdownMenu down>
-                                <DropdownItem>
-                                    <NavLink href="www.google.com">Review Us on Google </NavLink>
-                                    </DropdownItem>
-                                <DropdownItem divider />
-                                    <DropdownItem>
-                                        <NavLink href="mailto:email@email.com">Email Us</NavLink>
-                                    </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
-                    </DropdownMenu>
-                </UncontrolledDropdown>
-
-                <UncontrolledDropdown nav in Navbar>
-                <DropdownToggle nav caret>Products<span> | </span></DropdownToggle>
-                    <DropdownMenu down>
-                        <DropdownItem>
-                            <NavLink href="/storeContainer">All Products</NavLink>
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                            <NavLink href="/storeContainer">Shampoo & Conditioner</NavLink>
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                            <NavLink href="/storeContainer/#style">Styling Products</NavLink>
-                        </DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>
-                            <NavLink href="/storeContainer/#accessories">Accessories</NavLink>
-                        </DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledDropdown>
+                <NavItem>
+                  <NavLink><Link to="/services">Services Offered<span> | </span></Link></NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink><Link to="/about">About Us<span> | </span></Link></NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink><Link to="/reviews">Contact Us<span> | </span></Link></NavLink>
+                </NavItem>
+                 <NavItem>
+                  <NavLink><Link to="/store">Products<span> | </span></Link></NavLink>
+                </NavItem>
               </Nav>
             </Collapse>
           </Navbar>

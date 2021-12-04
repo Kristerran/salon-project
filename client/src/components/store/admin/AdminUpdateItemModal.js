@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, InputGroup, InputGroupText, Input } from 'reactstrap';
+import InputGroupAddon from '@bit/reactstrap.reactstrap.input-group-addon';
 import { FiEdit } from 'react-icons/fi';
 import axios from 'axios';
 
