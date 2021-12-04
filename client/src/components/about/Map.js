@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl, {GeolocateControl} from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import 'mapbox-gl/dist/mapbox-gl.css' // Updating node module will keep css up to date.
@@ -81,15 +80,5 @@ const styles = {
          );
      }
  }
-=======
-import React from 'react';
-import { Container } from 'reactstrap';
-
-function Map() {
-    return (
-        <Container className="location" />
-    )
-}
->>>>>>> b4c2079718495881596fe96e48edcf41fe56ed47
 
 export default Map;
