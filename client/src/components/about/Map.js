@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl, {GeolocateControl} from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import mapboxgl, {GeolocateControl} from '!mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css' // Updating node module will keep css up to date.
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css' // Updating node module will keep css up to date.
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions'

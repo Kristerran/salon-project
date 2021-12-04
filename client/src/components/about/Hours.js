@@ -1,8 +1,6 @@
 import React from 'react';
 import { Row, Col, Container } from 'reactstrap';
 
-import { Row, Col } from 'reactstrap';
-
 // import Map from './Map.js';
 
 function Hours() {

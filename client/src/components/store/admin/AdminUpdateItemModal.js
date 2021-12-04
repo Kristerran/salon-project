@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, ListGroup, InputGroup, InputGroupText, Input } from 'reactstrap';
-import InputGroupAddon from '@bit/reactstrap.reactstrap.input-group-addon';
 import { FiEdit } from 'react-icons/fi';
 import axios from 'axios';
 
@@ -62,39 +61,39 @@ class AdminUpdateItemModal extends Component {
               <ModalBody>
                 <ListGroup>
                 <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Name</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input placeholder={"default: "+this.props.infos.title} value={title} onChange={this.onChangeTitle} />
                   </InputGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Price $</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input placeholder={"default: "+this.props.infos.price} value={price} onChange={this.onChangePrice} />
                   </InputGroup>
                    <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Sizes</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input placeholder={"default: "+this.props.infos.size.map(x=>x+' '+x)} value={sizes} onChange={this.onChangeSizes} />
                   </InputGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Category</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input placeholder={"default: "+this.props.infos.tags} value={tags} onChange={this.onChangeTags} />
                   </InputGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Images</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input type="textarea" placeholder={"default: "+this.props.infos.images.map(x=>x+' '+x)} value={images} onChange={this.onChangeImages} />
                   </InputGroup>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend">
+                    {/* <InputGroupAddon addonType="prepend"> */}
                       <InputGroupText>Description</InputGroupText>
-                    </InputGroupAddon>
+                    {/* </InputGroupAddon> */}
                     <Input type="textarea" placeholder={"default: "+this.props.infos.description} value={description} onChange={this.onChangeDescription} />
                   </InputGroup>
                 </ListGroup>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Empty from './components/Empty';
+import Empty from './components/store/Empty';
 import { ApolloProvider } from '@apollo/react-hooks';
 import Loadable from 'react-loadable';
 import ApolloClient from 'apollo-boost';
@@ -19,7 +19,7 @@ import Services from './components/services/ServicesContainer.js';
 import items from "./components/services/data.js";
 import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
-import Store from './components/store/StoreContainer.js';
+ import Store from './components/store/StoreContainer.js';
 import Footer from './components/main/footer.js';
 
 const Loading = () => <div style={{ height: '1000px' }}></div>;
@@ -40,7 +40,7 @@ const CartContainer = Loadable({
 });
 
 const HomepageContainer = Loadable({
-  loader: () => import('./components/store/Containers/Homepagecontainer'),
+  loader: () => import('./components/home/HomeContainer'),
   loading: Loading
 });
 
