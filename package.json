@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "concurrently": "^6.4.0"
+<<<<<<< HEAD
+=======
+  
+>>>>>>> main
   },
   "scripts": {
     "start": "node server/server.js",
@@ -12,6 +16,7 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
+  
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { Row, Col, Input, Badge, Button, ListGroupItem, Collapse, Label, CustomInput, FormFeedback } from 'reactstrap';
+import CustomInput from '@bit/reactstrap.reactstrap.custom-input';
+import { Row, Col, Input, Badge, Button, ListGroupItem, Collapse, Label, FormFeedback } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const propTypes = {
