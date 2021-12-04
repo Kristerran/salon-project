@@ -52,7 +52,7 @@ const Submenu = ({ sendOneKeyword, gender, itemsListByGender, handleSubMenuExit
           <p><strong>Categories</strong></p>
           <div style={styles.subMenuCategoriesUl}>
             {
-              itemsListByGender.map(x => <div key={x} onClick={()=>sendOneKeyword(x)}><Link to={`/productslist/${gender}`} style={styles.subMenuCategory}> {x}</Link></div>)
+              itemsListByGender.map(x => <div key={x} onClick={()=>sendOneKeyword(x)}><Link to={`/itemlist/${gender}`} style={styles.subMenuCategory}> {x}</Link></div>)
             }
           </div>
         </Col>

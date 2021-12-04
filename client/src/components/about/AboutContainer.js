@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Placeholder from '../../assets/images/placeholder.png';
-// import StylistCard from './StylistCard.js';
+import StylistCard from './StylistCard.js';
 import Hours from './Hours.js';
 import Contact from './Contact.js';
 import Map from './Map.js'
 import '../../css/about/about.css';
 
-function AboutContainer() {
+function About() {
     return(
         <>
             <header>
@@ -15,12 +15,14 @@ function AboutContainer() {
                 <h4 className="font-italic">About us</h4>
                 <h1>SALON NAME</h1>
             </header>
-            {/* <StylistCard /> */}
-            <Map />
-            <Hours />
-            <Contact />
+            <React.Fragment>
+                <StylistCard />
+                <Map />
+                <Hours />
+                <Contact />
+            </React.Fragment>
         </>
     )
 }
 
-export default AboutContainer;
+export default About;

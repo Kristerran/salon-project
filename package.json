@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@apollo/react-hooks": "^4.0.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
@@ -49,7 +50,19 @@
       "react-app",
       "react-app/jest"
     ]
+=======
+    "concurrently": "^6.4.0"
+  
   },
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+>>>>>>> b4c2079718495881596fe96e48edcf41fe56ed47
+  },
+  
   "browserslist": {
     "production": [
       ">0.2%",

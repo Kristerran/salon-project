@@ -1,15 +1,23 @@
 import React from 'react';
+import { Row, Col, Container } from 'reactstrap';
 
+<<<<<<< HEAD
 import { Row, Col } from 'reactstrap';
 
+=======
+>>>>>>> b4c2079718495881596fe96e48edcf41fe56ed47
 // import Map from './Map.js';
 
 function Hours() {
     return (
-        <>
+        <Container className="hours">
             <Row>
                 {/* <Col md={8}><Map /></Col> */}
+<<<<<<< HEAD
                 <Col md={4}>
+=======
+                <Col md={6}>
+>>>>>>> b4c2079718495881596fe96e48edcf41fe56ed47
                     <Row>
                         <Col>Our Hours</Col>
                     </Row>
@@ -43,7 +51,7 @@ function Hours() {
                     </Row>
                 </Col>
             </Row>
-        </>
+        </Container>
     )
 }
 
