@@ -1,12 +1,12 @@
 import React from 'react'
 import FullCalendar from '@fullcalendar/react' // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
+import listviewPlugin from '@fullcalendar/daygrid' // a plugin!
 
 const Calendar = () => (
   <div>
       <FullCalendar
-        plugins={[ dayGridPlugin ]}
-        initialView="dayGridMonth"
+        plugins={[ listviewPlugin ]}
+        initialView="listWeek"
       />
   </div>
 );
