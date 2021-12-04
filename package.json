@@ -4,10 +4,6 @@
   "private": true,
   "dependencies": {
     "concurrently": "^6.4.0"
-<<<<<<< HEAD
-=======
-  
->>>>>>> main
   },
   "scripts": {
     "start": "node server/server.js",
