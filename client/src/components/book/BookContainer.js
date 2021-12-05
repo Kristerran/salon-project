@@ -11,7 +11,8 @@ import Hours from "../about/Hours.js";
 function Book() {
     return (
         <>
-            <Row>
+        <Calendar />
+            {/* <Row>
                 <Col md={12} style="textAlign: center">
                     <h2>Book An Appointment</h2>
                     <h6>BLURB</h6>
@@ -23,9 +24,8 @@ function Book() {
                     <Hours />
                 </Col>
                 <Col md={12}>
-                    <Calendar />
                 </Col>
-            </Row>
+            </Row> */}
         </>
     )
 }
