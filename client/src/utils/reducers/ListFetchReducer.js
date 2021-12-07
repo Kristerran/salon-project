@@ -12,7 +12,7 @@ import {
 	FILTER_ARGS,
 	FILL_FILTER,
 	ITEM_FETCH_SUCCESS
-} from '../actions/constants.js';
+} from '../../components/store/actions/constants.js';
 
 import { combineReducers } from 'redux';
 

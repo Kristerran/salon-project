@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Empty from './components/Empty';
+import Empty from './components/store/Empty.js';
 import { ApolloProvider } from '@apollo/react-hooks';
 import Loadable from 'react-loadable';
 import ApolloClient from 'apollo-boost';
@@ -25,7 +25,7 @@ import Footer from './components/main/footer.js';
 const Loading = () => <div style={{ height: '1000px' }}></div>;
 
 const ItemContainer = Loadable({
-  loader: () => import('./components/store/Containers/ItemContainer'),
+  loader: () => import('./components/store/Containers/ItemContainer.js'),
   loading: Loading
 });
 
@@ -36,11 +36,6 @@ const CheckoutContainer = Loadable({
 
 const CartContainer = Loadable({
   loader: () => import('./components/store/Containers/CartContainer'),
-  loading: Loading
-});
-
-const HomepageContainer = Loadable({
-  loader: () => import('./components/store/Containers/Homepagecontainer'),
   loading: Loading
 });
 
@@ -92,16 +87,16 @@ function App() {
               <Route path='/about' element={<About />} />
               <Route path='/reviews' element={<Reviews />} />
               <Route path='/store' element={<Store />} />
-              <Route exact path='/' component={HomepageContainer} />
-              <Route exact path='/itemlist' component={ItemsListContainer} />
-              <Route exact path='/item/:id/:item' component={ItemContainer} />
-              <Route exact path='/checkout' component={CheckoutContainer} />
-              <Route exact path='/cart' component={CartContainer} />
-              <Route exact path='/itemlist/:gender' component={ItemsListContainer} />
-              <Route exact path='/category/:gender' component={ItemsListGenderHomepage} />
-              <Route exact path='/admin' component={AdminContainer} />
-              <Route exact path='/dashboard' component={Secret} />
-              <Route component={Empty}/>
+              <Route exact path='/' component={<HomepageContainer />} />
+              <Route exact path='/itemlist' component={<ItemsListContainer />} />
+              <Route exact path='/item/:id/:item' component={<ItemContainer />} />
+              <Route exact path='/checkout' component={<CheckoutContainer />} />
+              <Route exact path='/cart' component={<CartContainer />} />
+              <Route exact path='/itemlist/:gender' component={<ItemsListContainer />} />
+              <Route exact path='/category/:gender' component={<ItemsListGenderHomepage />} />
+              <Route exact path='/admin' component={<AdminContainer />} />
+              <Route exact path='/dashboard' component={<Secret />} />
+              <Route component={<Empty />}/>
             </Routes>
             <Footer />
           </div>

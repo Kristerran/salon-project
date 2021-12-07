@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { selectorTotalAmountCart } from '../selectors/SelectorListStats';
+import { selectorTotalAmountCart } from '../../../utils/reducers/SelectorListStats.js';
 import Checkout from '../Checkout.js';
-import { addUserAddress } from '../actions/UserAction';
+import { addUserAddress } from '../actions/UserAction.js';
 
 class CheckoutContainer extends Component {
   constructor(props){

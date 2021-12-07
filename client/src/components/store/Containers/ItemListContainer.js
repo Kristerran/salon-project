@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
-} from '../utils/actions/DataFetchAction.js';
+import {
+  sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
+} from '../actions/DataFetchAction.js';
 
-import { selectorListFilterSorter } from '../utils/reducers/SelectorItemFilterSorter.js';
-import ItemList from '../components/store/ItemList.js';
+
+import { selectorListFilterSorter } from '../../../utils/reducers/SelectorItemFilterSorter.js';
+import ItemList from '../ItemList.js';
 
 class ItemListContainer extends Component {
 
@@ -16,7 +18,7 @@ class ItemListContainer extends Component {
     };
   };
 
-  componentDidMount = () => this.props.fetchDataApi('/api/productsdata');
+  componentDidMount = () => this.props.fetchDataApi('/api/itemdata');
 
 
   currentPageHandler = x => {

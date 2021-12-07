@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import StarRatings from 'react-star-ratings';
 
-class StarRatings extends Component {
+class StarRating extends Component {
 
   constructor(props){
     super(props);
@@ -17,7 +17,7 @@ class StarRatings extends Component {
   }
 
   render = () =>
-    <StarRatings
+    <StarRating
       rating={this.state.rating}
       starDimension="15px"
       starSpacing="1px"
@@ -28,4 +28,4 @@ class StarRatings extends Component {
     />
 };
 
-export default StarRatings;
+export default StarRating;
