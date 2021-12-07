@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import { selectorTotalAmountCart } from '../../../utils/reducers/SelectorListStats.js';
+=======
+import { selectorTotalAmountCart } from '../../../utils/reducers/SelectorListStats';
+>>>>>>> eb2ce4125c407065f7bb19d91558ad273fc28603
 import Checkout from '../Checkout.js';
 import { addUserAddress } from '../actions/UserAction.js';
 

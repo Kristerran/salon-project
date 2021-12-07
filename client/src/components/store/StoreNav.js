@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import { isBrowser } from "react-device-detect";
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import { oneKeywordForFilter, resetKeywords } from './actions/DataFetchAction.js';
+=======
+import { oneKeywordForFilter, resetKeywords} from './actions/DataFetchAction';
+>>>>>>> eb2ce4125c407065f7bb19d91558ad273fc28603
 import { selectorTotalItemsCart } from '../../utils/reducers/SelectorListStats.js';
 import CheckoutMiniSummaryPreview from './CheckoutPreview.js';
 import Submenu from './Submenu.js';

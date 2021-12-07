@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import { oneKeywordForFilter } from '../actions/DataFetchAction.js';
+=======
+ import { oneKeywordForFilter } from '../actions/DataFetchAction';
+>>>>>>> eb2ce4125c407065f7bb19d91558ad273fc28603
 import { Row, Col, Card, CardImg, Container } from 'reactstrap';
 
 const styles = {

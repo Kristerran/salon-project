@@ -12,7 +12,11 @@ import {
 	FILTER_ARGS,
 	FILL_FILTER,
 	ITEM_FETCH_SUCCESS
+<<<<<<< HEAD
 } from '../../components/store/actions/constants.js';
+=======
+} from '../../components/store/actions/constants';
+>>>>>>> eb2ce4125c407065f7bb19d91558ad273fc28603
 
 import { combineReducers } from 'redux';
 

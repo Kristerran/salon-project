@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import {
   sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
 } from '../actions/DataFetchAction.js';
@@ -7,6 +8,13 @@ import {
 
 import { selectorListFilterSorter } from '../../../utils/reducers/SelectorItemFilterSorter.js';
 import ItemList from '../ItemList.js';
+=======
+import {sortArgsForFilter, keywordsForFilter, actionSizeForFilter, oneKeywordForFilter, fetchDataApi, actionPriceRangeFilter, actionFillFilters
+} from '../actions/DataFetchAction';
+
+import { selectorListFilterSorter } from '../../../utils/reducers/SelectorItemFilterSorter';
+import ItemList from '../ItemList';
+>>>>>>> eb2ce4125c407065f7bb19d91558ad273fc28603
 
 class ItemListContainer extends Component {
 

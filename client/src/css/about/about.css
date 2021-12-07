@@ -74,3 +74,6 @@ figure.testimonial-cards .author h5 span {
   text-transform: none;
   display: block;
 }
+.map-container {
+  height: 400px;
+  }

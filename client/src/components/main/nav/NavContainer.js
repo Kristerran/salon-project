@@ -10,26 +10,30 @@ import SocialIcons from '../social-icons.js';
 function NavContainer() {
     return (
         <header className="header-wrapper">
-            <div class="header-container">
+            <div className="header-container">
                 <div className="contact-header">
-                    <div class="row">
+                    <div >
                         <div className="align-content-left">
                             <div className="contact-info">
                                 <span> Phone Number </span>
-                                <span> | </span>
+                                <span> | </span> 
                                 <span><a href="mailto:email@email.com">email@email.com</a></span>
-                                <span> | </span>
+                                 <span> | </span>
                                 <SocialIcons />
                             </div>
                         </div>
                     </div>
-                    {/* <Logo /> */}
-                    <MainMenu />
+                  
+                    <div className="nav-header">
+                        <div>
+                            {/* <Logo /> */}
+                            <MainMenu />
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
     )
 }
-
 
 export default NavContainer;
