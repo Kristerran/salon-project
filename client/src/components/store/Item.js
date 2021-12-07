@@ -83,7 +83,7 @@ class Item extends Component {
       />
     );
     const MainImageMobileView = (
-      <CarouselItemPage imgsArray={infoItem.images} />
+      <div imgsArray={infoItem.images} />
     );
 
     return (
