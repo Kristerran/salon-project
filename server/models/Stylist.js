@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+
 const stylistSchema = new Schema({
+    stylistId: {
+        type: Number,
+        required: true,
+      },
     name: {
         type: String,
         required: true,
@@ -22,8 +27,14 @@ const stylistSchema = new Schema({
     imgPath: {
         type: "String",
         required: true,
-    }
-
+    },
+    salonId: {
+        type: Number,
+        required: true,
+    
+      },
+ 
 })
 const Stylist = mongoose.model('Stylist', stylistSchema);
+
 module.exports = Stylist;
