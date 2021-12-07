@@ -91,7 +91,7 @@ function App() {
               <Route path='/services' element={<Services items={items} />} />
               <Route path='/about' element={<About />} />
               <Route path='/reviews' element={<Reviews />} />
-              <Route path='/store' element={<Store />} />
+              {/* <Route path='/store' element={<Store />} /> */}
               <Route exact path='/' component={HomepageContainer} />
               <Route exact path='/itemlist' component={ItemsListContainer} />
               <Route exact path='/item/:id/:item' component={ItemContainer} />
