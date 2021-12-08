@@ -40,11 +40,20 @@ type Auth {
 
 }
 
+
+type Product {
+ _id: ID
+}
+
 type Query {
 user: User
 order(_id: ID!): Order
 service(_id: ID!): Service
 services: [Service]
+categories: [Service]
+products: [Product]
+product: Product
+checkout: ID
 }
 
 type Mutation {
@@ -62,6 +71,7 @@ updateUser(
     password: String
 ): User
 updateService(_id: ID! price: Float!): Service
+updateProduct: ID
 login(email: String!, password: String!): Auth
 }
 `;

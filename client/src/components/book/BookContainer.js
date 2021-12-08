@@ -11,21 +11,13 @@ import Hours from "../about/Hours.js";
 function Book() {
     return (
         <>
+        <div>
+            <h2>
+                Book Appointment
+            </h2>
+        </div>
         <Calendar />
-            {/* <Row>
-                <Col md={12} style="textAlign: center">
-                    <h2>Book An Appointment</h2>
-                    <h6>BLURB</h6>
-                </Col>
-                <Col md={6}>
-                    <BookingForm />
-                </Col>
-                <Col md={6}>
-                    <Hours />
-                </Col>
-                <Col md={12}>
-                </Col>
-            </Row> */}
+        <Hours />
         </>
     )
 }
