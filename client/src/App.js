@@ -5,7 +5,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink
 import { setContext } from '@apollo/client/link/context';
 
 import { Provider } from 'react-redux';
-import store from './utils/store';
+import store from './components/store/utils/store';
 
 import './css/App.css';
 import "./css/index.css";
@@ -20,11 +20,11 @@ import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
 import Store from './components/store/pages/Home';
 import Detail from './components/store/pages/Detail';
-import NoMatch from '.components/store/pages/NoMatch';
-import Login from '.components/store/pages/Login';
-import Signup from '.components/store/pages/Signup';
-import Success from '.components/store/pages/Success';
-import OrderHistory from '.components/store/pages/OrderHistory';
+import NoMatch from './components/store/pages/NoMatch';
+import Login from './components/store/pages/Login';
+import Signup from './components/store/pages/Signup';
+import Success from './components/store/pages/Success';
+import OrderHistory from './components/store/pages/OrderHistory';
 import Footer from './components/main/footer.js';
 
 
@@ -62,11 +62,11 @@ function App() {
               <Route path='/about' element={<About />} />
               <Route path='/reviews' element={<Reviews />} />
               <Route path='/store' element={<Store />} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/success" component={Success} />
-              <Route exact path="/orderHistory" component={OrderHistory} />
-              <Route exact path="/products/:id" component={Detail} />
+              <Route path="/login" component={Login} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/success" component={Success} />
+              <Route path="/orderHistory" component={OrderHistory} />
+              <Route path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Routes>
             <Footer />

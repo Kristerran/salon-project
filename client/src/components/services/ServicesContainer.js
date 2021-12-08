@@ -3,7 +3,7 @@ import Menu from './Menu.js';
 import Categories from './Categories.js';
 import items from './data.js';
 import { useQuery } from '@apollo/client';
-import { QUERY_CATEGORIES } from '../../utils/queries.js';
+import { QUERY_CATEGORIES } from './utils/queries';
 
 import  '../../css/services/services.css';
 
