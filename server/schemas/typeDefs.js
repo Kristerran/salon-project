@@ -85,7 +85,13 @@ type Product {
  _id: ID
 }
 
+
+type Product {
+ _id: ID
+}
+
 type Query {
+<<<<<<< HEAD
     me: User
     categories: [Category]
     user(username: String!): User
@@ -115,6 +121,35 @@ type Mutation {
     updateProduct(productId: ID!, price: Float!): Product
     addService(serviceName: String!, option: String!, price: Float!): Service
 
+=======
+user: User
+order(_id: ID!): Order
+service(_id: ID!): Service
+services: [Service]
+categories: [Service]
+products: [Product]
+product: Product
+checkout: ID
+}
+
+type Mutation {
+addUser(
+    firstName: String!
+    lastName: String!
+    email: String!
+    password: String
+): Auth
+addOrder(services: [ID]!): Order
+updateUser(
+    firstName: String
+    lastName: String
+    email: String
+    password: String
+): User
+updateService(_id: ID! price: Float!): Service
+updateProduct: ID
+login(email: String!, password: String!): Auth
+>>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
 }
 `;
 

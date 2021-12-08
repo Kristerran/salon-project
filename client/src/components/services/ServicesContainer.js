@@ -3,7 +3,11 @@ import Menu from './Menu.js';
 import Categories from './Categories.js';
 import items from './data.js';
 import { useQuery } from '@apollo/client';
+<<<<<<< HEAD
 import { QUERY_CATEGORIES } from '../../utils/queries.js';
+=======
+// import { QUERY_CATEGORIES } from '../../utils/queries.js';
+>>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
 
 import  '../../css/services/services.css';
 
@@ -14,8 +18,13 @@ function Services() {
     const [menuItems, setMenuItems] = useState(items)
     const [categories, setCategories] = useState(allCategories)
 
+<<<<<<< HEAD
     const { loading, data, error } = useQuery(QUERY_CATEGORIES);
     console.log(data)
+=======
+    // const { loading, data, error } = useQuery(QUERY_CATEGORIES);
+    // console.log(data)
+>>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
 
     const filterItems = (category) => {
         if (category === 'all') {
