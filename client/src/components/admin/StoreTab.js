@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import ProductTable from './ProductTable.js';
-import AddItem from './store/AddItem.js';
-import HistoryLog from './HistoryLog.js';
-import OrderTable from './OrderTable.js'
+import ProductTable from './AdminItemTable';
+import AddItem from './AdminAddItem';
+import HistoryLog from './AdminItemHistoryLog';
+import OrderTable from './AdminOrdersTable'
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Admin extends Component {

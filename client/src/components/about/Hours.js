@@ -1,17 +1,16 @@
 import React from 'react';
+import { Row, Col, Container } from 'reactstrap';
 
-import { Row, Col } from 'reactstrap';
-
-import Map from '../about/Map.js';
+// import Map from './Map.js';
 
 function Hours() {
     return (
-        <>
+        <Container className="hours">
             <Row>
-                <Col md={8}><Map /></Col>
-                <Col md={4}>
+                {/* <Col md={8}><Map /></Col> */}
+                <Col md={6}>
                     <Row>
-                        <Col>Our Hours</Col>
+                        <Col>Hours</Col>
                     </Row>
                     <Row>
                         <Col>Sunday</Col>
@@ -43,7 +42,7 @@ function Hours() {
                     </Row>
                 </Col>
             </Row>
-        </>
+        </Container>
     )
 }
 

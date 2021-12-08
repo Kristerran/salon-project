@@ -10,22 +10,22 @@ import SocialIcons from '../social-icons.js';
 function NavContainer() {
     return (
         <header className="header-wrapper">
-            <div class="header-container">
+            <div className="header-container">
                 <div className="contact-header">
-                    <div class="row">
+                    <div >
                         <div className="align-content-left">
                             <div className="contact-info">
                                 <span> Phone Number </span>
-                                <span> | </span>
+                                <span> | </span> 
                                 <span><a href="mailto:email@email.com">email@email.com</a></span>
-                                <span> | </span>
+                                 <span> | </span>
                                 <SocialIcons />
                             </div>
                         </div>
                     </div>
-                    <div className="header-sticky" style={{ display: 'none' }}></div>
+                  
                     <div className="nav-header">
-                        <div className='row'>
+                        <div>
                             {/* <Logo /> */}
                             <MainMenu />
                         </div>
@@ -35,6 +35,5 @@ function NavContainer() {
         </header>
     )
 }
-
 
 export default NavContainer;

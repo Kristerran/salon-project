@@ -80,6 +80,11 @@ type Auth {
     user: User
 }
 
+
+type Product {
+ _id: ID
+}
+
 type Query {
     me: User
     categories: [Category]

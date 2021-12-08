@@ -1,10 +1,9 @@
 {
-  "name": "server",
+  "name": "mern-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js",
     "watch": "nodemon server.js"
@@ -18,9 +17,10 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql": "^16.0.1",
+    "graphql": "^15.5.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.13"
+    "mongoose": "^5.9.7",
+    "stripe": "^8.67.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

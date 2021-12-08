@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import EmployeeTable from './ProductTable.js';
-import AddEmployee from './store/AddItem.js';
+import EmployeeTable from './AdminItemTable';
+import AddEmployee from './AdminAddEmployee';
 import EmployeeHistoryLog from './HistoryLog.js';
-import EmployeeSalesTable from './OrderTable.js'
-import ViewAllEmployeeCalendars from '/EmployeeCalendars.js';
+// import EmployeeSalesTable from './OrderTable.js'
+// import ViewAllEmployeeCalendars from '/EmployeeCalendars.js';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Admin extends Component {
@@ -45,16 +45,16 @@ export default class Admin extends Component {
                 backgroundColor: '#66bceb',
                 color:'white'
               },
-              tab4: {
-                cursor: 'pointer',
-                backgroundColor: '#ffce56',
-                color:'white'
-            },
-            tab5: {
-                cursor: 'pointer',
-                backgroundColor: 'black',
-                color:'white'
-              },
+            //   tab4: {
+            //     cursor: 'pointer',
+            //     backgroundColor: '#ffce56',
+            //     color:'white'
+            // },
+            // tab5: {
+            //     cursor: 'pointer',
+            //     backgroundColor: 'black',
+            //     color:'white'
+            //   },
         }
         return (
             <div>
@@ -74,7 +74,7 @@ export default class Admin extends Component {
                     <b>Employee History Log</b>
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                {/* <NavItem>
                   <NavLink style={styles.tab4} onClick={() => { this.toggle('4'); }}>
                     <b>Employee Sales Log</b>
                   </NavLink>
@@ -83,7 +83,7 @@ export default class Admin extends Component {
                   <NavLink style={styles.tab5} onClick={() => { this.toggle('5'); }}>
                     <b>View All Employee Calendars</b>
                   </NavLink>
-                </NavItem>
+                </NavItem> */}
               </Nav>
               <TabContent activeTab={this.state.activeTab}>
                 <TabPane tabId="1">
