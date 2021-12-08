@@ -1,68 +1,93 @@
 const items = [
     {
         id: '1',
-        title: ' womens haircut',
+        title: ' Womens Haircut',
         category: 'Cut',
-        price: '1000',
+        price: '$65',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '2',
-        title: 'partial highlight',
-        category: 'Color',
-        price: '1000',
+        title: 'Mens Haircut',
+        category: 'Cut',
+        price: '$45',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '3',
-        title: 'keratin',
-        category: 'Treatment',
-        price: '1000',
+        title: 'Kids Haircut',
+        category: 'Cut',
+        price: '$45',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '4',
-        title: 'all over color',
-        category: 'Color',
-        price: '1000',
+        title: 'Blowout',
+        category: 'Blowout',
+        price: '$55',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '1',
-        title: ' womens haircut',
-        category: 'Cut',
-        price: '1000',
+        title: 'Formal Hairstyling',
+        category: 'Styling',
+        price: '$85',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '2',
-        title: 'partial highlight',
+        title: 'Full Highlight',
         category: 'Color',
-        price: '1000',
+        price: '$195',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '3',
-        title: 'keratin',
-        category: 'Treatment',
-        price: '1000',
+        title: 'Partial Highlgiht',
+        category: 'Color',
+        price: '$145',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
     },
     {
         id: '4',
-        title: 'all over color',
+        title: 'Toner',
         category: 'Color',
-        price: '1000',
+        price: '$95',
         img: '',
-        desc: 'sdfsdfdsfsdf'
+        desc: ''
+    },
+    {
+        id: '4',
+        title: 'All Over Color',
+        category: 'Color',
+        price: '$125',
+        img: '',
+        desc: ''
+    },
+    {
+        id: '4',
+        title: 'Color Touch Up',
+        category: 'Color',
+        price: '$85',
+        img: '',
+        desc: ''
+    },
+    {
+        id: '4',
+        title: 'Keratin Treatment',
+        category: 'Keratin',
+        price: '$250',
+        img: '',
+        desc: ''
     }
+    
 ]
 
 export default items;
