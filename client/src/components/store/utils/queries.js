@@ -1,10 +1,10 @@
-import { gql } from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 export const QUERY_PRODUCTS = gql`
   query getProducts($category: ID) {
     products(category: $category) {
       _id
-      title
+      name
       description
       price
       quantity
@@ -28,7 +28,7 @@ export const QUERY_ALL_PRODUCTS = gql`
   {
     products {
       _id
-      title
+      name
       description
       price
       quantity
@@ -43,7 +43,7 @@ export const QUERY_CATEGORIES = gql`
   {
     categories {
       _id
-      style
+      name
     }
   }
 `;
