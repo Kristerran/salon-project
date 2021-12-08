@@ -1,6 +1,13 @@
 import React from 'react';
 import { Collapse, Navbar, NavLink, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+const styles = {
+  logoStyle: {
+    height: '15vh',
+    width: 'auto',
+    filter: 'drop-shadow(4px 5px 5px #96C1AE)',
+  }
+}
 export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +28,9 @@ export default class MainMenu extends React.Component {
       <>
 
         <Navbar color="light" light expand="md">
-          <NavbarBrand to="/">ENTER LOGO HERE</NavbarBrand>
+          <Link to="/">
+            <img src='../Logo.svg' style={styles.logoStyle} />
+          </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
