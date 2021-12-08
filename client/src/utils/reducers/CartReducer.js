@@ -1,4 +1,4 @@
-import { ADD_TO_CART, DELETE_FROM_CART, DELETE_ALL_FROM_CART } from '../constants';
+import { ADD_TO_CART, DELETE_FROM_CART, DELETE_ALL_FROM_CART } from '../../components/store/actions/constants.js';
 
 export const cartReducer = (state = [], action) => {
 

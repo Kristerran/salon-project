@@ -1,4 +1,4 @@
-import { USER_ADDRESS } from '../constants.js';
+import { USER_ADDRESS } from '../../components/store/actions/constants';
 
 export const getUserAddress = (state = {}, action) => {
   switch (action.type) {

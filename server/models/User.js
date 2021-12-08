@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
+const Order = require('./Order')
 const Service = require('./Service');
 const Stylist = require('./Stylist');
 
@@ -42,7 +43,7 @@ userSchema.pre('save', async function (next) {
   });
 
   // compare the incoming password with the hashed password
-profileSchema.methods.isCorrectPassword = async function (password) {
+userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
   };
   
