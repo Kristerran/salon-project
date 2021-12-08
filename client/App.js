@@ -11,21 +11,21 @@ import './css/App.css';
 import "./css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavContainer from './components/main/nav/NavContainer.js';
-import Home from './components/home/HomeContainer.js';
-import Book from './components/book/BookContainer.js';
-import Services from './components/services/ServicesContainer.js';
-import items from "./components/services/data.js";
-import About from './components/about/AboutContainer.js';
-import Reviews from './components/reviews/ReviewContainer.js';
-import Store from './components/store/pages/Home';
-import Detail from './components/store/pages/Detail';
+import NavContainer from './src/components/main/nav/NavContainer.js';
+import Home from './src/components/home/HomeContainer.js';
+import Book from './src/components/book/BookContainer.js';
+import Services from './src/components/services/ServicesContainer.js';
+import items from "./src/components/services/data.js";
+import About from './src/components/about/AboutContainer.js';
+import Reviews from './src/components/reviews/ReviewContainer.js';
+import Store from './src/components/store/pages/Home';
+import Detail from './src/components/store/pages/Detail';
 import NoMatch from '.components/store/pages/NoMatch';
 import Login from '.components/store/pages/Login';
 import Signup from '.components/store/pages/Signup';
 import Success from '.components/store/pages/Success';
 import OrderHistory from '.components/store/pages/OrderHistory';
-import Footer from './components/main/footer.js';
+import Footer from './src/components/main/footer.js';
 
 
 const httpLink = createHttpLink({
