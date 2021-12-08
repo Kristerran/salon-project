@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Input, Form, FormGroup, Label, Container, Alert } from 'reactstrap';
 import axios from 'axios';
 
-import Placeholder from '../../store/placeholder.png';
+import Placeholder from '../../assets/images/placeholder.png';
 
 class AdminFormAddItem extends Component {
   constructor(props) {
