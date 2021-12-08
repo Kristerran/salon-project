@@ -1,13 +1,13 @@
 import React from 'react';
 import items from './data.js';
-import Placeholder from '../../assets/images/placeholder.png';
+import Placeholder from '../../assets/images/touchup.jpg';
 import { Container } from 'reactstrap';
 
 function Menu() {
   return (
 
     
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
       {items.map((menuItem) => {
         const { id, title, img, price, desc } = menuItem
         return (
