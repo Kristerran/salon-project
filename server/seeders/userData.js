@@ -9,29 +9,26 @@ mongoose.connect('mongodb://localhost/salon-project', {
 
 const user = [
   {
-    "salonId": "1",
-    "roleId": "1",
+
     "username": "AAvisha",
-    "firstname": "Aavash ",
-    "lastname": "Poudel",
+    "firstName": "Aavash ",
+    "lastName": "Poudel",
     "email": "aavishap@yahoo.com",
     "password": "password01"
   },
   {
-    "salonId": "1",
-    "roleId": "2",
+
     "username": "Jasmine-Jas",
-    "firstname": "Jasmine ",
-    "lastname": "Kin",
+    "firstName": "Jasmine ",
+    "lastName": "Kin",
     "email": "Jkin@yahoo.com",
     "password": "password02"
   },
   {
-    "salonId": "1",
-    "roleId": "1",
+
     "username": "Yana",
-    "firstname": "Yana ",
-    "lastname": "Garbu",
+    "firstName": "Yana ",
+    "lastName": "Garbu",
     "email": "yanag@yahoo.com",
     "password": "password03"
   },

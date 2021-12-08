@@ -2,49 +2,63 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 type Salon {
-    _id: ID
+    _id: ID!
+    salonId: Int!
     name: String!
+    location: String!
+    phoneInt: Int!
+
 }
 type Category {
-    _id: ID
+    _id: ID!
+    categoryId: Int!
+    salonId: Int!
     name: String!
 
   }
 
 type Order {
-    _id: ID
-    purchasedate: String!
+    _id: ID!
+    salonId: Int!
+    orderId: Int!
+    purchasedate: String
     orderType: String!
-    products: [Product]
-    services: [Service]
+
     }
 
 type Customer {
     _id: ID!
+    salonId: Int!
     name: String!
     email: String!
-    phoneNumber: Int!
+    phoneNumber: Int
  }
 
 type Service {
-    _id: ID
+    _id: ID!
+    salonId: Int!
+    serviceId: Int!
     serviceName: String!
     options: String!
-    price: Float!
+    price: Int!
 }
 
 type Product {
-    _id: ID
+    _id: ID!
+    salonId: Int!
+    productId: Int!
     title: String!
     quantity: String!
     images: String!
     description: String!
-    price: Float!
+    price: Float
     category: Category!
 }
 
 type Stylist {
 _id: ID!
+salonId: Int!
+stylistId: Int!
 name: String!
 speciality: String!
 bio: String!
@@ -58,6 +72,7 @@ username: String!
 firstName: String!
 lastName: String!
 email: String!
+
 }
 
 type Auth {

@@ -33,15 +33,15 @@ const userSchema = new Schema({
     trim: 5,
   },
 
-  roleId: {
-    type: Number,
-    required: true,
-  },
-  salonId: {
-    type: Number,
-    required: true,
+  // roleId: {
+  //   type: Number,
+  //   required: true,
+  // },
+  // salonId: {
+  //   type: Number,
+  //   required: true,
 
-  }
+  // }
 
 });
 

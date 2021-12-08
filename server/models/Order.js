@@ -19,7 +19,7 @@ const orderSchema = new Schema({
 
   },
   salonId: {
-    type: Number,
+    type: String,
     required: true,
 
   },
