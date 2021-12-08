@@ -14,13 +14,17 @@ class Calendar extends React.Component {
     this.handleEventClick = this.handleEventClick.bind(this)
     this.handleButton = this.handleButton.bind(this)
   }
+<<<<<<< HEAD
   bookAppt(id){
     
   }
+=======
+
+>>>>>>> a97fc66ddb61b902d75f6dd577bd3c3a5816c2ee
   toggle = () => {
     this.setState({ modal: !this.state.modal });
   };
-  
+
   handleButton = () => {
     this.bookAppt(this.state.event.url)
   };

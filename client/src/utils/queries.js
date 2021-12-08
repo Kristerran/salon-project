@@ -66,7 +66,7 @@ export const QUERY_CATEGORIES = gql`
   {
     categories {
       _id
-      title
+      style
     }
   }
 `;

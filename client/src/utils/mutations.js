@@ -71,3 +71,10 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_TO_CART_MUTATION = gql`
+    mutation ADD_TO_CART_MUTATION($itemId: ID!) {
+        addToCart(itemId: $itemId) {
+            id
+        }
+    }
