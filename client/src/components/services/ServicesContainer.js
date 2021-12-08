@@ -29,7 +29,7 @@ function Services() {
         <main>
             <section className="menu section">
                 <div className="title">
-                    <h2>Our Services</h2>
+                    <h2>Services</h2>
                 </div>
                 <Categories categories={categories} filterItems={filterItems} />
                 <Menu items={menuItems}/>
