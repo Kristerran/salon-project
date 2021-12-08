@@ -9,7 +9,7 @@ function ProductItem(item) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  const { image, name, _id, price, quantity } = item;
+  const { image, name, _id, price, quantity, size, rating} = item;
 
   const { cart } = state;
 
@@ -39,12 +39,14 @@ function ProductItem(item) {
       <Link to={`/products/${_id}`}>
         <img alt={name} src={`/images/${image}`} />
         <p>{name}</p>
+        <span>{rating}</span>
       </Link>
       <div>
         <div>
           {quantity} {pluralize('item', quantity)} in stock
         </div>
-        <span>${price}</span>
+        <span>{price}</span>
+        <span>{size}</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>

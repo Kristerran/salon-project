@@ -8,7 +8,9 @@ export const QUERY_PRODUCTS = gql`
       description
       price
       quantity
+      size
       image
+      rating
       category {
         _id
       }
@@ -31,7 +33,9 @@ export const QUERY_ALL_PRODUCTS = gql`
       name
       description
       price
+      size
       quantity
+      rating
       category {
         name
       }
@@ -61,8 +65,10 @@ export const QUERY_USER = gql`
           name
           description
           price
+          size
           quantity
           image
+          rating
         }
       }
     }

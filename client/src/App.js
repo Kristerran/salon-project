@@ -15,18 +15,17 @@ import NavContainer from './components/main/nav/NavContainer.js';
 import Home from './components/home/HomeContainer.js';
 import Book from './components/book/BookContainer.js';
 import Services from './components/services/ServicesContainer.js';
-import items from "./components/services/data.js";
 import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
-import Store from './components/store/pages/Home';
+import StoreHome from './components/store/pages/Home';
 import Detail from './components/store/pages/Detail';
 import NoMatch from './components/store/pages/NoMatch';
 import Login from './components/store/pages/Login';
 import Signup from './components/store/pages/Signup';
 import Success from './components/store/pages/Success';
 import OrderHistory from './components/store/pages/OrderHistory';
-import Store from './components/store/Containers/HomepageContainer';
 import Footer from './components/main/footer.js';
+
 
 
 const httpLink = createHttpLink({
@@ -59,16 +58,16 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/book' element={<Book />} />
-              <Route path='/services' element={<Services items={items} />} />
+              <Route path='/services' element={<Services/>} />
               <Route path='/about' element={<About />} />
               <Route path='/reviews' element={<Reviews />} />
-              <Route path='/store' element={<Store />} />
-              <Route path="/login" component={Login} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/success" component={Success} />
-              <Route path="/orderHistory" component={OrderHistory} />
-              <Route path="/products/:id" component={Detail} />
-              <Route component={NoMatch} />
+              <Route path='/store' element={<StoreHome />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/success" element={<Success />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              <Route path="/products/:id" element={<Detail />} />
+              <Route element={<NoMatch />} />
             </Routes>
             <Footer />
           </Provider>

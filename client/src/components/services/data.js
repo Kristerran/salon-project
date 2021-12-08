@@ -32,7 +32,7 @@ const items = [
         desc: ''
     },
     {
-        id: '1',
+        id: '5',
         title: 'Formal Hairstyling',
         category: 'Styling',
         price: '$85',
@@ -40,7 +40,7 @@ const items = [
         desc: ''
     },
     {
-        id: '2',
+        id: '6',
         title: 'Full Highlight',
         category: 'Color',
         price: '$195',
@@ -48,7 +48,7 @@ const items = [
         desc: ''
     },
     {
-        id: '3',
+        id: '7',
         title: 'Partial Highlgiht',
         category: 'Color',
         price: '$145',
@@ -56,7 +56,7 @@ const items = [
         desc: ''
     },
     {
-        id: '4',
+        id: '8',
         title: 'Toner',
         category: 'Color',
         price: '$95',
@@ -64,7 +64,7 @@ const items = [
         desc: ''
     },
     {
-        id: '4',
+        id: '9',
         title: 'All Over Color',
         category: 'Color',
         price: '$125',
@@ -72,7 +72,7 @@ const items = [
         desc: ''
     },
     {
-        id: '4',
+        id: '10',
         title: 'Color Touch Up',
         category: 'Color',
         price: '$85',
@@ -80,14 +80,14 @@ const items = [
         desc: ''
     },
     {
-        id: '4',
+        id: '11',
         title: 'Keratin Treatment',
         category: 'Keratin',
         price: '$250',
         img: '',
         desc: ''
     }
-    
+
 ]
 
 export default items;

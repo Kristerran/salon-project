@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem';
+import ProductItem from '../ProductItem/index';
 import { useDispatch, useSelector } from 'react-redux';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -55,6 +55,9 @@ function ProductList() {
               image={product.image}
               name={product.name}
               price={product.price}
+              desc={product.desc}
+              size={product.size}
+              rating={product.rating}
               quantity={product.quantity}
             />
           ))}
