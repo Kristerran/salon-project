@@ -1,32 +1,17 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+
 const serviceSchema = new Schema({
-    kidsHairCut: {
+    serviceId: {
+        type: Number,
+        required: true,
+      },
+    serviceName: {
         type: String,
         required: true, 
     },
-    menHairCut: {
-        type: String,
-        required: true,  
-    },
-    womenHairCut: {
-        type: String,
-        required: true,  
-    },
-    color: {
-        type: String,
-        required: true,  
-    },
-    style: {
-        type: String,
-        required: true,  
-    },
-    treatments: {
-        type: String,
-        required: true,  
-    },
-    texture: {
+   options: {
         type: String,
         required: true,  
     },
@@ -35,8 +20,12 @@ const serviceSchema = new Schema({
         required: true,
         min: 0.99,
     },
-
-
+    salonId: {
+        type: Number,
+        required: true,
+    
+      },
+  
 })
 const Service = mongoose.model('Service', serviceSchema);
 module.exports = Service;

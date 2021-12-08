@@ -25,6 +25,7 @@ import Login from './components/store/pages/Login';
 import Signup from './components/store/pages/Signup';
 import Success from './components/store/pages/Success';
 import OrderHistory from './components/store/pages/OrderHistory';
+import Store from './components/store/Containers/HomepageContainer';
 import Footer from './components/main/footer.js';
 
 
