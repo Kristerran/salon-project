@@ -4,11 +4,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import { Provider } from 'react-redux';
-<<<<<<< HEAD
-import store from './storeConfig.js';
-=======
 // import store from './storeConfig.js';
->>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
 
 import './css/App.css';
 import "./css/index.css";
@@ -21,11 +17,7 @@ import Services from './components/services/ServicesContainer.js';
 import items from "./components/services/data.js";
 import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
-<<<<<<< HEAD
-import Store from './components/store/Containers/HomepageContainer';
-=======
 // import Store from './components/store/Containers/HomepageContainer';
->>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
 import Footer from './components/main/footer.js';
 
 
@@ -47,11 +39,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
-<<<<<<< HEAD
-          <Provider store={store} >
-=======
           {/* <Provider store={store} > */}
->>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
             <NavContainer />
             <Routes>
               <Route path='/' element={<Home />} />
@@ -62,11 +50,7 @@ function App() {
               {/* <Route path='/store' element={<Store />} /> */}
             </Routes>
             <Footer />
-<<<<<<< HEAD
-          </Provider>
-=======
           {/* </Provider> */}
->>>>>>> 99702948de4a6e6a1fc97193e9df64735da57459
         </div>
       </Router>
     </ApolloProvider>

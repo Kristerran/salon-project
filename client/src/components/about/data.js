@@ -1,10 +1,10 @@
 const stylist = [
     {
-        imgPath: '../../assets/images/placeholder.png',
-        name: 'Nikki',
+        imgPath: '../../assets/images/lai.jpeg',
+        name: 'Lai ',
         specialty: 'None',
         bio: 'meh',
-        year: '1'
+        year: '10'
     }
 ]
 
