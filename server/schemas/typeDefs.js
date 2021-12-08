@@ -34,6 +34,16 @@ email: String
 orders: [Order]
 }
 
+type Appt {
+    _id: ID
+    available: Boolean
+    title: String
+    start: String
+    client: String
+    service: String
+    contact: String
+}
+
 type Auth {
     token: ID
     user: User
@@ -47,6 +57,7 @@ type Product {
 
 type Query {
 user: User
+appts(avail: Boolean!): [Appt]
 order(_id: ID!): Order
 service(_id: ID!): Service
 services: [Service]

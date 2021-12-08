@@ -17,7 +17,7 @@ import Services from './components/services/ServicesContainer.js';
 import items from "./components/services/data.js";
 import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
-import Store from './components/store/Containers/HomepageContainer';
+// import Store from './components/store/Containers/HomepageContainer';
 import Footer from './components/main/footer.js';
 
 
