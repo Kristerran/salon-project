@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const stylistSchema = new Schema({
-    stylistId: {
+const customerSchema = new Schema({
+    customerId: {
         type: Number,
         required: true,
       },
@@ -11,21 +11,14 @@ const stylistSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-    },
-    speciality: {
+      },
+    email: {
         type: String,
         required: true,
+        trim: true,
     },
-    bio: {
-        type: String,
-        required: true,
-    },
-    year: {
+    phoneNumber: {
         type: Number,
-        required: true,
-    },
-    imgPath: {
-        type: "String",
         required: true,
     },
     salonId: {
@@ -35,6 +28,6 @@ const stylistSchema = new Schema({
       },
  
 })
-const Stylist = mongoose.model('Stylist', stylistSchema);
+const Customer = mongoose.model('Customer', customerSchema);
 
-module.exports = Stylist;
+module.exports = Customer;
