@@ -26,6 +26,7 @@ import Success from './components/store/pages/Success';
 import OrderHistory from './components/store/pages/OrderHistory';
 import Footer from './components/main/footer.js';
 
+import products from './components/store/data';
 
 
 const httpLink = createHttpLink({
@@ -66,7 +67,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/success" element={<Success />} />
               <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route path="/products/:id" element={<Detail />} />
+              <Route path="/products/:id" element={<Detail products={products} />} />
               <Route element={<NoMatch />} />
             </Routes>
             <Footer />
