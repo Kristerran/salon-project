@@ -8,7 +8,7 @@ const productSchema = new Schema({
         autoIncrement: true,
         required: true,
       },
-    title: {
+    name: {
         type: String,
         required: true,
     },
@@ -25,7 +25,7 @@ const productSchema = new Schema({
         required: true,
         min: 0.99,
     },
-    images: {
+    image: {
         type: String,
         required: true,
     },
@@ -37,8 +37,8 @@ const productSchema = new Schema({
         type: String,
         required: true,
     },
-    salonId: {
-        type: Number,
+    category: {
+        type: String,
         required: true,
       },
     category: {
