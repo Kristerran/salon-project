@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Order, Appt, Product, Category,Stylist, Customer, Salon, Order, Service } = require('../models');
+const { User, Appt, Product, Category,Stylist, Customer, Salon, Order, Service } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
@@ -59,7 +59,9 @@ const resolvers = {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.products',
           populate: 'category'
-        });
+        })
+      }
+    },
 
     orders: async () => {
       return await Order.find({})

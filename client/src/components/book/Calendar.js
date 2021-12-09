@@ -1,8 +1,12 @@
 import React from 'react';
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import listPlugin from '@fullcalendar/list'; // a plugin!
+import { useQuery } from '@apollo/client';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import {QUERY_AVAILABLE_APPT} from "../../utils/queries"
+const {loading, error, data} = useQuery(QUERY_AVAILABLE_APPT)
+
+
 class Calendar extends React.Component {
   constructor(props){
     super(props);
@@ -20,7 +24,7 @@ class Calendar extends React.Component {
   toggle = () => {
     this.setState({ modal: !this.state.modal });
   };
-
+  
   handleButton = () => {
     this.bookAppt(this.state.event.url)
   };
@@ -37,7 +41,7 @@ class Calendar extends React.Component {
   };
   render(){
     return (
-  <div>
+      <div>
       <FullCalendar
         plugins={[ listPlugin ]}
         initialView="listWeek"

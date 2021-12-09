@@ -1,17 +1,17 @@
 import { gql } from 'graphql-tag';
 
 export const QUERY_AVAILABLE_APPT = gql`
-  query getAppt {
-    Appt{
-      _id
-      title
-      time
-      available: true
-    }
+query appts($avail: true) {
+  appts(avail: $avail){
+    _id
+    title
+    start
+    available
   }
+}
 `;
 export const QUERY_BOOKED_APPT = gql`
-  query getAppt {
+  query appts {
     Appt{
       _id
       title
@@ -19,7 +19,7 @@ export const QUERY_BOOKED_APPT = gql`
       client
       service
       contact
-      available: false
+      available
     }
   }
 `;
