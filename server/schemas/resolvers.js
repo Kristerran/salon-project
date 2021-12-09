@@ -51,6 +51,10 @@ const resolvers = {
       return Product.find(params).populate('productCategory');
     },
 
+    review: async () => {
+      return await Review.find({})
+    },
+
     orders: async () => {
       return await Order.find({})
     },

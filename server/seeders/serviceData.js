@@ -63,7 +63,6 @@ const service = [
         "option": "hair care",
         "price": 95.00,
     },
-   
 ]
 db.Service.deleteMany({})
   .then(() => db.Service.collection.insertMany(service))

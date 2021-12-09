@@ -28,8 +28,8 @@ const reviewSchema = new Schema({
         required: true,
     }
 })
-const review = mongoose.model('review', reviewSchema);
+const Review = mongoose.model('Review', reviewSchema);
 
-module.exports = review;
+module.exports = Review;
 
 
