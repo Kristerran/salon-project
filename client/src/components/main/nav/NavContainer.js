@@ -15,11 +15,11 @@ function NavContainer() {
                     <div >
                         <div className="align-content-left">
                             <div className="contact-info">
-                                <span> Phone Number </span>
+                                {/* <span> Phone Number </span>
                                 <span> | </span> 
                                 <span><a href="mailto:email@email.com">email@email.com</a></span>
                                  <span> | </span>
-                                <SocialIcons />
+                                <SocialIcons /> */}
                             </div>
                         </div>
                     </div>
