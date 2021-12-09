@@ -10,7 +10,7 @@ function Hours() {
                 {/* <Col md={8}><Map /></Col> */}
                 <Col md={6}>
                     <Row>
-                        <Col>Our Hours</Col>
+                        <Col>Hours</Col>
                     </Row>
                     <Row>
                         <Col>Sunday</Col>
