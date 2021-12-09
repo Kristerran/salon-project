@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductItem from '../ProductItem/';
+import ProductItem from '../ProductItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
@@ -45,20 +45,21 @@ function ProductList() {
 
   return (
     <div className="my-2">
-      <h2>FeaturedProducts</h2>
+      <h2>Featured Products</h2>
       {state.products.length ? (
         <div className="flex-row">
           {filterProducts().map((product) => (
             <ProductItem
-              key={products._id}
-              _id={products._id}
-              image={products.image}
-              name={products.name}
-              price={products.price}
-              desc={products.desc}
-              size={products.size}
-              rating={products.rating}
-              quantity={products.quantity}
+              key={product._id}
+              _id={product._id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              desc={product.desc}
+              size={product.size}
+              rating={product.rating}
+              quantity={product.quantity}
+              category={product.category}
             />
           ))}
         </div>

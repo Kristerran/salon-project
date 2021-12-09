@@ -12,7 +12,7 @@ export const QUERY_PRODUCTS = gql`
       image
       rating
       category {
-        _id
+        name
       }
     }
   }
@@ -52,25 +52,4 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 
-export const QUERY_USER = gql`
-  {
-    user {
-      firstName
-      lastName
-      orders {
-        _id
-        purchaseDate
-        products {
-          _id
-          name
-          description
-          price
-          size
-          quantity
-          image
-          rating
-        }
-      }
-    }
-  }
-`;
+
