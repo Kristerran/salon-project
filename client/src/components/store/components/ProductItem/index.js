@@ -37,17 +37,17 @@ function ProductItem(item) {
   return (
     <div className="card px-1 py-1">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
         <p>{name}</p>
-        <span>{rating}</span>
+        <img alt={name} src={`./images/${image}`} />
       </Link>
+        <span>{rating}</span>
       <div>
-        <div>
-          {quantity} {pluralize('item', quantity)} in stock
-        </div>
         <span>{price}</span>
-        <span>{size}</span>
+        <p>{size}</p>
       </div>
+      <div>
+          {quantity} in stock
+        </div>
       <button onClick={addToCart}>Add to cart</button>
     </div>
   );

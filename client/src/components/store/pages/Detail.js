@@ -9,7 +9,7 @@ import {
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
-} from '../utils/actions.js';
+} from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 
@@ -103,7 +103,7 @@ function Detail() {
           </p>
 
           <img
-            src={currentProduct.image}
+            src={`./images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
         </div>
