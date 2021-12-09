@@ -3,12 +3,17 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-    name: {
+    productId: {
+        type: Number,
+        autoIncrement: true,
+        required: true,
+      },
+    title: {
         type: String,
         required: true,
     },
     quantity: {
-        type: String,
+        type: Number,
         required: true,
     },
     size: {
@@ -16,10 +21,11 @@ const productSchema = new Schema({
         required: true,
     },
     price: {
-        type: String,
+        type: Number,
         required: true,
+        min: 0.99,
     },
-    image: {
+    images: {
         type: String,
         required: true,
     },
@@ -31,6 +37,10 @@ const productSchema = new Schema({
         type: String,
         required: true,
     },
+    salonId: {
+        type: Number,
+        required: true,
+      },
     category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',

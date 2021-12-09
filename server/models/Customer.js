@@ -4,8 +4,7 @@ const { Schema } = mongoose;
 
 const customerSchema = new Schema({
     customerId: {
-    type: Number,
-      autoIncrement: true,
+        type: Number,
         required: true,
       },
     name: {
@@ -26,7 +25,6 @@ const customerSchema = new Schema({
         type: Number,
         required: true,
       },
- 
 })
 const Customer = mongoose.model('Customer', customerSchema);
 

@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 const stylistSchema = new Schema({
     stylistId: {
         type: Number,
-        autoIncrement: true,
         required: true,
       },
     name: {
@@ -32,8 +31,7 @@ const stylistSchema = new Schema({
     salonId: {
         type: Number,
         required: true,
-      },
- 
+    }
 })
 const Stylist = mongoose.model('Stylist', stylistSchema);
 
