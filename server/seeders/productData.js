@@ -6,7 +6,8 @@ mongoose.connect('mongodb://localhost/salon-project', {
   // useFindAndModify: false,
   useUnifiedTopology: true,
 });
-const product = [
+
+const products = [
   {
     name: 'Hairdressers Invisible Oil Shampoo',
     description: 'A featherlight moisturizing shampoo for dry hair.',
@@ -250,7 +251,7 @@ const product = [
 ]
 
 db.Product.deleteMany({})
-  .then(() => db.Product.collection.insertMany(product))
+  .then(() => db.Product.collection.insertMany(products))
   .then((data) => {
     // console.log(data.result.n + ' records inserted!');
     process.exit(0);

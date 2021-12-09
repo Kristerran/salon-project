@@ -17,6 +17,11 @@ type Category {
 
   }
 
+  type ProductCategory {
+    _id: ID!
+    name: String!
+  }
+
 type Order {
     _id: ID!
     salonId: Int!

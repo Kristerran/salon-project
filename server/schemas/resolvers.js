@@ -35,11 +35,11 @@ const resolvers = {
     product: async (parent, { id }) =>
       Product.findById(id).populate('category'),
 
-    products: async (parent, { category, name }) => {
+    products: async (parent, { productCategory, name }) => {
       const params = {};
 
-      if (category) {
-        params.category = category;
+      if (productCategory) {
+        params.productCategory = productCategory;
       }
 
       if (name) {
@@ -48,7 +48,7 @@ const resolvers = {
         };
       }
 
-      return Product.find(params).populate('category');
+      return Product.find(params).populate('productCategory');
     },
 
     orders: async () => {
