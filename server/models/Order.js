@@ -6,7 +6,7 @@ const dateFormat = require('../utils/dateFormat');
 const orderSchema = new Schema({
   orderId: {
     type: Number,
-    required: true,
+    autoIncrement: true,
   },
   purchaseDate: {
     type: Date,
@@ -15,26 +15,13 @@ const orderSchema = new Schema({
   },
   orderType: {
     type: String,
-    required: true,
-
-  },
-  salonId: {
-    type: String,
-    required: true,
-
   },
   products: [
     {
       type: Schema.Types.ObjectId,
       ref: 'Product',
     },
-  ],
-  services: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Service',
-    },
-  ],
+  ]
 
 })
 const Order = mongoose.model('Order', orderSchema);
