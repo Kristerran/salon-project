@@ -1,12 +1,11 @@
 import { gql } from 'graphql-tag';
 
 export const QUERY_AVAILABLE_APPT = gql`
-query appts($avail: true) {
+query appts($avail: Boolean!) {
   appts(avail: $avail){
     _id
     title
     start
-    available
   }
 }
 `;

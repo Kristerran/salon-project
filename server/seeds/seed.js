@@ -1,4 +1,4 @@
-const db = require('./connection');
+const db = require('../config/connection');
 const { Appt } = require('../models');
 
 db.once('open', async () => {
@@ -8,7 +8,7 @@ db.once('open', async () => {
    {
      available: true ,
      title: 'Available appt' ,
-     start: 'December 15, 2021 03:24:00' ,
+     start: new Date(new Date().setDate(new Date().getDate() + 5)).toISOString() ,
      client: 'N/A',
      service: 'N/A',
      contact: 'N/A',
@@ -16,7 +16,7 @@ db.once('open', async () => {
    {
      available: true ,
      title: 'Available appt' ,
-     start: 'December 15, 2021 03:24:00' ,
+     start: new Date(new Date().setDate(new Date().getDate() + 4)).toISOString() ,
      client: 'N/A',
      service: 'N/A',
      contact: 'N/A',
@@ -24,7 +24,7 @@ db.once('open', async () => {
    {
      available: true ,
      title: 'Available appt' ,
-     start: 'December 15, 2021 03:24:00' ,
+     start: new Date(new Date().setDate(new Date().getDate() + 3)).toISOString() ,
      client: 'N/A',
      service: 'N/A',
      contact: 'N/A',
@@ -32,7 +32,7 @@ db.once('open', async () => {
    {
      available: false ,
      title: 'Available appt' ,
-     start: 'December 15, 2021 05:24:00' ,
+     start: new Date(new Date().setDate(new Date().getDate() + 2)).toISOString() ,
      client: 'N/A',
      service: 'N/A',
      contact: 'N/A',
@@ -40,7 +40,7 @@ db.once('open', async () => {
    {
      available: false ,
      title: 'Available appt' ,
-     start: 'December 15, 2021 04:24:00' ,
+     start: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString() ,
      client: 'N/A',
      service: 'N/A',
      contact: 'N/A',

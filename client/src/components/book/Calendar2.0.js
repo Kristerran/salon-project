@@ -11,7 +11,11 @@ function Calendar(props) {
     const [modal,setModal] = useState(false)
     const [calendarWeekends,setCalendarweekends] = useState(true)
     const [event, updateEvent] = useState([])
-    const {loading, error, data} = useQuery(QUERY_AVAILABLE_APPT)
+    const {loading, error, data} = useQuery(QUERY_AVAILABLE_APPT,{
+      variables: {
+        avail: true,
+      }
+    })
     
     const events = data?.appts || [];
 
@@ -28,12 +32,11 @@ function Calendar(props) {
 
      const handleEventClick = (info) => {
      console.log(info.event)
-     let id = info.event.id
-     let url = '/api/appointment/' + id
+     let _id = info.event._id
      let title = info.event.title
      let date = info.event.start.toDateString()
      let time = info.event.start.toLocaleTimeString()
-     updateEvent({url, id, date, title, time})
+     updateEvent({_id, date, title, time})
      activateModal()
      console.log(event)
    };
@@ -53,7 +56,7 @@ function Calendar(props) {
                 />
           )}
         <Modal
-              show ={modal}
+              isOpen = {modal}
             >
               <ModalHeader closeModal>
                 {event.title}
