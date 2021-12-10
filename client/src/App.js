@@ -25,8 +25,8 @@ import Signup from './components/store/pages/Signup';
 import Success from './components/store/pages/Success';
 import OrderHistory from './components/store/pages/OrderHistory';
 import Footer from './components/main/footer.js';
-
-import products from './components/store/data';
+import reviews from './seeds/reviewData.json'
+import products from './seeds/productData.json';
 
 
 const httpLink = createHttpLink({
@@ -61,13 +61,13 @@ function App() {
               <Route path='/book' element={<Book />} />
               <Route path='/services' element={<Services/>} />
               <Route path='/about' element={<About />} />
-              <Route path='/reviews' element={<Reviews />} />
-              <Route path='/store' element={<StoreHome />} />
+              <Route path='/reviews' element={<Reviews reviews={reviews}/>} />
+              <Route path='/store' element={<StoreHome products={products}/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/success" element={<Success />} />
               <Route path="/orderHistory" element={<OrderHistory />} />
-              <Route path="/products/:id" element={<Detail products={products} />} />
+              {/* <Route path="/products" element={<Detail  />} /> */}
               <Route element={<NoMatch />} />
             </Routes>
             <Footer />

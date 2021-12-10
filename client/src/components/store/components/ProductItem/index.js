@@ -4,12 +4,14 @@ import { pluralize } from '../../utils/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
+import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
+  CardSubtitle, CardBody } from 'reactstrap';
 
-function ProductItem(item) {
+function ProductItem({ product }) {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
-  const { image, name, _id, price, quantity, size, rating} = item;
+  const { image, name, _id, price, quantity, size, rating} = product;
 
   const { cart } = state;
 
@@ -28,28 +30,31 @@ function ProductItem(item) {
     } else {
       dispatch({
         type: ADD_TO_CART,
-        product: { ...item, purchaseQuantity: 1 },
+        product: { ...product, purchaseQuantity: 1 },
       });
-      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+      idbPromise('cart', 'put', { ...product, purchaseQuantity: 1 });
     }
   };
 
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/products/${_id}`}>
-        <p>{name}</p>
-        <img alt={name} src={`./images/${image}`} />
-      </Link>
-        <span>{rating}</span>
-      <div>
-        <span>{price}</span>
-        <p>{size}</p>
-      </div>
-      <div>
-          {quantity} in stock
+
+    <CardGroup>
+      <Card>
+        <Link to={`/products/${_id}`}>
+          <p>{name}</p>
+          <img alt={name} src={`./images/${image}`} />
+        </Link>
+          <span>{rating}</span>
+        <div>
+          <span>{price}</span>
+          <p>{size}</p>
         </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+        <div>
+            {quantity} in stock
+          </div>
+        <button onClick={addToCart}>Add to cart</button>
+        </Card>
+      </CardGroup>
   );
 }
 
