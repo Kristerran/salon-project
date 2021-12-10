@@ -89,23 +89,23 @@ email: String!
 
 }
 
+type Appt {
+    _id: ID
+    available: Boolean
+    title: String
+    start: String
+    client: String
+    service: String
+    contact: String
+}
+
 type Auth {
     token: ID
     user: User
 }
-
-
-type Product {
- _id: ID
-}
-
-
-type Product {
- _id: ID
-}
-
 type Query {
     me: User
+    appts(avail: Boolean!): [Appt]
     categories: [Category]
     user(username: String!): User
     customer(name: String!): Customer

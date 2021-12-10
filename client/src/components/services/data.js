@@ -4,15 +4,15 @@ const items = [
         title: ' Womens Haircut',
         category: 'Cut',
         price: '$65',
-        img: '',
-        desc: ''
+        img: './images/womenshaircut.jpg',
+        desc: '',
     },
     {
         id: '2',
         title: 'Mens Haircut',
         category: 'Cut',
         price: '$45',
-        img: '',
+        img: './images/menshaircut.jpg',
         desc: ''
     },
     {
@@ -20,7 +20,7 @@ const items = [
         title: 'Kids Haircut',
         category: 'Cut',
         price: '$45',
-        img: '',
+        img: './images/kids.jpg',
         desc: ''
     },
     {
@@ -28,7 +28,7 @@ const items = [
         title: 'Blowout',
         category: 'Blowout',
         price: '$55',
-        img: '',
+        img: './images/blowout.jpg',
         desc: ''
     },
     {
@@ -36,7 +36,7 @@ const items = [
         title: 'Formal Hairstyling',
         category: 'Styling',
         price: '$85',
-        img: '',
+        img: './images/styling.jpg',
         desc: ''
     },
     {
@@ -44,7 +44,7 @@ const items = [
         title: 'Full Highlight',
         category: 'Color',
         price: '$195',
-        img: '',
+        img: './images/highlight.jpg',
         desc: ''
     },
     {
@@ -52,7 +52,7 @@ const items = [
         title: 'Partial Highlgiht',
         category: 'Color',
         price: '$145',
-        img: '',
+        img: './images/partial.jpg',
         desc: ''
     },
     {
@@ -60,7 +60,7 @@ const items = [
         title: 'Toner',
         category: 'Color',
         price: '$95',
-        img: '',
+        img: './images/toner.jpg',
         desc: ''
     },
     {
@@ -68,7 +68,7 @@ const items = [
         title: 'All Over Color',
         category: 'Color',
         price: '$125',
-        img: '',
+        img: './images/allover.jpg',
         desc: ''
     },
     {
@@ -76,7 +76,7 @@ const items = [
         title: 'Color Touch Up',
         category: 'Color',
         price: '$85',
-        img: '',
+        img: './images/touchup.jpg',
         desc: ''
     },
     {
@@ -84,7 +84,7 @@ const items = [
         title: 'Keratin Treatment',
         category: 'Keratin',
         price: '$250',
-        img: '',
+        img: './images/keratin.jpg',
         desc: ''
     }
 

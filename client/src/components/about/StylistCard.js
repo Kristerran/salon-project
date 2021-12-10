@@ -5,7 +5,7 @@ import stylist from './data.js';
 
 function StylistCard() {
     return (
-        <Container className="stylists">
+        <div className="stylists flex-grow-1">
             <Card className="stylist-cards">
                 {/* <img variant="top" src={stylist.imgPath} className="img-fluid" alt="card-img" /> */}
                 <CardBody>
@@ -20,7 +20,7 @@ function StylistCard() {
                     <Button><a href='../book/BookContainer.js'>Book an Appointment</a></Button>
                 </CardBody>
             </Card>
-        </Container>
+        </div>
     );
 }
 

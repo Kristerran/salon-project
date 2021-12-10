@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, CardText, Row, Col } from 'reactstrap';
-import Placeholder1 from '../../assets/images/cut.jpg';
-import Placeholder2 from '../../assets/images/color.jpg';
-import Placeholder3 from '../../assets/images/treatment.jpg';
-import Placeholder4 from '../../assets/images/styless.jpg';
+import Placeholder1 from '../../images/cut.jpg';
+import Placeholder2 from '../../images/color.jpg';
+import Placeholder3 from '../../images/treatment.jpg';
+import Placeholder4 from '../../images/styless.jpg';
 import '../../css/services/services.css';
 
 function ServiceCard() {
