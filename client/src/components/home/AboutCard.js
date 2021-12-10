@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from "reactstrap";
 
-import Placeholder from '../../assets/images/collage.jpg';
+import Placeholder from '../../images/collage.jpg';
 
 
 function About() {
