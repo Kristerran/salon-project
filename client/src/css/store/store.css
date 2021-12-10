@@ -1,9 +1,52 @@
 .card-group {
     display: inline-block;
-    width: 33%;
-    height: 300px;
+    width: 32%;
+    margin-left: 1%;
+}
+.card {
+    height: 550px;
+    margin-top:2%;
 }
 
-img {
-    height: 100px;
+.part1 {
+    height: 175px;
+}
+.product-name{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Meow Script', cursive;
+    color:coral;
+}
+.product-images {
+    height:210px;
+}
+
+.product-btn {
+    font-family: 'Meow Script', cursive;
+    font-size: 32px;
+    padding-left: 2%;
+    padding-right: 4%;
+    background-color: darkgray;
+    color: white;
+}
+.product-price {
+    font-size: 30px;
+    font-family: 'Meow Script', cursive;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size:13px;
+    font-style: italic;
+
+}
+
+.product-category {
+    margin-top:2%;
+    font-size: 18px;
+}
+
+.product-category, .product-description, .product-size, .product-qty {
+    font-family: 'Fuzzy Bubbles', cursive;
+    color: darkgray;
 }

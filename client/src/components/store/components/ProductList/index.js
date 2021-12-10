@@ -8,8 +8,8 @@ function ProductList({products}) {
       <h2>Featured Products</h2>
         {/* <div className="flex-row"> */}
         {products.map(product => (
-              <ProductItem className="col-sm"
-                key={product._id}
+              <ProductItem
+                key={product.name}
                 product={product}
               />
           ))}
