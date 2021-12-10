@@ -5,6 +5,7 @@
   line-height: 24px;
   color: #737373;
   display: inline;
+  position: relative;
 }
 .site-footer hr {
   border-top-color: #bbb;
@@ -56,7 +57,7 @@
   margin-left: 6px;
   margin-right: 0;
   border-radius: 100%;
-  background-color: #33353d;
+  background-color: #FFBEBE;
 }
 .copyright-text {
   margin: 0;

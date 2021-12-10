@@ -1,17 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "salon-project",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "concurrently": "^6.4.0"
-  },
-=======
   "name": "lai-salon",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
->>>>>>> main
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
@@ -19,25 +10,10 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-<<<<<<< HEAD
-  
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-=======
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
->>>>>>> main
   }
 }
