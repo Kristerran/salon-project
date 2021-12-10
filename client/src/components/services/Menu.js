@@ -1,6 +1,6 @@
 import React from 'react';
 import items from './data.js';
-import Placeholder from '../../assets/images/touchup.jpg';
+// import Placeholder from '../../images/touchup.jpg';
 import { Container } from 'reactstrap';
 
 function Menu() {

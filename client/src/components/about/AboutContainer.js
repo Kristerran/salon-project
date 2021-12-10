@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Placeholder from '../../assets/images/lai.jpeg';
+import Placeholder from '../../images/lai.jpeg';
 import StylistCard from './StylistCard.js';
 import Hours from './Hours.js';
 import Contact from './Contact.js';
@@ -14,7 +14,7 @@ function About() {
         <StylistCard />
         <header>
                 {<img src={Placeholder} alt="logo" />}
-                <h4 className="font-italic">About us</h4>
+                {/* <h4 className="font-italic">About us</h4> */}
                 <h1>Lai Hairstylist</h1>
 
             </header>

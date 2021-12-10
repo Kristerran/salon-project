@@ -4,7 +4,7 @@ const items = [
         title: ' Womens Haircut',
         category: 'Cut',
         price: '$65',
-        img: './images/cut.jpg',
+        img: './images/womenshaircut.jpg',
         desc: '',
     },
     {
@@ -84,7 +84,7 @@ const items = [
         title: 'Keratin Treatment',
         category: 'Keratin',
         price: '$250',
-        img: './images/treatment.jpg',
+        img: './images/keratin.jpg',
         desc: ''
     }
     
