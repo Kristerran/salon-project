@@ -1,7 +1,11 @@
 import React from 'react';
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import listPlugin from '@fullcalendar/list'; // a plugin!
+import { useQuery } from '@apollo/client';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {QUERY_AVAILABLE_APPT} from "../../utils/queries"
+const {loading, error, data} = useQuery(QUERY_AVAILABLE_APPT)
+
 
 class Calendar extends React.Component {
   constructor(props){
@@ -14,13 +18,15 @@ class Calendar extends React.Component {
     this.handleEventClick = this.handleEventClick.bind(this)
     this.handleButton = this.handleButton.bind(this)
   }
-
+  bookAppt(id){
+    
+  }
   toggle = () => {
     this.setState({ modal: !this.state.modal });
   };
-
+  
   handleButton = () => {
-    alert(this.state.event.url)
+    this.bookAppt(this.state.event.url)
   };
   handleEventClick = (info) => {
     console.log(info.event)
@@ -35,22 +41,13 @@ class Calendar extends React.Component {
   };
   render(){
     return (
-  <div>
+      <div>
       <FullCalendar
         plugins={[ listPlugin ]}
         initialView="listWeek"
         noEventsContent="No available appointments at this time, please check back soon!"
         eventClick={this.handleEventClick}
-        events={[
-          { id:1, title: 'Available Appt', start: '2021-12-05T19:30:00Z' },
-          { id:2, title: 'Available Appt', start: '2021-12-05T01:30:00Z'},
-          { id:3, title: 'Available Appt', start: '2021-12-05T19:30:00Z' },
-          { title: 'Available Appt', start: '2021-12-05T01:30:00Z' },
-          { title: 'Available Appt', start: '2021-12-05T19:30:00Z' },
-          { title: 'Available Appt', start: '2021-12-05T01:30:00Z'},
-          { title: 'Available Appt', start: '2021-12-05T19:30:00Z' },
-          { title: 'Available Appt', start: '2021-12-05T01:30:00Z'}
-        ]}
+        // events= {...apptArray}
         />
         <Modal
               isOpen={this.state.modal}
