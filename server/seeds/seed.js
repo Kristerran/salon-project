@@ -1,11 +1,12 @@
 const db = require('../config/connection');
 const { Appt } = require('../models');
-
+const { v4: uuidv4 } = require('uuid')
 db.once('open', async () => {
   await Appt.deleteMany();
 
   const appts = await Appt.insertMany([
    {
+     id: uuidv4(),
      available: true ,
      title: 'Available appt' ,
      start: new Date(new Date().setDate(new Date().getDate() + 5)).toISOString() ,
@@ -14,6 +15,7 @@ db.once('open', async () => {
      contact: 'N/A',
   },
    {
+    id: uuidv4(),
      available: true ,
      title: 'Available appt' ,
      start: new Date(new Date().setDate(new Date().getDate() + 4)).toISOString() ,
@@ -22,6 +24,7 @@ db.once('open', async () => {
      contact: 'N/A',
   },
    {
+    id: uuidv4(),
      available: true ,
      title: 'Available appt' ,
      start: new Date(new Date().setDate(new Date().getDate() + 3)).toISOString() ,
@@ -30,6 +33,7 @@ db.once('open', async () => {
      contact: 'N/A',
   },
    {
+    id: uuidv4(),
      available: false ,
      title: 'Available appt' ,
      start: new Date(new Date().setDate(new Date().getDate() + 2)).toISOString() ,
@@ -38,6 +42,7 @@ db.once('open', async () => {
      contact: 'N/A',
   },
    {
+    id: uuidv4(),
      available: false ,
      title: 'Available appt' ,
      start: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString() ,

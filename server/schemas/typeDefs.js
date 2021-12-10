@@ -77,6 +77,7 @@ email: String!
 
 type Appt {
     _id: ID
+    id: String
     available: Boolean
     title: String
     start: String
@@ -111,6 +112,7 @@ type Mutation {
     addUser( username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     updateUser( username: String!, email: String!, password: String!): User
+    bookAppt( id: String!): Appt
     creatOrder(orderType: String!): Order
     updateOrder(orderId: [ID]!): Order
     deleteOrder(orderId: [ID]!): Order
