@@ -6,7 +6,6 @@ function ProductList({products}) {
   return (
     <div className="my-2">
       <h2>Featured Products</h2>
-        {/* <div className="flex-row"> */}
         {products.map(product => (
               <ProductItem
                 key={product.name}
@@ -14,7 +13,6 @@ function ProductList({products}) {
               />
           ))}
         </div>
-    // </div>
   );
 }
 
