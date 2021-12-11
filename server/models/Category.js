@@ -7,8 +7,8 @@ const categorySchema = new Schema({
   categoryId: {
     type: Number,
     required: true,
-
   },
+  
   salonId: {
     type: Number,
     required: true,

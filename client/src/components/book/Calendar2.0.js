@@ -2,9 +2,10 @@ import React from 'react';
 import {useEffect, useState} from 'react'
 import FullCalendar from '@fullcalendar/react'; // must go before plugins
 import listPlugin from '@fullcalendar/list'; // a plugin!
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import {QUERY_AVAILABLE_APPT} from "../../utils/queries"
+import {BOOK_APPT} from "../../utils/mutations"
 
 
 function Calendar(props) {
@@ -14,10 +15,12 @@ function Calendar(props) {
     const {loading, error, data} = useQuery(QUERY_AVAILABLE_APPT,{
       variables: {
         avail: true,
-      }
+      },
+      fetchPolicy: "network-only"
     })
+    const [bookAppt, {reset}] = useMutation(BOOK_APPT)
     
-    const events = data?.appts || [];
+    let initialEvents = data?.appts || [];
 
     const activateModal = () => {
      setModal(true);
@@ -26,19 +29,21 @@ function Calendar(props) {
         setModal(false)
     }
   
-   const handleButton = () => {
-     console.log(event.url)
+   
+  const handleButton = () => {
+     console.log(event)
+     bookAppt({variables: { id: event.id}})
+     closeModal()
+     window.location.reload()
    };
 
      const handleEventClick = (info) => {
-     console.log(info.event)
-     let _id = info.event._id
+     let id = info.event.extendedProps._id
      let title = info.event.title
      let date = info.event.start.toDateString()
      let time = info.event.start.toLocaleTimeString()
-     updateEvent({_id, date, title, time})
+     updateEvent({id, date, title, time})
      activateModal()
-     console.log(event)
    };
     return (
       <div>
@@ -52,11 +57,13 @@ function Calendar(props) {
                 initialView="listWeek"
                 noEventsContent="No available appointments at this time, please check back soon!"
                 eventClick={handleEventClick}
-                 events= {events}
+                rerenderEvents
+                initialEvents = {initialEvents}
                 />
           )}
         <Modal
               isOpen = {modal}
+              onClosed = {() => reset()}
             >
               <ModalHeader closeModal>
                 {event.title}
