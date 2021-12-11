@@ -1,0 +1,270 @@
+.store-home-container {
+  background-image: linear-gradient(#ffbebe, #668ac4, #b095ca, #006e79);
+}
+
+/* Products Page */
+
+.card-group {
+  display: inline-block;
+  width: 32%;
+  margin-left: 1%;
+}
+.card {
+  height: 700px;
+  margin-top: 2%;
+  border: solid thick darkgray;
+  box-shadow: 1px 1px 5px 1px rgb(36, 35, 35);
+}
+.product-head {
+  font-size: 100px;
+  font-family: "Meow Script", cursive;
+  font-weight: bold;
+  padding-top: 2%;
+  text-shadow: 2px 5px white;
+}
+
+.product-category {
+  height: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(39, 2, 39);
+}
+.product-name {
+  height: 50px;
+  font-size: 64px;
+  margin-top: -3%;
+  font-weight: bold;
+  font-family: "Meow Script", cursive;
+  color: coral;
+  text-shadow: 1px 2px rgb(39, 2, 39);
+}
+.product-description {
+  height: 20px;
+  font-size: 24px;
+  font-style: italic;
+  text-shadow: 1px black;
+  padding-top: 3%;
+}
+
+.stars {
+  height: 20px;
+  padding-top: 2%;
+}
+.product-images {
+  height: 365px;
+  width: 100%;
+}
+
+.product-price {
+  height: 30px;
+  font-size: 48px;
+  color: rgb(39, 2, 39);
+  font-family: "Meow Script", cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px orange;
+}
+.product-size {
+  height: 30px;
+  font-size: 24px;
+}
+.product-btn:hover {
+  transform: scale(1.05);
+  border: solid thick black;
+}
+
+.product-btn {
+  font-family: "Meow Script", cursive;
+  height: 40px;
+  padding-left: 2%;
+  padding-right: 4%;
+  background-color: darkgray;
+  color: white;
+  box-shadow: 1px 1px 5px 1px black;
+  text-shadow: 1px 1px black;
+}
+
+.product-qty {
+  height: 30px;
+}
+
+.product-category,
+.product-description,
+.product-size,
+.product-qty {
+  font-family: "Barlow Condensed", sans-serif;
+  color: rgb(77, 72, 72);
+}
+.my-2 {
+  padding-bottom: 3%;
+  padding-right: 1%;
+}
+
+/* Cart modal */
+.cart {
+    background-color: white;
+    border: thick solid rgb(39, 2, 39);
+}
+
+.cart h2 {
+    font-size: 60px;
+}
+.shopping-cart {
+  font-family: "Meow Script", cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px orange;
+}
+
+.alert {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+}
+
+.cart-product {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+}
+
+.cart-quantity {
+    font-size: 18px;
+    align-items: center;
+}
+
+.total {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px 1px orange;
+    text-decoration-line: overline;
+}
+
+.checkout {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 5px 0 5px;
+    font-family: "Barlow Condensed", sans-serif;
+    box-shadow: 1px 1px 5px 1px black;
+}
+
+@media (max-width: 1100px) {
+  .product-name {
+    font-size: 20px;
+    text-shadow: 0 1px black;
+    height: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-head {
+    font-size: 70px;
+  }
+  .card {
+    height: 440px;
+  }
+  .product-category {
+    font-size: 20px;
+    height: 20px;
+  }
+  .product-name {
+    font-size: 30px;
+    text-shadow: 0 1px black;
+    height: 15px;
+  }
+  .product-description {
+    font-size: 14px;
+    height: 10px;
+    padding-top: 1%;
+  }
+  .product-images {
+    height: 165px;
+  }
+  .product-price {
+    font-size: 26px;
+    height: 15px;
+  }
+  .product-size {
+    font-size: 14px;
+    height: 10px;
+  }
+  .product-btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .product-head {
+    font-size: 80px;
+  }
+  .card {
+    height: 440px;
+  }
+  .product-category {
+    font-size: 20px;
+    height: 20px;
+  }
+  .product-name {
+    font-size: 26px;
+    text-shadow: 0 1px black;
+    height: 15px;
+  }
+  .product-description {
+    font-size: 14px;
+    height: 10px;
+    padding-top: 1%;
+  }
+  .product-images {
+    height: 165px;
+  }
+  .product-price {
+    font-size: 26px;
+    height: 15px;
+  }
+  .product-size {
+    font-size: 14px;
+    height: 10px;
+  }
+  .product-btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .product-head {
+    font-size: 40px;
+  }
+  .card-group {
+    width: 70%;
+  }
+  .card {
+    height: 440px;
+  }
+  .product-category {
+    font-size: 20px;
+    height: 20px;
+  }
+  .product-name {
+    font-size: 26px;
+    text-shadow: 0 1px black;
+    height: 15px;
+  }
+  .product-description {
+    font-size: 14px;
+    height: 10px;
+    padding-top: 1%;
+  }
+  .product-images {
+    height: 165px;
+  }
+  .product-price {
+    font-size: 26px;
+    height: 15px;
+  }
+  .product-size {
+    font-size: 14px;
+    height: 10px;
+  }
+  .product-btn {
+    font-size: 20px;
+  }
+}

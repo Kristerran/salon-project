@@ -31,9 +31,7 @@ const stylistSchema = new Schema({
     salonId: {
         type: Number,
         required: true,
-    
-      },
- 
+    }
 })
 const Stylist = mongoose.model('Stylist', stylistSchema);
 

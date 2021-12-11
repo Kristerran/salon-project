@@ -11,7 +11,7 @@ const serviceSchema = new Schema({
         type: String,
         required: true, 
     },
-   options: {
+    options: {
         type: String,
         required: true,  
     },
@@ -23,9 +23,8 @@ const serviceSchema = new Schema({
     salonId: {
         type: Number,
         required: true,
-    
       },
-  
+
 })
 const Service = mongoose.model('Service', serviceSchema);
 module.exports = Service;

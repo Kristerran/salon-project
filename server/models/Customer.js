@@ -24,9 +24,7 @@ const customerSchema = new Schema({
     salonId: {
         type: Number,
         required: true,
-    
       },
- 
 })
 const Customer = mongoose.model('Customer', customerSchema);
 

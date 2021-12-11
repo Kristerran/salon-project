@@ -9,7 +9,6 @@ function BookCard() {
         <Row>
             <Col md={12} style={{textAlign: "center"}}>
                 <h2>Book An Appointment</h2>
-                <h4>BLURB</h4>
             </Col>
             <Col />
             <Col md={12}>

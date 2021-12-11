@@ -1,6 +1,7 @@
 import React from 'react';
 import { Collapse, Navbar, NavLink, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import Auth from '../../store/utils/auth';
 const styles = {
   logoStyle: {
     height: '15vh',
@@ -21,12 +22,15 @@ export default class MainMenu extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-
+  logout() {
+    localStorage.clear();
+    window.location.href = '/';
+  }
   render() {
     return (
       <>
 
-        <Navbar color="light" light expand="md">
+        <Navbar color="" light expand="md">
           <Link to="/">
             <img src='../Logo.svg' style={styles.logoStyle} />
           </Link>
@@ -50,6 +54,15 @@ export default class MainMenu extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink><Link to="/store">Products</Link></NavLink>
+              </NavItem>
+              <NavItem>
+              <div>
+            {Auth.loggedIn() ? (
+              <NavLink><Link to="#" onClick={this.logout()}>Logout</Link></NavLink>
+            ) : (
+              <NavLink><Link to="/login">Login</Link></NavLink>
+            )}
+          </div>
               </NavItem>
             </Nav>
           </Collapse>

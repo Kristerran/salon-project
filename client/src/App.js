@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 import { Provider } from 'react-redux';
-// import store from './storeConfig.js';
+import store from './components/store/utils/store';
 
 import './css/App.css';
 import "./css/index.css";
@@ -14,24 +15,38 @@ import NavContainer from './components/main/nav/NavContainer.js';
 import Home from './components/home/HomeContainer.js';
 import Book from './components/book/BookContainer.js';
 import Services from './components/services/ServicesContainer.js';
-import items from "./components/services/data.js";
 import About from './components/about/AboutContainer.js';
 import Reviews from './components/reviews/ReviewContainer.js';
-// import Store from './components/store/Containers/HomepageContainer';
+import StoreHome from './components/store/pages/Home';
+import Detail from './components/store/pages/Detail';
+import NoMatch from './components/store/pages/NoMatch';
+import Login from './components/store/pages/Login';
+import Signup from './components/store/pages/Signup';
+import Success from './components/store/pages/Success';
+import OrderHistory from './components/store/pages/OrderHistory';
 import Footer from './components/main/footer.js';
+import reviews from './seeds/reviewData.json'
+import products from './seeds/itemData.json';
 
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 const client = new ApolloClient({
-  request: (operation) => {
-    const token = localStorage.getItem('id_token')
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : ''
-      }
-    })
-  },
-  uri: '/graphql',
-})
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 
 function App() {
@@ -39,18 +54,24 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="App">
-          {/* <Provider store={store} > */}
+          <Provider store={store} >
             <NavContainer />
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/book' element={<Book />} />
-              <Route path='/services' element={<Services items={items} />} />
+              <Route path='/services' element={<Services/>} />
               <Route path='/about' element={<About />} />
-              <Route path='/reviews' element={<Reviews />} />
-              {/* <Route path='/store' element={<Store />} /> */}
+              <Route path='/reviews' element={<Reviews reviews={reviews}/>} />
+              <Route path='/store' element={<StoreHome products={products} />} />
+              <Route path="/products/:id" element={<Detail />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/success" element={<Success />} />
+              <Route path="/orderHistory" element={<OrderHistory />} />
+              <Route element={<NoMatch />} />
             </Routes>
             <Footer />
-          {/* </Provider> */}
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>

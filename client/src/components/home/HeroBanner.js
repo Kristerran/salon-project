@@ -4,11 +4,11 @@ import { Container } from 'reactstrap';
 
 const styles = {
   bannerCoverPc: {
-    backgroundImage: 'url("/images/banner-cover-pc.jpg")',
+    backgroundImage: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")',
     backgroundSize: 'cover'
   },
   bannerCoverMobile: {
-    backgroundImage: 'url("/images/banner-cover-mobile.jpg")',
+    backgroundImage: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")',
     backgroundSize: 'cover'
   },
   textBanner: {
@@ -34,7 +34,7 @@ const { bannerCoverPc, bannerCoverMobile, textBanner, titleH1Mobile, titleH1Pc }
 
 const HeroBanner = () => (
   <div fluid style={isMobile? bannerCoverMobile : bannerCoverPc}>
-    <Container fluid style={{height: '250px'}}>
+    <Container fluid style={{height: '250px', color: '#FFBEBE'}}>
       <div style={textBanner}>
         <h1 className="display-3" style={isMobile ? titleH1Mobile : titleH1Pc}>LAI</h1>
         <p>Lai Saetern is an independent hairstylist at Tangelo Hair Salon. They specialize in cut, color and styling for women and men.</p>
@@ -44,4 +44,3 @@ const HeroBanner = () => (
 );
 
 export default HeroBanner;
-
