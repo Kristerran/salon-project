@@ -11,7 +11,7 @@ const serviceSchema = new Schema({
         type: String,
         required: true, 
     },
-   options: {
+    options: {
         type: String,
         required: true,  
     },

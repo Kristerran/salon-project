@@ -9,7 +9,7 @@ function ShopCard() {
     return (
         <>
             <h2>Our Products</h2>
-            <h4>BLURB</h4>
+            {/* <h4>BLURB</h4> */}
         <Row>
             <Col md={3}>
                 <Card>
@@ -43,7 +43,7 @@ function ShopCard() {
                     <CardImg src={Placeholder3} alt="Card image" />
                     <CardImgOverlay>
                         {/* <CardTitle>Lorem</CardTitle> */}
-                        <CardText>Hand-Tied</CardText>
+                        <CardText>Hair Accessories</CardText>
                     </CardImgOverlay>
                 </Card>
             </Col>

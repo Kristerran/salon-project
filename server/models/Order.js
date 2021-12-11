@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const dateFormat = require('../utils/dateFormat');
 
+
 const orderSchema = new Schema({
   orderId: {
     type: Number,
@@ -11,7 +12,7 @@ const orderSchema = new Schema({
   purchaseDate: {
     type: Date,
     default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
+
   },
   orderType: {
     type: String,
@@ -27,12 +28,6 @@ const orderSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: 'Product',
-    },
-  ],
-  services: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Service',
     },
   ],
 
