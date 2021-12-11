@@ -5,9 +5,10 @@ const { Schema } = mongoose;
 const productSchema = new Schema({
     productId: {
         type: Number,
+        autoIncrement: true,
         required: true,
       },
-    title: {
+    name: {
         type: String,
         required: true,
     },
@@ -15,12 +16,16 @@ const productSchema = new Schema({
         type: Number,
         required: true,
     },
+    size: {
+        type: String,
+        required: true,
+    },
     price: {
         type: Number,
         required: true,
         min: 0.99,
     },
-    images: {
+    image: {
         type: String,
         required: true,
     },
@@ -28,22 +33,13 @@ const productSchema = new Schema({
         type: String,
         required: true,
     },
-    tags: {
-        type: String,
-        required: true,
-    },
     description: {
         type: String,
         required: true,
     },
-    salonId: {
-        type: Number,
-        required: true,
-    
-      },
     category: {
         type: Schema.Types.ObjectId,
-        ref: 'Category',
+        ref: 'ProductCategory',
         required: true,
       },
 })

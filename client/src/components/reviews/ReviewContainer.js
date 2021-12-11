@@ -1,24 +1,23 @@
 import React from 'react';
 
-// import Review from './ReviewCard.js';
-import reviews from './reviews.js';
-
 import '../../css/reviews/reviews.css';
 
-function ReviewContainer() {
+function ReviewContainer({reviews}) {
 
     return (
         <>
             <div className="title">
                 <h2>See what our clients have to say:</h2>
             </div>
-            <figure className="review-card">
-                <blockquote>{reviews.quote}</blockquote>
+            {reviews.map(review => (
+                <figure className="review-card">
+                <blockquote>{review.quote}</blockquote>
                 <div class="author">
-                    <img src={reviews.imgPath} alt="image of person" />
-                    <h5>{reviews.name} <span>{reviews.date}</span><span>{reviews.rating}</span></h5>
+                        {review.image && <img src={review.image} alt="image of person" />}
+                    <h5>{review.name} <span>{review.date}</span><span>{review.rating}</span></h5>
                 </div>
             </figure>
+            ))}
         </>
     );
 }

@@ -1,0 +1,247 @@
+
+[
+  {
+    "_id": 1,
+    "name": "Invisible Oil Shampoo",
+    "description": "A featherlight moisturizing shampoo for dry hair.",
+    "image": "/images/bbhs.jpg",
+    "category": "Hairdressers Invisible Oil",
+    "price": 29.00,
+    "quantity": 25,
+    "size": "8.5 fl oz",
+    "rating": ""
+  },
+  {
+    "_id": 2,
+    "name": "Invisible Oil Conditioner",
+    "description":"A divine dose of hair moisture.",
+    "category": "Hairdressers Invisible Oil",
+    "image": "/images/bbhc.jpg",
+    "price": 34.00,
+    "quantity": 25,
+    "size": "6.7 fl oz",
+    "rating": "4.5/5"
+  },
+  {
+    "_id": 3,
+    "name": "Invisible Oil Mask",
+    "description":"Treat hair to 72 hours of lasting moisture.",
+    "image": "/images/bbhm.jpg",
+    "category": "Hairdressers Invisible Oil",
+    "price": 43.00,
+    "quantity": 21,
+    "size": "6.7 fl oz",
+    "rating": "4.5/5"
+  },
+  {
+    "name": "Invisible Oil",
+    "description": "Light as air, for healthy hair.",
+    "image": "/images/bbho.jpg",
+    "category": "Hairdressers Invisible Oil",
+    "price": 42.00,
+    "quantity": 10,
+    "size": "3.4 fl oz",
+    "rating": "4.7/5"
+  },
+  {
+    "name": "Heat Protective Primer",
+    "description": "The best hair heat protection under the sun.",
+    "image": "/images/bbhp.jpg",
+    "category": "Hairdressers Invisible Oil",
+    "price": 29.00,
+    "quantity": 21,
+    "size": "8.5 fl oz",
+    "rating": "4.6/5"
+  },
+  {
+    "name": "Finishing Spray",
+    "description": "Tousled texture. Feather-soft feel.",
+    "image": "/images/bbhf.jpg",
+    "category": "Hairdressers Invisible Oil",
+    "price": 32.00,
+    "quantity": 11,
+    "size": "3.7 fl oz",
+    "rating": "4.7/5"
+  },
+  {
+    "name": "Volume Shampoo",
+    "description": "The best shampoo for instant body building.",
+    "image": "/images/bbts.jpg",
+    "category": "Texture",
+    "price": 31.0,
+    "quantity": 21,
+    "size": "8.5 fl oz",
+    "rating": "4.2/5"
+  },
+  {
+    "name": "Volume Conditioner",
+    "description": "Body building made easy.",
+    "image": "/images/bbtc.jpg",
+    "category": "Texture",
+    "price": 34.00,
+    "quantity": 26,
+    "size": "8.5 fl oz",
+    "rating": "3.2/5"
+  },
+  {
+    "name": "Go Big Treatment",
+    "description": "The first step to sky-high styles.",
+    "image": "/images/bbts.jpg",
+    "category": "Texture",
+    "price": 30.00,
+    "quantity": 8,
+    "size": "8.5 fl oz",
+    "rating": "4.6/5"
+  },
+  {
+    "name": "Thickening Spray",
+    "description": "Lush, thick hair starts here.",
+    "image": "/images/bbtt.jpg",
+    "category": "Texture",
+    "price": 30.00,
+    "quantity": 6,
+    "size": "8.5 fl oz",
+    "rating": "4.7/5"
+  },
+  {
+    "name": "Blowout Dry Creme",
+    "description": "Your blow dry just got bigger.",
+    "image": "/images/bbtb.jpg",
+    "category": "Texture",
+    "price": 32.00,
+    "quantity": 7,
+    "size": "5 fl oz",
+    "rating": "3.9/5"
+  },
+  {
+    "name": "Dryspun Texture Spray",
+    "description": "A texturizing hair spray that adds airy volume.",
+    "image": "/images/bbtd.jpg",
+    "category": "Texture",
+    "price": 31.00,
+    "quantity": 9,
+    "size": "3.6 fl oz",
+    "rating": "4.3/5"
+  },
+  {
+    "name": "Moisturizing Shampoo",
+    "description": "A gentle cleanser for seriously hydrated curls.",
+    "image": "/images/bbcs.jpg",
+    "category": "Curl",
+    "price": 31.00,
+    "quantity": "21",
+    "size": "8.5 fl oz",
+    "rating": "4.8/5"
+  },
+  {
+    "name": "3-in-1 Conditioner",
+    "description": "Rinse-out, leave-in, or co-wash.",
+    "image": "/images/bbcc.jpg",
+    "category": "Curl",
+    "price": 34.00,
+    "quantity": 11,
+    "size": "6.7 fl oz",
+    "rating": "4.7/5"
+  },
+  {
+    "name": "Light Defining Cream",
+    "description": "For moisturized, flexible curls with movement.",
+    "image": "/images/bbcl.jpg",
+    "category": "Curl",
+    "price": 32.00,
+    "quantity": 15,
+    "size": "8.5 fl oz",
+    "rating": "4.9/5"
+  },
+  {
+    "name": "Anti-Humidity Gel-Oil",
+    "description": "Elongated, nourished curls are no longer a stretch.",
+    "image": "/images/bbcg.jpg",
+    "category": "Curl",
+    "price": 32.00,
+    "quantity": 14,
+    "size": "5 fl oz",
+    "rating": "4.3/5"
+  },
+  {
+    "name": "Butter Mask",
+    "description": "A moisturizing treatment for the thirsty curls.",
+    "image": "/images/bbcm.jpg",
+    "category": "Curl",
+    "price": 43.00,
+    "quantity": 8,
+    "size": "6.7 fl oz",
+    "rating": "5/5"
+  },
+  {
+    "name": "Mousse",
+    "description": "For long-lasting curl definition and bounce.",
+    "image": "/images/bbcmo.jpg",
+    "category": "Curl",
+    "price": 32.00,
+    "quantity": 10,
+    "size": "5 fl oz",
+    "rating": "3.9/5"
+  },
+  {
+    "name": "Foam Wash Shampoo",
+    "description": "Après-beach texture – without the beach.",
+    "image": "/images/bbss.jpg",
+    "category": "Surf",
+    "price": 27.00,
+    "quantity": 10,
+    "size": "8.5 fl oz",
+    "rating": "4.3/5"
+  },
+  {
+    "name": "Creme Rinse Conditioner",
+    "description": "Après beach texture – without the beach.",
+    "image": "/images/bbsc.jpg",
+    "category": "Surf",
+    "price": 29.00,
+    "quantity": 13,
+    "size": "8.5 fl oz",
+    "rating": "4.4/5"
+  },
+  {
+    "name": "Surf Spray",
+    "description": "The original sea salt spray.",
+    "image": "/images/bbssp.jpg",
+    "category": "Surf",
+    "price": 29.00,
+    "quantity": 22,
+    "size": "4.2 fl oz",
+    "rating": "4.4/5"
+  },
+  {
+    "name": "Surf Infusion",
+    "description": "The beach, bottled.",
+    "image": "/images/bbsi.jpg",
+    "category": "Surf",
+    "price": 29.00,
+    "quantity": 14,
+    "size": "3.4 fl oz",
+    "rating": "4.3/5"
+  },
+  {
+    "name": "Styling Leave In",
+    "description": "Make waves wherever you go.",
+    "image": "/images/bbsl.jpg",
+    "category": "Surf",
+    "price": 30.00,
+    "quantity": 10,
+    "size": "5 fl oz",
+    "rating": "4.2/5"
+  },
+  {
+    "name": "Foam Spray Blow Dry",
+    "description": "Beachy hair can be glamorous, too.",
+    "image": "/images/bbsd.jpg",
+    "category": "Surf",
+    "price": 31.00,
+    "quantity": 21,
+    "size": "4 fl oz",
+    "rating": "4.4/5"
+  }
+]
+

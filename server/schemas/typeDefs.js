@@ -17,6 +17,11 @@ type Category {
 
   }
 
+  type ProductCategory {
+    _id: ID!
+    name: String!
+  }
+
 type Order {
     _id: ID
     salonId: Int
@@ -67,6 +72,15 @@ year: String
 imgPath: String
 }
 
+type Review {
+    _id: ID!
+    name: String!
+    quote: String!
+    date: String!
+    image: String!
+    rating: String!
+}
+
 type User {
 _id: ID
 username: String
@@ -93,7 +107,9 @@ type Auth {
     token: ID
     user: User
 }
-
+type Checkout {
+    session: ID
+  }
 type Query {
     user: User
     users: [User]
