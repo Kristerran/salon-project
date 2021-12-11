@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const apptSchema = new Schema({
+    id: {
+        type: String,
+        required: true,
+    },
     available: {
         type: Boolean,
         required: true,

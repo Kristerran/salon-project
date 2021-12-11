@@ -77,6 +77,18 @@ orders: [Order]
 
 }
 
+
+type Appt {
+    _id: ID
+    id: String
+    available: Boolean
+    title: String
+    start: String
+    client: String
+    service: String
+    contact: String
+}
+
 type Auth {
     token: ID
     user: User
@@ -108,6 +120,12 @@ type Mutation {
     removeProduct(title: String!): Product
     addService(serviceName: String!, price: Float!): Service
     removeService(serviceId: String!): Service
+    bookAppt( id: String!): Appt
+    creatOrder(orderType: String!): Order
+    updateOrder(orderId: [ID]!): Order
+    updateCustomer(customerId: [ID]!): Customer
+    addProduct(productId: ID!): Product
+    deleteProduct(productId: ID!): Product
 
 }
 `;

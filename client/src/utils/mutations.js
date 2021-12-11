@@ -11,12 +11,11 @@ export const CREATE_APPT = gql`
 `;
 
 export const BOOK_APPT = gql`
-  mutation bookAppt($id: Integer!, $client: String!, service: String!, $contact: Email! ) {
-    login(id: $id, client: $client, service: $service contact: $contact ) {
-      id: id
-      client: client
-
-    }
+  mutation bookAppt($id: String!) {
+    bookAppt(id: $id)
+     {
+       _id
+     }
   }
 `;
 

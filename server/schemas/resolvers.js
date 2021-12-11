@@ -131,6 +131,20 @@ const resolvers = {
       );
     },
 
+
+    bookAppt: async (parent, args) => {
+
+      return Appt.findByIdAndUpdate(
+        {_id: args.id},
+        { available: false }
+      );
+    },
+
+    // addOrder: async (parent, { products }, context) => {
+    //   console.log(context);
+    //   if (context.user) {
+    //     const order = new Order({ products });
+
     removeProduct: async (parent, { title }, context) => {
       if (context.user) {
         const updatedUser =  await User.findOneAndUpdate (
