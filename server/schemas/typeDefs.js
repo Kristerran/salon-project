@@ -113,10 +113,13 @@ type Checkout {
 type Query {
     user: User
     users: [User]
+    review: Review
+    appts(avail: Boolean!): [Appt]
     categories: [Category]
     customer(name: String!): Customer
     customers: [Customer]
     orders: [Order]
+    checkout(products: [ID]!): Checkout
     order(_id: ID!): Order
     products: [Product]
     product(_id: ID!): Product
