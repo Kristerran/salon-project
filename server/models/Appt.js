@@ -2,20 +2,16 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const apptSchema = new Schema({
-    id: {
-        type: Number,
-        required: true, 
-    },
     available: {
         type: Boolean,
         required: true,
     },
-    Title: {
+    title: {
         type: String,
         required: true,
     },
     start:{
-        type: Date,
+        type: String,
         required: true,
     },
     client:{

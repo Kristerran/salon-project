@@ -8,7 +8,7 @@ function Hours() {
         <Container className="hours">
             <Row>
                 {/* <Col md={8}><Map /></Col> */}
-                <Col md={6}>
+                <Col md={12}>
                     <Row>
                         <Col>Hours</Col>
                     </Row>
