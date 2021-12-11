@@ -7,36 +7,36 @@ mongoose.connect('mongodb://localhost/salon-project', {
   useUnifiedTopology: true,
 });
 const product = [
-    {
-        "salonId": "1",
-        "productId": "2",
-        "title": "Shampoo",
-        "quantity": "2",
-        "images": "img",
-        "ratings": "5",
-        "tags": "3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-        "salonId": "1",
-        "productId": "4", 
-        "title": "Shampoo",
-        "quantity": "2",
-        "images": "img",
-        "ratings": "5",
-        "tags": "3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-        "salonId": "1",
-        "productId": "7",
-        "title": "Shampoo",
-        "quantity": "2",
-        "images": "img",
-        "ratings": "5",
-        "tags": "3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
+  {
+    "salonId": "1",
+    "productId": "2",
+    "title": "Shampoo",
+    "quantity": 2,
+    "images": "img",
+    "ratings": "5",
+    "tags": "3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "salonId": "1",
+    "productId": "4",
+    "title": "Shampoo",
+    "quantity": 2,
+    "images": "img",
+    "ratings": "5",
+    "tags": "3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "salonId": "1",
+    "productId": "7",
+    "title": "Shampoo",
+    "quantity": 2,
+    "images": "img",
+    "ratings": "5",
+    "tags": "3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
 ]
 
 db.Product.deleteMany({})
