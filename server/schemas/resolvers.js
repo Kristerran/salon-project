@@ -121,6 +121,15 @@ const resolvers = {
         { new: true }
       );
     },
+
+    bookAppt: async (parent, args) => {
+
+      return Appt.findByIdAndUpdate(
+        {_id: args.id},
+        { available: false }
+      );
+    },
+
     // addOrder: async (parent, { products }, context) => {
     //   console.log(context);
     //   if (context.user) {
