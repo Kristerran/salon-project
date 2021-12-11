@@ -7,8 +7,8 @@ const styles = {
     height: '15vh',
     width: 'auto',
     filter: 'drop-shadow(4px 5px 5px #96C1AE)',
-  }
-}
+  },
+};
 export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +31,7 @@ export default class MainMenu extends React.Component {
     return (
       <>
 
-        <Navbar color="light" light expand="md">
+        <Navbar color="" light expand="md">
           <Link to="/">
             <img src='../Logo.svg' style={styles.logoStyle} />
           </Link>
