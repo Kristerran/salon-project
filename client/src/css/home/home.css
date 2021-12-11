@@ -1,11 +1,15 @@
 /* Hero Banner */
 
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 .banner-cover-pc {
-  background-image: 'url("https://i.pinimg.com/564x/a2/cb/ec/a2cbec977b18206893249793c67cd594.jpg")';
+  background-image: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")';
   background-size: 'cover';
 };
 .bannerCoverMobile {
-  background-image: 'url("https://i.pinimg.com/564x/a2/cb/ec/a2cbec977b18206893249793c67cd594.jpg")';
+  background-image: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")';
   background-size: 'cover';
 };
 .textBanner {
@@ -18,7 +22,7 @@
   padding: '30px';
 };
 .titleH1Pc {
-  fontsize: '80px';
+  font-size: '80px';
 };
 .titleH1Mobile {
   font-size: '60px';
@@ -26,4 +30,14 @@
 .row {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.card {
+  object-fit: cover;
+  border: solid;
+  border-width: 5px;
+  border-color: #FFBEBE;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: white;
 }

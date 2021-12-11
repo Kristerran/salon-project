@@ -10,7 +10,6 @@ function ServiceCard() {
     return (
         <>
             <h2>Services</h2>
-            <h4>BLURB</h4>
         <Row>
             <Col  md={3} >
                 <Card>

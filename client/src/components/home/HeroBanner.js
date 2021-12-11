@@ -4,11 +4,11 @@ import { Container } from 'reactstrap';
 
 const styles = {
   bannerCoverPc: {
-    backgroundImage: 'url("https://i.ibb.co/mJCHJxb/banner.png")',
+    backgroundImage: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")',
     backgroundSize: 'cover'
   },
   bannerCoverMobile: {
-    backgroundImage: 'url("https://i.ibb.co/mJCHJxb/banner.png")',
+    backgroundImage: 'url("https://i.ibb.co/K7t0c10/bannerstuff.jpg")',
     backgroundSize: 'cover'
   },
   textBanner: {

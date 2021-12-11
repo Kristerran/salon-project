@@ -31,7 +31,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-gold: #c59d5f;
+  --clr-salmon: #ffbebe;
 
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -152,7 +152,7 @@ Menu
 .underline {
   width: 5rem;
   height: 0.25rem;
-  background: var(--clr-gold);
+  background-color: #ffbebe;
   margin-left: auto;
   margin-right: auto;
 }
@@ -176,7 +176,7 @@ Menu
   border-radius: var(--radius);
 }
 .filter-btn:hover {
-  background: var(--clr-gold);
+  background-color: #ffbebe;
   color: var(--clr-white);
 }
 .section-center {
@@ -196,7 +196,8 @@ Menu
   object-fit: cover;
   height: 200px;
   width: 100%;
-  border: 0.25rem solid var(--clr-gold);
+  border: 0.25rem solid;
+  border-color: #FFBEBE;
   border-radius: var(--radius);
   display: block;
 }

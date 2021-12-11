@@ -15,8 +15,8 @@ function HomeContainer() {
         <main class="w-100 p-3">
             <HeroBanner />
             <AboutCard />
-            <ServiceCard />
             <BookCard />
+            <ServiceCard />
             <ShopCard />
         </main>
             )
