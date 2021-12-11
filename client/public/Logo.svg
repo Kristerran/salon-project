@@ -1,6 +1,6 @@
 <svg width="450" height="200" viewBox="0 0 450 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="450" height="200%" fill="none"/>
-<rect width="450" height="200" rx="16" fill="white"/>
+<rect width="450" height="200" rx="16" fill="d4d4d4"/>
 <g filter="url(#filter0_d_0_1)">
 <rect x="9" y="8" width="179" height="184" rx="16" fill="#C58889"/>
 </g>

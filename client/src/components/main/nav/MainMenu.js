@@ -6,9 +6,8 @@ const styles = {
   logoStyle: {
     height: '15vh',
     width: 'auto',
-    filter: 'drop-shadow(4px 5px 5px #96C1AE)',
-  },
-};
+  }
+}
 export default class MainMenu extends React.Component {
   constructor(props) {
     super(props);

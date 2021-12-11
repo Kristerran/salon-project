@@ -14,7 +14,7 @@ function BookCard() {
             <Col md={12}>
                 <h4>Hey Beautiful!</h4>
                 <p>Nice to see you again! You may request an appointment with one of our stylists by using the "request new appointment" form or by contacting the salon directly!</p>
-                <Button><a href="/bookContainer">See Our Availability</a></Button>
+                <Button><a href="/book">See Our Availability</a></Button>
             </Col>
             <Col md={6}>
                 {/* <BookingForm /> */}
