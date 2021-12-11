@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, CardText, Row, Col } from 'reactstrap';
-import Placeholder from '../../assets/images/prod5.jpg';
-import Placeholder1 from '../../assets/images/prod2.jpg';
-import Placeholder2 from '../../assets/images/prod3.jpg';
-import Placeholder3 from '../../assets/images/prod4.jpg';
+import Placeholder from '../../images/prod5.jpg';
+import Placeholder1 from '../../images/prod2.jpg';
+import Placeholder2 from '../../images/prod3.jpg';
+import Placeholder3 from '../../images/prod4.jpg';
 
 function ShopCard() {
     return (
@@ -16,7 +16,7 @@ function ShopCard() {
                     <CardImg src={Placeholder} alt="Card image" />
                     <CardImgOverlay>
                         <CardTitle>Shampoo & Conditioner</CardTitle>
-                        <CardText> Lorem</CardText>
+                        {/* <CardText> Lorem</CardText> */}
                     </CardImgOverlay>
                 </Card>
             </Col>
@@ -25,7 +25,7 @@ function ShopCard() {
                     <CardImg src={Placeholder1} alt="Card image" />
                     <CardImgOverlay>
                         <CardTitle>Styling Products</CardTitle>
-                        <CardText>Lorem</CardText>
+                        {/* <CardText>Lorem</CardText> */}
                     </CardImgOverlay>
                 </Card>
             </Col>
@@ -34,7 +34,7 @@ function ShopCard() {
                     <CardImg src={Placeholder2} alt="Card image" />
                     <CardImgOverlay>
                         <CardTitle>Mens Haircare</CardTitle>
-                        <CardText>Lorem</CardText>
+                        {/* <CardText>Lorem</CardText> */}
                     </CardImgOverlay>
                 </Card>
             </Col>
@@ -42,8 +42,8 @@ function ShopCard() {
                 <Card>
                     <CardImg src={Placeholder3} alt="Card image" />
                     <CardImgOverlay>
-                        <CardTitle>Lorem</CardTitle>
-                        <CardText>Hand-Tied</CardText>
+                        {/* <CardTitle>Lorem</CardTitle> */}
+                        <CardText>Hair Accessories</CardText>
                     </CardImgOverlay>
                 </Card>
             </Col>

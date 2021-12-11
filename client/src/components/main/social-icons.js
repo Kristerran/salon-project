@@ -9,10 +9,10 @@ function SocialIcons() {
 
     return (
         <>
-                <a href="https://facebook.com"><AiFillFacebook /></a>
-                <a href="https://twitter.com"><AiFillTwitterSquare /></a>
-                <a href="https://instagram.com"><AiFillInstagram /></a>
-                <a href="https://yelp.com"><FaYelp /></a>
+                {/* <a href="https://facebook.com"><AiFillFacebook /></a>
+                <a href="https://twitter.com"><AiFillTwitterSquare /></a> */}
+                <a href="https://www.instagram.com/lai.hairstylist/"><AiFillInstagram /></a>
+                <a href="https://www.yelp.com/biz/lai-hairstylist-sacramento-2?osq=lai+hairstylist"><FaYelp /></a>
         </>
     );
 }

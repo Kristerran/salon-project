@@ -4,8 +4,8 @@ import { Col, Row } from 'reactstrap';
 function Contact() {
     return (
         <>
-            <Row>
-                <Col md={4}>Phone</Col>
+            {/* <Row> */}
+                {/* <Col md={4}>Phone</Col>
                 <Col md={4}>Email</Col>
                 <Col md={4}>Location</Col>
             </Row>
@@ -17,7 +17,7 @@ function Contact() {
             <Row>
                 <Col md={4}>Appointment Cancellation Policy</Col>
                 <Col md={6}>BLURB</Col>
-            </Row>
+            </Row> */}
         </>
     )
 }
