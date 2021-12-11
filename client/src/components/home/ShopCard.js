@@ -9,7 +9,7 @@ function ShopCard() {
     return (
         <>
             <h2>Our Products</h2>
-            <h4>BLURB</h4>
+            {/* <h4>BLURB</h4> */}
         <Row>
             <Col md={3}>
                 <Card>
