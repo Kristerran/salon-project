@@ -43,7 +43,7 @@ function ShopCard() {
                     <CardImg src={Placeholder3} alt="Card image" />
                     <CardImgOverlay>
                         {/* <CardTitle>Lorem</CardTitle> */}
-                        <CardText>Hand-Tied</CardText>
+                        <CardText>Hair Accessories</CardText>
                     </CardImgOverlay>
                 </Card>
             </Col>
