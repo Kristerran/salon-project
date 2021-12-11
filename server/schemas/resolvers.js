@@ -133,7 +133,7 @@ const resolvers = {
 
     removeProduct: async (parent, { title }, context) => {
       if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
+        const updatedUser =  await User.findOneAndUpdate (
           { _id: context.user._id },
           { $pull: { Product: { title } } },
           { new: true }
@@ -165,9 +165,9 @@ const resolvers = {
 
     removeService: async (parent, { serviceId }, context) => {
       if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
+        const updatedUser =  await User.findOneAndUpdate (
           { _id: context.user._id },
-          { $pull: { Service: { serviceId } } },
+          { $pull: { Service: { serviceId} } },
           { new: true }
         );
         return updatedUser;

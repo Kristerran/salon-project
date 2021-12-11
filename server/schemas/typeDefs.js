@@ -83,7 +83,7 @@ type Auth {
 }
 
 type Query {
-    user(username: String!): User
+    user: User
     users: [User]
     categories: [Category]
     customer(name: String!): Customer

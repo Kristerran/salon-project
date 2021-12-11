@@ -47,7 +47,7 @@ export default class MainMenu extends React.Component {
                 <NavLink><Link to="/about">About Us</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><Link to="/reviews">Contact Us</Link></NavLink>
+                <NavLink><Link to="/reviews">Reviews</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink><Link to="/store">Products</Link></NavLink>
