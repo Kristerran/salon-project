@@ -1,6 +1,7 @@
 
 [
   {
+    "_id": 1,
     "name": "Invisible Oil Shampoo",
     "description": "A featherlight moisturizing shampoo for dry hair.",
     "image": "/images/bbhs.jpg",
@@ -11,6 +12,7 @@
     "rating": ""
   },
   {
+    "_id": 2,
     "name": "Invisible Oil Conditioner",
     "description":"A divine dose of hair moisture.",
     "category": "Hairdressers Invisible Oil",
@@ -21,6 +23,7 @@
     "rating": "4.5/5"
   },
   {
+    "_id": 3,
     "name": "Invisible Oil Mask",
     "description":"Treat hair to 72 hours of lasting moisture.",
     "image": "/images/bbhm.jpg",
@@ -62,7 +65,7 @@
   },
   {
     "name": "Volume Shampoo",
-    "description": "The best volumizing shampoo for instant body building.",
+    "description": "The best shampoo for instant body building.",
     "image": "/images/bbts.jpg",
     "category": "Texture",
     "price": 31.0,
@@ -162,7 +165,7 @@
   },
   {
     "name": "Butter Mask",
-    "description": "A deeply moisturizing treatment for the thirstiest curls.",
+    "description": "A moisturizing treatment for the thirsty curls.",
     "image": "/images/bbcm.jpg",
     "category": "Curl",
     "price": 43.00,
@@ -192,7 +195,7 @@
   },
   {
     "name": "Creme Rinse Conditioner",
-    "description": "Après beach texture (and moisture) – without the beach.",
+    "description": "Après beach texture – without the beach.",
     "image": "/images/bbsc.jpg",
     "category": "Surf",
     "price": 29.00,

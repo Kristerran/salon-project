@@ -9,7 +9,7 @@
     "@fullcalendar/list": "^5.10.1",
     "@fullcalendar/react": "^5.10.1",
     "@mapbox/mapbox-gl-directions": "^3.1.2",
-    "@stripe/stripe-js": "^1.21.2",
+    "@stripe/stripe-js": "^1.22.0",
     "apollo": "^2.10.3",
     "apollo-boost": "^0.4.9",
     "apollo-link-context": "^1.0.20",

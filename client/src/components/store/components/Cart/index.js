@@ -41,8 +41,8 @@ const Cart = () => {
 
   function calculateTotal() {
     let sum = 0;
-    state.cart.forEach((product) => {
-      sum += product.price * product.purchaseQuantity;
+    state.cart.forEach((item) => {
+      sum += item.price * item.purchaseQuantity;
     });
     return sum.toFixed(2);
   }
@@ -50,9 +50,9 @@ const Cart = () => {
   function submitCheckout() {
     const productIds = [];
 
-    state.cart.forEach((product) => {
-      for (let i = 0; i < product.purchaseQuantity; i++) {
-        productIds.push(product._id);
+    state.cart.forEach((item) => {
+      for (let i = 0; i < item.purchaseQuantity; i++) {
+        productIds.push(item._id);
       }
     });
 
@@ -71,31 +71,33 @@ const Cart = () => {
     );
   }
 
+
   return (
     <div className="cart">
       <div className="close" onClick={toggleCart}>
-        [close]
+      ✗
       </div>
-      <h2>Shopping Cart</h2>
+      <h2 className="shopping-cart">Your Cart</h2>
       {state.cart.length ? (
         <div>
-          {state.cart.map((product) => (
-            <CartItem key={product._id} product={product} />
+          {state.cart.map((item) => (
+            <CartItem key={item._id} item={item} />
           ))}
 
           <div className="flex-row space-between">
-            <strong>Total: ${calculateTotal()}</strong>
-
+            <strong className="total">Total: ${calculateTotal()}</strong>
+          </div>
+          <div>
             {Auth.loggedIn() ? (
-              <button onClick={submitCheckout}>Checkout</button>
+              <button><a href="/login">Checkout</a></button>
             ) : (
-              <span>(log in to check out)</span>
+              <button className="checkout" onClick={submitCheckout}>Checkout</button>
             )}
           </div>
         </div>
       ) : (
-        <h3>
-          You haven't added anything to your cart yet!
+        <h3 className="alert">
+          Your cart is empty!
         </h3>
       )}
     </div>

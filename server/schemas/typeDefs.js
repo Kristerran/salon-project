@@ -26,7 +26,7 @@ type Order {
     _id: ID!
     salonId: Int!
     orderId: Int!
-    purchasedate: String
+    purchaseDate: String
     orderType: String!
 
     }
@@ -103,6 +103,9 @@ type Auth {
     token: ID
     user: User
 }
+type Checkout {
+    session: ID
+  }
 type Query {
     me: User
     appts(avail: Boolean!): [Appt]
@@ -119,10 +122,12 @@ type Query {
     stylist(id: ID!): Stylist
     service(id: ID!): Service
     services (salonId: ID!): [Service]
+    review: [Review]
+    checkout(products: [ID]!): Checkout
 }
 
 type Mutation {
-    addUser( username: String!, email: String!, password: String!): Auth
+    addUser( firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     updateUser( username: String!, email: String!, password: String!): User
     creatOrder(orderType: String!): Order
@@ -133,6 +138,7 @@ type Mutation {
     deleteProduct(productId: ID!): Product
     updateProduct(productId: ID!, price: Float!): Product
     addService(serviceName: String!, option: String!, price: Float!): Service
+    addOrder(products: [ID]!): Order
 
 }
 `;

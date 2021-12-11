@@ -37,17 +37,17 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex-row">
-      <div>
-        <img
-          src={item.image}
-          alt={item.name}
+      {/* <div>
+        <img className="cart-image"
+          src={product.image}
+          alt={product.name}
         />
-      </div>
+      </div> */}
       <div>
-        <div>{item.name}, ${item.price}</div>
+        <div className="cart-product">{item.name}, ${item.price}</div>
         <div>
-          <span>Qty:</span>
-          <input
+          <span>Quantity: </span>
+          <input className="cart-quantity"
             type="number"
             placeholder="1"
             value={item.purchaseQuantity}
@@ -58,7 +58,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            🗑️
+            ✗
           </span>
         </div>
       </div>

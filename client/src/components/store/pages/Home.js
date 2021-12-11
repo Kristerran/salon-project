@@ -5,7 +5,7 @@ import '../../../css/store/store.css'
 
 const Home = ({products}) => {
   return (
-    <div className="container">
+    <div className="store-home-container">
       <ProductList products={products}/>
       <Cart />
     </div>
