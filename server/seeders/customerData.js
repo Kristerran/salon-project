@@ -12,19 +12,19 @@ const customer = [
         "salonId": "1",
         "name": "Harper",
         "email": "harper@yahoo.com",
-        "phoneNumber": "916-111-1111"
+        "phoneNumber": "+19161111111"
     },
     {
         "salonId": "1",
         "name": "Gracie",
         "email": "gracie@yahoo.com",
-        "phoneNumber": "916-111-2221"
+        "phoneNumber": "+19161112221"
     },
     {
         "salonId": "1",
         "name": "George",
         "email": "george@yahoo.com",
-        "phoneNumber": "916-111-3333"
+        "phoneNumber": "+19161113333"
     },
 
 ]

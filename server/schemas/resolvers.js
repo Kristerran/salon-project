@@ -1,24 +1,29 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Appt, Product, Category,Stylist, Customer, Salon, Order, Service } = require('../models');
+const { User, Order, Product, Service, Stylist, Customer, Salon, Category } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
 const resolvers = {
   Query: {
-    me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select("-password"
-        );
-        return userData;
-      }
-      throw new AuthenticationError('Incorrect credentials');
-    },
-
     users: async () => {
-      return await User.find({});
+      return await User.find({}).populate('orders');
     },
     user: async (parent, { username }) => {
-      return await User.findOne({ username });
+      return await User.findOne({ username }).populate('orders');
+    },
+
+    me: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category'
+        });
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
+      }
+
+      throw new AuthenticationError('Not logged in');
     },
 
     customers: async () => {
@@ -35,38 +40,43 @@ const resolvers = {
     product: async (parent, { id }) =>
       Product.findById(id).populate('category'),
 
-    products: async (parent, { category, name }) => {
-      const params = {};
+    // products: async (parent, { category, name }) => {
+    //   const params = {};
 
-      if (category) {
-        params.category = category;
-      }
+    //   if (category) {
+    //     params.category = category;
+    //   }
 
-      if (name) {
-        params.name = {
-          $regex: name,
-        };
-      }
+    //   if (name) {
+    //     params.name = {
+    //       $regex: name,
+    //     };
+    //   }
 
-      return Product.find(params).populate('category');
+    //   return Product.find(params).populate('category');
+    // },
+    products: async () => {
+      return await Product.find({});
     },
-    appts: async (parent, args) => {
-      return await Appt.find({available: args.avail})
+
+    orders: async () => {
+      return await Order.find({}).populate('products');
     },
 
-    user: async (parent, args, context) => {
+    order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
           path: 'orders.products',
           populate: 'category'
-        })
+        });
+
+        return user.orders.id(_id);
       }
+
+      throw new AuthenticationError('Not logged in');
     },
 
-    orders: async () => {
-      return await Order.find({})
-    },
-    service: async () => {
+    services: async () => {
       return await Service.find({})
     },
 
@@ -81,16 +91,17 @@ const resolvers = {
 
 
   Mutation: {
-    addUser: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addUser: async (parent, { firstName, lastName, username, email, password }) => {
+      const user = await User.create({ firstName, lastName, username, email, password });
       const token = signToken(user);
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('Incorrect credentials');
       }
 
       const correctPw = await user.isCorrectPassword(password);
@@ -103,24 +114,23 @@ const resolvers = {
 
       return { token, user };
     },
+
     updateUser: async (parent, args, context) => {
       if (context.user) {
-        return User.findByIdAndUpdate(context.user.id, args, {
-          new: true,
-        });
+        return await User.findByIdAndUpdate(context.user._id, args, { new: true });
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError('You are Not logged in');
     },
-    updateProduct: async (parent, { id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
 
-      return Product.findByIdAndUpdate(
-        id,
-        { $inc: { quantity: decrement } },
+    updateProduct: async (parent, { productId, quantity }) => {
+      return Product.findOneAndUpdate(
+        productId,
+        { $inc: { quantity } },
         { new: true }
       );
     },
+
 
     bookAppt: async (parent, args) => {
 
@@ -135,28 +145,53 @@ const resolvers = {
     //   if (context.user) {
     //     const order = new Order({ products });
 
-    //     await User.findByIdAndUpdate(context.user.id, {
-    //       $push: { orders: order },
-    //     });
+    removeProduct: async (parent, { title }, context) => {
+      if (context.user) {
+        const updatedUser =  await User.findOneAndUpdate (
+          { _id: context.user._id },
+          { $pull: { Product: { title } } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthenticationError('You are not logged in!');
+    },
 
-    //     return order;
-    //   }
+    addOrder: async (parent, { products }, context) => {
+      console.log(context);
+      if (context.user) {
+        const order = new Order({ products });
 
-    //   throw new AuthenticationError('Not logged in');
-    // },
+        await User.findByIdAndUpdate(context.user.id, {
+          $push: { orders: order },
+        });
+
+        return order;
+      }
+
+      throw new AuthenticationError('Not are not logged in');
+    },
+
+
+    addService: async (parent, { serviceName, price }) => {
+      return await Service.create({ serviceName, price });
+    },
+
+    removeService: async (parent, { serviceId }, context) => {
+      if (context.user) {
+        const updatedUser =  await User.findOneAndUpdate (
+          { _id: context.user._id },
+          { $pull: { Service: { serviceId} } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthenticationError('You are not logged in!');
+    },
+
   }
 }
 
 module.exports = resolvers;
 
-// type Mutation {
-//     addUser( username: String!, email: String!, password: String!): Auth
-//     login(email: String!, password: String!): Auth
-//     updateUser( username: String!, email: String!, password: String!): User
-//     addOrder(_id: ID!, purchaseDate: String!): Order
-//     updateOrder(_id: ID!, purchaseDate: String!): Order 
-//     updateProduct(_id: ID!, quantity: Int!): Product
-//     updateStylist(_id: ID!, name: String!): Stylist 
-//     updateService(price: Float!): Service
-//     updateTestimonial(startRating: String!): Testimonial
-//     removeComment(thoughtId: ID!, commentId: ID!): Thought
+
