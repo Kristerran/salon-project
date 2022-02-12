@@ -1,5 +1,5 @@
 # Lai Salon
-![Screenshot of deployed site](https://photos.google.com/photo/AF1QipMo8ycNpAYPBmgSMWX3aJnlUs_f-KrtwuBOcJCN)
+![Screenshot of deployed site]('https://photos.google.com/photo/AF1QipMo8ycNpAYPBmgSMWX3aJnlUs_f-KrtwuBOcJCN')
 ## Link to deployed project:
 https://shrouded-springs-95173.herokuapp.com/
 
