@@ -1,6 +1,10 @@
 {
   "name": "lai-salon",
   "version": "1.0.0",
+  "engines" : { 
+    "npm" : "8.19.2",
+    "node" : "17.2.0"
+  },
   "description": "",
   "main": "server/server.js",
   "scripts": {
